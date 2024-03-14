@@ -1,0 +1,45 @@
+<style>
+  .full-width-image-link a {
+    width: 100%;
+    display: inline-block;
+}
+.full-width-image-link a img {
+    width: 100%;
+    object-fit: cover;
+}
+  .full-width-image-link {
+    /* margin-top: {{ section.settings.margintop }}; */
+}
+</style>
+<div class="full-width-image-link">
+  <a href="{{ section.settings.imagelink }}"><img src="{{ section.settings.image | img_url: 'master' }}"> </a>
+</div>
+
+{% schema %}
+  {
+    "name": "Full Image With Link",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Add image"
+      },
+      {
+        "type": "url",
+        "id": "imagelink",
+        "label": "Add link here"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Full Image With Link"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,54 @@
+<style>
+div#shopify-section-b2f60206-5da9-4516-a714-016184bcac54 {
+    padding: 2rem;
+    text-align: center;
+}
+.banner-cta-new a.btn {
+    background: #94cc09 !important;
+    font-size: 14px;
+    line-height: 19px;
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 17px 35px;
+    border-radius: 0px;
+    display: inline-block;
+    border-radius: 100px;
+}
+</style>
+{% if section.settings.phonenumber != blank %}
+<div class="banner-cta-new">
+<!--   <p><a href="tel:{{ section.settings.phonenumber }}">{{ section.settings.phonetext }}: {{ section.settings.phonenumber }}</a></p> -->
+  <a href="tel:{{ section.settings.phonenumber }}" class="btn" aria-label="Learn More: Complex Diet Drops">{{ section.settings.phonetext }}: {{ section.settings.phonenumber }}</a>
+</div>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "CTA Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "phonetext",
+        "label": "Text"
+      },
+      {
+        "type": "text",
+        "id": "phonenumber",
+        "label": "Phone Number"
+      }
+    ],
+    "presets": [
+      {
+      "name": "CTA Section"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

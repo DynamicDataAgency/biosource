@@ -1,0 +1,86 @@
+<div id="collection-with-products-section">           
+<div class="section-header text-center">
+      <h2>WHAT’S YOUR GOAL?</h2>
+    </div>             
+     <div class="w3-container">
+        <div class="w3-bar w3-black">
+          <a href="#">
+           <div class="w3-bar-item w3-button " onclick="openCity('weight')"  id="icon-block-1">
+                    {% assign collection = collections.weight-loss %}
+                        {% if collection.image %}
+                            <img class="lazyloaded" src="{{ collection.image.src | collection_img_url: 'original' }}" alt="{{ collection.image.alt }}" />
+                        {% endif %}
+                    <h3>Weight Loss</h3>
+           </div>
+          </a>
+          <a href="#">
+           <div class="w3-bar-item w3-button" onclick="openCity('energy')"  id="icon-block-2">
+                    {% assign collection = collections.increase-energy %}
+                        {% if collection.image %}
+                            <img class="lazyloaded" src="{{ collection.image.src | collection_img_url: 'original' }}" alt="{{ collection.image.alt }}" />
+                        {% endif %}
+                    <h3>Increase Energy</h3>
+           </div>
+          </a>
+          <a href="#">
+           <div class="w3-bar-item w3-button" onclick="openCity('improve')"  id="icon-block-3">
+                {% assign collection = collections.improve-overall-health %}
+                    {% if collection.image %}
+                        <img class="lazyloaded" src="{{ collection.image.src | collection_img_url: 'original' }}" alt="{{ collection.image.alt }}" />
+                    {% endif %}
+                <h3>Improve Overall Health</h3>
+           </div>
+          </a>
+        </div>
+        <div href="#">
+        <div class="w3-container city" id="icon-block-1-bottom">
+           {% for product in collections.weight-loss.products %}
+           <a href="{{ product.url | within: collection }}">
+           <img class="lazyloaded" src="{{ product.featured_image.src | img_url: '300x' }}" alt="{{ product.featured_image.alt | escape }}"><br>
+           <h3>{{product.title}}</h3>
+           </a>
+           {% endfor %}
+        </div>
+        </div>
+       <div href="#">
+        <div class="w3-container city" id="icon-block-2-bottom">
+            {% for product in collections.increase-energy.products %}
+            <a href="{{ product.url | within: collection }}">
+            <img class="lazyloaded" src="{{ product.featured_image.src | img_url: '300x' }}" alt="{{ product.featured_image.alt | escape }}"><br>
+           <h3>{{product.title}}</h3>
+            </a>
+            {% endfor %}
+        </div>
+       </div>
+       <div href="#">
+        <div class="w3-container city" id="icon-block-3-bottom">
+            {% for product in collections.improve-overall-health.products %}
+            <a href="{{ product.url | within: collection }}">
+            <img class="lazyloaded" src="{{ product.featured_image.src | img_url: '300x' }}" alt="{{ product.featured_image.alt | escape }}"><br>
+           <h3>{{product.title}}</h3>
+            </a>
+            {% endfor %}
+        </div>
+       </div>
+</div>     
+</div>           
+               
+{% schema %}
+{
+  "name": "collection with product",
+  "class": "collection-with-product",
+  "settings": [
+    {
+      "id": "collection-with-product",
+      "type": "text",
+      "label": "Goal Products",
+      "default": "Goal Products"
+    }
+  ],
+  "presets": [{
+    "name": "collection-with-product",
+    "category": "Text"
+  }]
+}
+{% endschema %}
+<link rel="preload" href="{{ 'jquery-2-2-0.js' | asset_url }}" as="script">

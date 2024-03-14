@@ -1,0 +1,72 @@
+<style>
+    .rte img {
+        background: #fff;
+    }
+</style>
+
+
+             <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+             <div class="w3-container">
+                <div class="w3-bar w3-black">
+                   <button class="w3-bar-item w3-button" onclick="openCity('weight')">
+                        
+                            {% assign collection = collections.weight-loss %}
+                                {% if collection.image %}
+                                    <img src="{{ collection.image.src | collection_img_url: 'original' }}" alt="{{ collection.image.alt }}" />
+                                {% endif %}
+                            <h3>Weight Loss</h3>
+                        
+                   </button>
+                   <button class="w3-bar-item w3-button" onclick="openCity('energy')">
+                        
+                            {% assign collection = collections.increase-energy %}
+                                {% if collection.image %}
+                                    <img src="{{ collection.image.src | collection_img_url: 'original' }}" alt="{{ collection.image.alt }}" />
+                                {% endif %}
+                            <h3>Increase Energy</h3>
+                        
+                   </button>
+                   <button class="w3-bar-item w3-button" onclick="openCity('improve')">
+                    
+                        {% assign collection = collections.improve-overall-health %}
+                            {% if collection.image %}
+                                <img src="{{ collection.image.src | collection_img_url: 'original' }}" alt="{{ collection.image.alt }}" />
+                            {% endif %}
+                        <h3>Improve Overall Health</h3>
+                    
+                   </button>
+                </div>
+                
+                <div id="weight" class="w3-container city">
+                   {% for product in collections.weight-loss.products %}
+                   <a href="{{ product.url | within: collection }}">
+                   <img src="{{ product.featured_image.src | img_url: '300x' }}" alt="{{ product.featured_image.alt | escape }}">
+                   </a>
+                   {% endfor %}
+                </div>
+                <div id="energy" class="w3-container city" style="display:none">
+                    {% for product in collections.increase-energy.products %}
+                    <a href="{{ product.url | within: collection }}">
+                    <img src="{{ product.featured_image.src | img_url: '300x' }}" alt="{{ product.featured_image.alt | escape }}">
+                    </a>
+                    {% endfor %}
+                </div>
+                <div id="improve" class="w3-container city" style="display:none">
+                    {% for product in collections.weight-loss.products %}
+                    <a href="{{ product.url | within: collection }}">
+                    <img src="{{ product.featured_image.src | img_url: '300x' }}" alt="{{ product.featured_image.alt | escape }}">
+                    </a>
+                    {% endfor %}
+                </div>
+                <script>
+                   function openCity(cityName) {
+                     var i;
+                     var x = document.getElementsByClassName("city");
+                     for (i = 0; i < x.length; i++) {
+                       x[i].style.display = "none";  
+                     }
+                     document.getElementById(cityName).style.display = "block";  
+                   }
+                </script>
+               
+                          

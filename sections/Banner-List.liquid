@@ -1,0 +1,105 @@
+<div class="Banner" style="background-image:url({{section.settings.Image | img_url: 'master'}});">
+  
+  <div class="Banner-Content {{ section.settings.vertical_alignment }}">
+    
+    <ul>
+      
+      {% for block in section.blocks %}
+        
+      	<li>
+          
+          <img class="lazyload" src="{{ block.settings.img | img_url: 'master' }}">
+          
+          
+          <span class="Banner-Image-Title">{{ block.settings.Title }}</span>
+          
+      	</li>
+      
+      
+      
+      {% endfor %}
+      
+    </ul>
+    
+    
+  </div>
+  
+</div>
+
+
+
+
+
+{% schema %}
+  {
+    "name": "Banner-Text",
+    "settings": [
+
+	    {
+          "type": "image_picker",
+          "id": "Image",
+          "label": "Banner Image"
+    	},
+
+
+        {
+           "type": "select",
+           "id": "vertical_alignment",
+           "options": [
+              { "value": "top", "label": "Top"},
+              { "value": "middle", "label": "Middle"},
+              { "value": "bottom", "label": "Bottom"},
+			  { "value": "left", "label": "Left"},
+			  { "value": "right", "label": "Right"},
+			  { "value": "right-middle", "label": "Right-Middle"},
+			  { "value": "left-middle", "label": "Left-Middle"}
+           ],
+           "label": "Alignment"
+        }
+
+
+	],
+
+
+"blocks": [
+
+	
+        {
+            "type": "image_picker",
+            "name": "Image-Picker",
+            "settings": [
+              {
+
+				"type": "image_picker",
+                "id": "img",
+
+                "label": "Image"
+               
+              },
+			 {
+                "type": "text",
+                "id": "Title",
+
+                "label": "Title",
+                "default": "Hello world"
+              }
+
+            ]
+        }
+
+  	]
+
+
+  }
+
+
+
+
+
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,29 @@
+{% if section.settings.maintitle != blank %}
+<section class="js-cluster-wrapper headtitle zpa-text-line-063-v2 zp ba-5448817" data-id="5448817" id="1489969">
+  <div class="js-cluster zp cac-5448817"> 
+    <div class="flex-row"> 
+      <div class="xs-12"> 
+        <div data-block-wrapper=""> 
+          <div class="page-width default-styles-wrapper zpa-word-wrap disable-internal-link zp ba-5448816" data-id="5448816">
+          {{ section.settings.maintitle }}
+          </div> 
+        </div> 
+      </div> 
+    </div> 
+  </div>
+</section>
+{% endif %}
+{% schema %}
+{
+  "name": "Page Header Section",
+  "tag": "section",
+  "class": "section page-header-section",
+  "settings": [
+      {
+        "type": "richtext",
+        "id": "maintitle",
+        "label": "Add Title"
+      }
+  ]
+}
+{% endschema %}

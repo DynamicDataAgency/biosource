@@ -1,0 +1,85 @@
+<div class="Nutra_Box Box-First">
+    <div class="page-width">
+      <div class="Content" style="background-color:{{section.settings.Back}};padding: 15px;">
+       	<div class="Cont-Head">
+          {% for block in section.blocks %}
+          {% if block.type == 'head' %}
+              <h2>
+                  {{block.settings.head}}	
+              </h2>
+          {% endif %}
+          {% endfor %}
+        </div>	
+        <div class="Cont-List">  
+			<ul>
+              {% for block in section.blocks %}
+          		{% if block.type == 'richtext' %}
+                  <li>{{ block.settings.list }}</li>
+              	{% endif %}
+              {% endfor %}
+			</ul>
+        </div>	
+        <div class="Cont-Para">
+          {% for block in section.blocks %}
+          {% if block.type == 'html' %}
+          		<h2>{{block.settings.Para}}</h2>
+           {% endif %}
+          {% endfor %}
+        </div>
+       </div>
+    </div>
+</div>
+{% schema %}
+  {
+    "name": "Text-With-List",
+    "settings": [
+      {
+        "type": "color",
+        "id": "Back",
+        "label": "Background-Color",
+        "default": "#e5e5e5"
+      }
+	],
+"blocks": [
+        {
+            "type": "head",
+            "name": "head",
+            "settings": [
+              {
+                "id": "head",
+                "type": "text",
+                "label": "Heading",
+                "default": "Hello world"
+              }
+            ]
+        },
+        {
+            "type": "richtext",
+            "name": "Text-List",
+            "settings": [
+              {
+                "id": "list",
+                "type": "text",
+                "label": "List-Desc",
+                "default": "Hello world"
+              }
+            ]
+        },
+        {
+            "type": "html",
+            "name": "Desc",
+            "settings": [
+              {
+                "id": "Para",
+                "type": "text",
+                "label": "Description"
+              }
+            ]
+        }
+  	]
+  }
+{% endschema %}
+{% stylesheet %}
+{% endstylesheet %}
+{% javascript %}
+{% endjavascript %}

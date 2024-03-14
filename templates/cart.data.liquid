@@ -1,0 +1,10 @@
+{% layout none %}
+{
+{%- for item in cart.items -%}
+  {%- if item.variant.metafields.productId.productId -%}
+    {%- if added_first %},{% endif -%}
+    "{{ item.variant.metafields.productId.productId }}": {{ item.quantity | json }}
+    {%- assign added_first = true -%}
+  {%- endif -%}
+{%- endfor -%}
+}

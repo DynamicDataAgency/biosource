@@ -1,0 +1,49 @@
+<div class="page-width">
+<nav class="small--hide border-bottom" id="AccessibleNav" role="navigation">
+    {% include 'site-nav2', linklist: section.settings.submenu, wrapper_class: 'site-nav--centered' %}
+  </nav>
+
+</div>
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": [
+	{
+      "type": "link_list",
+      "id": "submenu",
+      "label": {
+        "cs": "Nabídka",
+        "da": "Menu",
+        "de": "Menü",
+        "en": "Sub Menu",
+        "es": "Menú",
+        "fi": "Valikko",
+        "fr": "Menu",
+        "hi": "मेनू",
+        "it": "Menu",
+        "ja": "メニュー",
+        "ko": "메뉴",
+        "nb": "Meny",
+        "nl": "Menu",
+        "pl": "Menu",
+        "pt-BR": "Menu",
+        "pt-PT": "Menu",
+        "sv": "Meny",
+        "th": "เมนู",
+        "tr": "Menü",
+        "vi": "Menu",
+        "zh-CN": "菜单",
+        "zh-TW": "選單"
+      },
+      "default": "main-menu"
+    }
+
+]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

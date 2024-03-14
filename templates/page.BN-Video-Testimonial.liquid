@@ -1,0 +1,118 @@
+<style>
+  .bn-video-testimonial .grid__item.medium-up--five-sixths.medium-up--push-one-twelfth {
+    padding-left: 0;
+}
+.bn-video-testimonial strong {
+    color: #94cc0b;
+}  
+.bn-video-testimonial .js-cluster-wrapper.headtitle {
+    background-color: #005aa9;
+    padding-top: 20px;
+  /* margin-bottom: 4rem; */
+} 
+/* .bn-video-testimonial .js-cluster-wrapper.zpa-cross-part-image-right-112-v2 {padding: 4rem 0;} */
+.bn-video-testimonial .js-cluster-wrapper.zpa-cross-part-image-right-112-v2 .flex-row {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 3rem;
+  
+}
+.bn-video-testimonial .js-cluster-wrapper.zpa-cross-part-image-right-112-v2 .flex-row .sm-6 {
+    width: 50%;
+} 
+
+.zp.ba-5448822 {
+    border-color: #CCCCCC;
+}
+.zpa-divider-style-solid {
+    border-top-style: solid;
+}
+ .zpa-divider-thickness-small {
+    border-top-width: 1px;
+}
+  .divider-section {
+    margin: 2rem 0;
+}
+.bn-video-testimonial .zpa-btn-custom {
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+    font-style: normal;
+    font-family: 'Lato';
+    border-radius: 15px;
+    border: 2px solid transparent;
+    padding: 20px 30px;
+    background-color: rgb(148, 204, 11);
+    color: rgb(255, 255, 255) !important;
+}
+
+.bn-video-testimonial .zpa-button-alignment-center {
+    text-align: center;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
+  #shopify-section-video-new, #shopify-section-video-new-two {
+  padding: 0;
+  }
+
+  #shopify-section-video-new [data-section-id="video-new"], #shopify-section-video-new-two [data-section-id="video-new"] {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+  .bn-video-testimonial .video-control__play-wrapper-mobile {
+   top: auto;
+  }
+  .bn-video-testimonial a {
+    color: #94cc0b;
+}
+@media screen and (max-width: 767px){
+  .bn-video-testimonial .js-cluster-wrapper.zpa-cross-part-image-right-112-v2 .flex-row {
+  flex-wrap: wrap;
+}
+  .bn-video-testimonial .js-cluster-wrapper.zpa-cross-part-image-right-112-v2 .flex-row .sm-6 {
+    width: 100%;
+}
+  .headtitle .default-styles-wrapper h1 {
+    font-size: 30px !important;
+}
+}
+  
+ .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            overflow: hidden;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        } 
+</style>
+
+<div class="bn-video-testimonial">
+  <div class="grid">
+    <div class="grid__item medium-up--five-sixths medium-up--push-one-twelfth">
+      <!-- <div class="section-header text-center">
+        <h1>{{ page.title }}</h1>
+      </div> -->
+      <div class="rte">
+      {% section 'page-header-section' %}
+
+      
+        
+      {% section 'video-new' %}
+
+      {% section 'page-content-sections' %}
+        
+      {% section 'video-new-two' %}
+        
+      {% section 'page-footer-section' %}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,174 @@
+{% comment %}
+  The contents of the product.liquid template can be found in /sections/product-template.liquid
+{% endcomment %}
+
+<div class="Boost-Product">
+
+{% section 'Boost-Energy' %}
+<!-- ------sections to create------------------------- -->
+<div class="page-width looxreviewsdiv"><h2>Real People. Real Results.</h2></div>
+	<div id="looxReviews" data-product-id="{{product.id}}" class="loox-reviews-default">{{ product.metafields.loox.reviews }}</div>
+
+<div class="Nutra-First-Section">
+  
+	{% section 'Text-List' %}
+  
+  
+</div>
+  
+  
+<div class="Nutra-First-Section Image-Text">
+  
+	{% section 'Image-Text2' %}
+  
+  
+</div>  
+  
+  
+<div class="Nutra-First-Section Banner-List">
+  
+	{% section 'Banner-List' %}
+  
+  
+</div>    
+
+<div class="Boost-Product-Description">
+  
+ {{ product.description }}
+  
+</div>
+
+<!-- section 8 : Starts -->
+<div class="nutra_box mb100 Section-8" id="section_boost8">
+    <div class="page-width">
+      <div class="row width50">
+         <div class="col-md-12">
+            <div class="nutra_content">
+              <h2>When & How To Use Boost</h2>
+              <p>Make Boost Energy Matrix a part of your regular daily regimen and feel the difference almost immediately!</p>
+              <p>It’s best to take on an empty stomach to allow your body to fully absorb the water-soluble ingredients.</p>
+              <p><strong><h3>Best Use:</h3></strong></p>
+
+              
+              <div class="promax-img-cont">
+                      <div class="inner-sect">
+                          <div class="Image-Content">
+                                      <img src="https://cdn.shopify.com/s/files/1/0268/2306/5772/files/02.png?v=1614244378" class="img-responsive shake lazyloaded">
+                          </div>
+                          <div class="Text-Content">
+                            Shake Well
+                          </div>
+                		</div>
+                            <div class="inner-sect">
+                                <div class="Image-Content">
+                                  <img src="https://cdn.shopify.com/s/files/1/0268/2306/5772/files/04.png?v=1614244378" class="img-responsive shake lazyloaded">
+                              </div>
+                                <div class="Text-Content">For Best Taste: Mix 1ml (full dropper) into 4 – 6 oz of water or juice.</div>
+                            </div>
+                            <div class="inner-sect">
+                                <div class="Image-Content">
+                                  <img src="https://cdn.shopify.com/s/files/1/0268/2306/5772/files/03.png?v=1614244378" class="img-responsive shake lazyloaded">
+                                  </div>
+                                <div class="Text-Content">For Maximum Absorption: Drop 1 ml directly under the tongue, hold for 30 seconds then swallow.</div>
+                            </div>
+                            <div class="inner-sect">
+                                <div class="Image-Content">
+                                  <img src="https://cdn.shopify.com/s/files/1/0268/2306/5772/files/01.png?v=1614244378" class="img-responsive shake lazyloaded">
+                                </div>
+                                <div class="Text-Content">Take 1ml (full dropper) 1-2 times per day.</div>
+                            </div>
+                            <div class="inner-sect Inner-Head">
+                              <div class="Text-Content"><span><strong>Once in the morning, 30 minutes prior to eating.</strong></span></div>
+                            </div>
+                            <div class="inner-sect Inner-Head">
+                              <div class="Text-Content"><span><strong>Once in the afternoon 30 minutes prior to eating or 2 hours after a meal.</strong></span></div>
+                            </div>                                
+                      </div>
+            	</div>
+         	</div>
+      </div>    
+    </div>
+</div>
+<!-- section 8 : Ends -->
+
+
+<!-- -----------end-sections--------------------------------- -->
+
+<!-- <div class="FAQ-Content">{% section 'faq-boost' %}</div> -->
+
+<div class="FAQ-Content">{% section 'FAQ' %}}</div>
+  
+<div class="mob-blo btnss mb10 mt40"><a class="text-center"href="#header-blank">Try It Now</a></div>
+
+<div class="Prod-Reviews">                                                                               
+  <div id="shopify-product-reviews" data-id="{{product.id}}">
+        {{ product.metafields.spr.reviews }}
+  </div>
+</div>                                                          
+  
+  
+<div class="Product-Recommendation">  
+	{% section 'product-recommendations' %}
+</div>  
+  
+  
+{% if collection %}
+  <div class="text-center return-link-wrapper page-width">
+    <a href="{{ collection.url }}" class="btn btn--secondary btn--has-icon-before return-link">
+      {% include 'icon-arrow-left' %}
+      {{ 'products.product.back_to_collection' | t: title: collection.title }}
+    </a>
+  </div>
+{% endif %}
+
+</div>
+
+<script>
+  // Override default values of shop.strings for each template.
+  // Alternate product templates can change values of
+  // add to cart button, sold out, and unavailable states here.
+  theme.productStrings = {
+    addToCart: {{ 'products.product.add_to_cart' | t | json }},
+    soldOut: {{ 'products.product.sold_out' | t | json }},
+    unavailable: {{ 'products.product.unavailable' | t | json }}
+  }
+</script>
+
+{% assign current_variant = product.selected_or_first_available_variant %}
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Product",
+  "name": {{ product.title | json }},
+  "url": {{ shop.url | append: product.url | json }},
+  {%- if product.featured_media -%}
+    {%- assign media_size = product.featured_media.preview_image.width | append: 'x' -%}
+    "image": [
+      {{ product.featured_media | img_url: media_size | prepend: "https:" | json }}
+    ],
+  {%- endif -%}
+  "description": {{ product.description | strip_html | json }},
+  {%- if current_variant.sku != blank -%}
+    "sku": {{ current_variant.sku | json }},
+  {%- endif -%}
+  "brand": {
+    "@type": "Thing",
+    "name": {{ product.vendor | json }}
+  },
+  "offers": [
+    {%- for variant in product.variants -%}
+      {
+        "@type" : "Offer",
+        {%- if variant.sku != blank -%}
+          "sku": {{ variant.sku | json }},
+        {%- endif -%}
+        "availability" : "http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
+        "price" : {{ variant.price | divided_by: 100.00 | json }},
+        "priceCurrency" : {{ cart.currency.iso_code | json }},
+        "url" : {{ shop.url | append: variant.url | json }}
+      }{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+  ]
+}
+</script>

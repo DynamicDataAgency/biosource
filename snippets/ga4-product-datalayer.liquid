@@ -1,0 +1,44 @@
+{% assign template_name = template.name %}
+
+<script type="text/javascript">
+window.dataLayer = window.dataLayer || [];
+
+window.appStart = function(){
+  window.productPageHandle = function(){
+
+    var productName = "{{ product.title | remove: "'" | remove: '"' }}";
+    var productId = "{{ product.id }}";
+    var productPrice = {{ product.price | money_without_currency }};
+    var productBrand = "{{ product.vendor | remove: "'" | remove: '"' }}";
+    var productCollection = "{{ product.collections.first.title | remove: "'" | remove: '"' }}";
+    var productType = "{{ product.type | remove: "'" | remove: '"' }}";
+    var productSku = "{{ product.selected_or_first_available_variant.sku | remove: "'" | remove: '"' }}";
+    var productVariantId = "{{ product.selected_variant.id | default: product.variants[0].id }}";
+    var productVariantTitle = "{{ product.selected_variant.title | default: product.variants[0].title }}";
+
+    window.dataLayer.push({
+      event: 'view_item',
+      ecommerce: {
+          currency: '{{ cart.currency.iso_code }}',
+          items: [
+          {
+            item_name: productName,
+            item_id: productSku,
+            item_brand: productBrand,
+            item_category: productCollection,
+            price: productPrice
+          },
+        ]
+      }
+    });
+
+  };
+      
+  {% case template_name %}
+  {% when "product" %}
+    productPageHandle();
+  {% endcase %}
+
+}
+appStart();
+</script>

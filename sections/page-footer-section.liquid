@@ -1,0 +1,55 @@
+{% if section.settings.mainfootertitle != blank %}
+      <section class="js-cluster-wrapper headtitle zpa-text-line-063-v2 zp ba-5448817" data-id="5448817" id="1489969">
+        <div class="js-cluster zp cac-5448817"> 
+          <div class="flex-row"> 
+            <div class="xs-12"> 
+              <div data-block-wrapper=""> 
+                <div class="page-width default-styles-wrapper zpa-word-wrap disable-internal-link zp ba-5448816" data-id="5448816">
+                {{ section.settings.mainfootertitle }}
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+        </div>
+      </section>
+{% endif %}
+{% if section.settings.btn != blank %}
+      <section class="js-cluster-wrapper zpa-plain-button-005-v2 cluster-padding-large zp ba-19133108" data-id="19133108" id="4468864" data-zp-crm-btn-popup="">
+        <div class="js-cluster zp cac-19133108"> 
+          <div class="flex-row"> 
+            <div class="xs-12 zpa-text-center-sm zpa-button-alignment-center"> 
+              <a href="{{ section.settings.btn_url }}" data-type="custom_dest" target="_blank" role="button" class="zpa-btn-custom zpa-mobile-btn-size zpa-button-padding-large zp ba-19133109" data-id="19133109"> {{ section.settings.btn }} </a> 
+            </div> 
+          </div> 
+        </div>
+      </section>  
+{% endif %}
+
+{% schema %}
+{
+  "name": "Page Footer Section",
+  "tag": "section",
+  "class": "section page-header-section",
+  "settings": [
+      {
+        "type": "richtext",
+        "id": "mainfootertitle",
+        "label": "Add Title"
+      },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "btn",
+      "label": "Button"
+    },
+    {
+      "type": "url",
+      "id": "btn_url",
+      "label": "Button URL"
+    }
+  ]
+}
+{% endschema %}

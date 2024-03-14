@@ -1,0 +1,80 @@
+<div class="Diet-Tool-Grid dpk">
+  <div class="Main-Grid-Content">
+    {% for block in section.blocks %}
+    <div class="Grid-Content">
+		<div class="Diet-Grid-Head"><h5><strong>{{block.settings.title}}</strong></h5></div>
+      	<div class="Diet-Grid-Image">
+          <a href="{{block.settings.link}}" target="_blank"><img class="lazyload" src="{{block.settings.image | img_url: 'master' }}"></a>
+      	</div>
+      	<div class="Grid-Para">
+          <p>{{block.settings.para}}</p>
+      	</div>
+      	<div class="Grid-Button-Link text-center">
+          <a class="btn" href="{{block.settings.link}}" target="_blank">
+            <span>{{block.settings.label}}</span>
+          </a>
+      	</div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+<div class="More-Tools text-center">
+  	<h4><strong>{{section.settings.more}}</strong></h4>
+</div>
+
+{% schema %}
+  {
+    "name": "Diet Tools",
+    "settings": [
+			 {
+                "type": "text",
+                "id": "more",
+                "label": "Tools Title",
+                "default": "Hello world"
+              }
+	],
+	"blocks": [
+        {
+            "type": "image_picker",
+            "name": "Image-Picker",
+            "settings": [
+              {
+				"type": "image_picker",
+                "id": "image",
+                "label": "Image"
+              },
+			 {
+                "type": "text",
+                "id": "title",
+
+                "label": "Title",
+                "default": "Hello world"
+              },
+
+              {
+                "id": "para",
+                "type": "html",
+                "label": "Description",
+                "default": "Click Here"
+              },
+
+              {
+                "id": "link",
+                "type": "url",
+                "label": "Button link"
+              },
+
+              {
+                "id": "label",
+                "type": "text",
+                "label": "Button text",
+                "default": "Click Here"
+              }
+
+            ]
+        }
+
+  	]
+  }
+{% endschema %}
+

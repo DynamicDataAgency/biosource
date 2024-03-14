@@ -1,0 +1,324 @@
+<div class="page-width">
+  {% if section.settings.title != blank %}
+    <div class="section-header text-center">
+      <h4 class="h2">{{ section.settings.title | escape }}</h4>
+    </div>
+  {% endif %}
+
+  <div class="custom-content">
+    {%- assign block_width_mobile = '' -%}
+
+    {% for block in section.blocks %}
+      {% case block.settings.width %}
+        {% when '25%' %}
+          {%- assign max_height = 250 -%}
+          {%- assign block_width = 'medium-up--one-quarter' -%}
+          {%- assign block_width_mobile = 'small--one-half' -%}
+        {% when '33%' %}
+          {%- assign max_height = 345 -%}
+          {%- assign block_width = 'medium-up--one-third' -%}
+          {%- assign block_width_mobile = 'small--one-half' -%}
+        {% when '50%' %}
+          {%- assign max_height = 530 -%}
+          {%- assign block_width = 'medium-up--one-half' -%}
+          {%- assign block_width_mobile = 'small--one-half' -%}
+        {% when '66%' %}
+          {%- assign max_height = 720 -%}
+          {%- assign block_width = 'two-thirds' -%}
+        {% when '75%' %}
+          {%- assign max_height = 810 -%}
+          {%- assign block_width = 'three-quarters' -%}
+        {% when '100%' %}
+          {%- assign max_height = 1090 -%}
+          {%- assign block_width = 'one-whole' -%}
+      {% endcase %}
+
+      {%- if block.type == 'blog' or block.type == 'article' -%}
+        {%- assign block_width_mobile = 'small--one-whole' -%}
+      {%- endif -%}
+
+      {% if block.type == 'image' %}
+        {% capture img_id %}CustomImage--{{ forloop.index }}-{{ block.settings.image.id }}{% endcapture %}
+        {% capture img_wrapper_id %}CustomImageWrapper--{{ forloop.index }}-{{ block.settings.image.id }}{% endcapture %}
+
+        {% unless block.settings.image == blank %}
+          {% include 'image-style', image: block.settings.image, height: max_height, wrapper_id: img_wrapper_id, img_id: img_id %}
+        {% endunless %}
+      {% endif %}
+
+      <div class="custom__item custom__item--{{ block.type }} custom__item--{{ block.id }} {{ block_width_mobile }} {{ block_width }}{% if block.settings.alignment %} align--{{ block.settings.alignment }}{% endif %}" {{ block.shopify_attributes }}>
+        <div class="custom__item-inner custom__item-inner--{{ block.type }}"{% if block.type == 'image' %} id="{{ img_wrapper_id }}"{% endif %}>
+          {% case block.type %}
+            {% when 'image' %}
+              {% if block.settings.image != blank %}
+                {%- assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                <div style="padding-top:{{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100}}%;" data-image-loading-animation>
+                  <img id="{{ img_id }}"
+                       class="custom__image lazyload js"
+                       data-src="{{ img_url }}"
+                       data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                       data-aspectratio="{{ block.settings.image.aspect_ratio }}"
+                       data-sizes="auto"
+                       alt="{{ block.settings.image.alt | escape }}">
+                </div>
+                <noscript>
+                  {% capture image_size %}{{ max_height }}x{% endcapture %}
+                  {{ block.settings.image | img_url: image_size, scale: 2, crop: 'top' | img_tag: block.settings.image.alt, 'custom__image' }}
+                </noscript>
+              {% else %}
+                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+              {% endif %}
+            {% when 'text' %}
+              <div class="medium-up--text-{{ block.settings.align_text }}">
+                {% if block.settings.title != blank %}
+                  <h4 class="h3">{{ block.settings.title | escape }}</h4>
+                {% endif %}
+                {% if block.settings.text != blank %}
+                  <div class="rte-setting rte">{{ block.settings.text }}</div>
+                {% endif %}
+              </div>
+            {% when 'video' %}
+              <div class="video-wrapper">
+                {% if block.settings.video_url == blank %}
+                  <iframe src="//www.youtube.com/embed/_9VUPq3SxOc?rel=0&showinfo=0&vq=720" width="850" height="480" frameborder="0" allowfullscreen></iframe>
+                {% else %}
+                  {% if block.settings.video_url.type == "youtube" %}
+                    <iframe src="//www.youtube.com/embed/{{ block.settings.video_url.id }}?rel=0&showinfo=0&vq=720" width="850" height="480" frameborder="0" allowfullscreen></iframe>
+                  {% endif %}
+                  {% if block.settings.video_url.type == "vimeo" %}
+                    <iframe src="//player.vimeo.com/video/{{ block.settings.video_url.id }}?byline=0&portrait=0&badge=0" width="850" height="480" frameborder="0" allowfullscreen></iframe>
+                  {% endif %}
+                {% endif %}
+              </div>
+            {% when 'product' %}
+              {%- assign product = all_products[block.settings.product] -%}
+              {% if product.title.size > 0 %}
+                {% include 'product-card-grid', max_height: max_height, product: product %}
+              {% else %}
+                {% comment %}
+                  No product yet. Show onboarding one.
+                {% endcomment %}
+                <div class="grid-view-item">
+                  <a class="grid-view-item__link" href="#">
+                    <div class="grid-view-item__image">
+                      {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+                      {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+                    </div>
+                    <div class="h4 grid-view-item__title">{{ 'homepage.onboarding.product_title' | t }}</div>
+                    <div class="grid-view-item__meta">
+                      {{ 1999 | money }}
+                    </div>
+                  </a>
+                </div>
+              {% endif %}
+            {% when 'collection' %}
+              {%- assign collection = collections[block.settings.collection] -%}
+              {% include 'collection-grid-item', collection: collection %}
+            {% when 'html' %}
+              {% if block.settings.code != blank %}
+                {{ block.settings.code }}
+              {% endif %}
+            {%- when 'link_list' -%}
+              {%- assign custom_linklist = block.settings.menu -%}
+              <ul class="list--inline custom__linklist">
+                {%- for link in linklists[custom_linklist].links -%}
+                  <li class="custom__linklist-item">
+                    <a href="{{ link.url }}" class="custom__linklist-link">
+                      {{ link.title | escape }}
+                    </a>
+                  </li>
+                {%- endfor -%}
+              </ul>
+
+            {%- when 'blog' -%}
+              {%- assign blog = blogs[block.settings.blog] -%}
+                <div class="blog-card">
+                  {%- if block.settings.cover_image -%}
+                    {%- assign img = block.settings.cover_image -%}
+                    {%- capture img_id -%}ArticleImage-{{ img.id }}{%- endcapture -%}
+                    {%- capture img_wrapper_id -%}ArticleImageWrapper-{{ img.id }}{%- endcapture -%}
+                    {%- assign img_url = img | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+                    {% include 'image-style', image: img, height: 600, wrapper_id: img_wrapper_id, img_id: img_id %}
+
+                    <div class="blog-card__image-wrapper blog-card__image-wrapper--{{ block.settings.image_size }}">
+                      <a href="{{ blog.url | default: '#' }}" class="blog-card__link">
+                        <div class="blog-card__overlay box ratio-container js lazyload" data-bgset="{% include 'bgset', image: img %}" data-sizes="auto" data-parent-fit="cover" data-image-loading-animation></div>
+                        <noscript>
+                          <div class="blog-card__overlay" style="background-image: url('{{ img | img_url: '1024x1024' }}')"></div>
+                        </noscript>
+
+                        <div class="blog-card__title-wrapper">
+                          <div class="blog-card__title h3">{{ blog.title }}</div>
+                        </div>
+                      </a>
+                    </div>
+                  {%- else -%}
+                    <div class="blog-card__image-wrapper blog-card__image-wrapper--{{ block.settings.image_size }}">
+                      <a href="{{ blog.url | default: '#' }}" class="blog-card__link">
+                        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                      </a>
+                    </div>
+                  {%- endif -%}
+
+                  {%- if block.settings.description != blank -%}
+                    <div class="blog-card__excerpt rte">{{ block.settings.description }}</div>
+                  {%- endif -%}
+
+                  {%- if block.settings.show_number_articles -%}
+                    {%- assign number_of_articles = blog.articles_count | default: 0 -%}
+                    <a href="{{ blog.url | default: '#' }}" class="blog-card__comment-count btn btn--tertiary btn--small" aria-label="{{ 'blogs.article.article_with_count' | t: count: number_of_articles }}: {{ blog.title }}">{{ 'blogs.article.article_with_count' | t: count: number_of_articles }}</a>
+                  {%- endif -%}
+                </div>
+            {%- when 'article' -%}
+              {%- assign article = articles[block.settings.article] -%}
+              {%- assign cover_image = block.settings.cover_image -%}
+
+              {%- if article != empty -%}
+                <div id="Article-{{ article.image.id }}" class="article">
+                  <a href="{{ article.url }}" class="article__link article__link--fixed-overlay">
+                    {%- if article.image and cover_image != 'none' -%}
+                      {%- capture img_id -%}ArticleImage-{{ article.image.id }}{%- endcapture -%}
+                      {%- capture img_wrapper_id -%}ArticleImageWrapper-{{ article.image.id }}{%- endcapture -%}
+                      {%- assign img_url = article.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+                      {% render 'image-style', image: article.image, height: 600, wrapper_id: img_wrapper_id, img_id: img_id %}
+
+                      {%- style -%}
+                        #Article-{{ article.image.id }} .article__link:not([disabled]):hover .article__grid-image-wrapper::before,
+                        #Article-{{ article.image.id }} .article__link:focus .article__grid-image-wrapper::before {
+                          padding-top:{{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;
+                        }
+                      {%- endstyle -%}
+
+                      <div id="{{ img_wrapper_id }}" class="article__grid-image-wrapper article__grid-image-wrapper--{{ cover_image }} article-image-wrapper js">
+                        <div class="article__grid-image-container" style="padding-top:{{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;" data-image-loading-animation>
+                          <img id="{{ img_id }}"
+                              class="article__list-image lazyload"
+                              data-src="{{ img_url }}"
+                              data-widths="[180, 360, 540, 720, 905, 1090, 1296, 1512, 1728, 2048]"
+                              data-aspectratio="{{ article.image.aspect_ratio }}"
+                              data-sizes="auto"
+                              alt="">
+                        </div>
+                      </div>
+
+                      <noscript>
+                        <p>
+                          <a href="{{ article.url }}">
+                            {{ article | img_url: '455x300', scale: 2 | img_tag: article.title }}
+                          </a>
+                        </p>
+                      </noscript>
+                    {%- endif -%}
+
+                    <h2 class="article__title h3">{{ article.title }}</h2>
+                  </a>
+
+                  {%- if block.settings.show_author or block.settings.show_date -%}
+                    <div class="article__meta">
+                      {%- if block.settings.show_author -%}
+                        <span class="article__author">{{ 'blogs.article.by_author' | t: author: article.author }}</span>
+                      {%- endif -%}
+
+                      {%- if block.settings.show_date -%}
+                        <span class="article__date">
+                          {{ article.published_at | time_tag: format: 'date' }}
+                        </span>
+                      {%- endif -%}
+                    </div>
+                  {%- endif -%}
+
+                  <div class="rte rte--article">
+                    {%- if article.excerpt.size > 0 -%}
+                      {{ article.excerpt }}
+                    {%- else -%}
+                      {{ article.content | strip_html | truncate: 150 }}
+                    {%- endif -%}
+                  </div>
+
+                  {%- if article.tags.size > 0 -%}
+                    <div class="article__tags rte">
+                      <ul class="list--inline" aria-label="{{ 'blogs.article.tags' | t }}">
+                        {%- for tag in article.tags -%}
+                          <li>
+                            <a href="{{ blog.url }}/tagged/{{ tag | handle }}" class="article__grid-tag">{{ tag }}</a>
+                          </li>
+                        {%- endfor -%}
+                      </ul>
+                    </div>
+                  {%- endif -%}
+
+                  <ul class="list--inline article__meta-buttons">
+                    <li>
+                      <a href="{{ article.url }}" class="btn btn--tertiary btn--small" aria-label="{{ 'blogs.article.read_more_title' | t: title: article.title }}">
+                        {{ 'blogs.article.read_more' | t }}
+                      </a>
+                    </li>
+
+                    {%- if article.comments != blank and article.comments_count > 0 -%}
+                      <li>
+                        <a href="{{ article.url }}#comments" class="article__comment-count btn btn--tertiary btn--small">
+                          {{ 'blogs.comments.comments_with_count' | t: count: article.comments_count }}
+                        </a>
+                      </li>
+                    {%- endif -%}
+                  </ul>
+                </div>
+              {%- else -%}
+                <div class="article">
+                  <a href="#" class="article__link article__link--fixed-overlay">
+                    {%- if article.image and cover_image != 'none' -%}
+                      <div class="article__grid-image-wrapper article__grid-image-wrapper--{{ cover_image }} article-image-wrapper">
+                        <div class="article__grid-image-container">
+                          {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                        </div>
+                      </div>
+                    {%- endif -%}
+
+                    <h2 class="article__title h3">{{ 'homepage.onboarding.blog_title' | t }}</h2>
+                  </a>
+
+                  {%- if block.settings.show_author or block.settings.show_date -%}
+                    <div class="article__meta">
+                      {%- if block.settings.show_author -%}
+                        {%- assign author_name = 'homepage.onboarding.blog_author' | t -%}
+                        <span class="article__author">{{ 'blogs.article.by_author' | t: author: author_name }}</span>
+                      {%- endif -%}
+
+                      {%- if block.settings.show_date -%}
+                        <span class="article__date">
+                          {{ "now" | time_tag: format: 'date' }}
+                        </span>
+                      {%- endif -%}
+                    </div>
+                  {%- endif -%}
+
+                  <div class="rte rte--article">{{ 'homepage.onboarding.blog_excerpt' | t }}</div>
+
+                  <ul class="list--inline article__meta-buttons">
+                    <li>
+                      <a href="#" class="btn btn--tertiary btn--small">
+                        {{ 'blogs.article.read_more' | t }}
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="#" class="article__comment-count btn btn--tertiary btn--small">
+                        {{ 'blogs.comments.comments_with_count' | t: count: 1 }}
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              {%- endif -%}
+          {% endcase %}
+        </div>
+      </div>
+
+    {% endfor %}
+  </div>
+
+  {% if section.blocks.size == 0 %}
+    {% include 'no-blocks' %}
+  {% endif %}
+</div>

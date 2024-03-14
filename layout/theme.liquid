@@ -1,0 +1,421 @@
+<!doctype html>
+<head>{% render 'spdn' %}
+
+<script>
+    window.Shopify = window.Shopify || {theme: {id: {{ theme.id }}, role: '{{ theme.role }}' } };
+    window._template = {
+        directory: "{{ template.directory }}",
+        name: "{{ template.name }}",
+        suffix: "{{ template.suffix }}"
+    }
+  </script> 
+                <script src="https://cdn.intelligems.io/62e21b8f74e9.js"></script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MZN46G6');</script>
+  <!-- End Google Tag Manager -->
+ 
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="{{ settings.color_button }}">
+
+<!--   <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.shopify.com" crossorigin> -->
+  <link rel="preconnect" href="https://monorail-edge.shopifysvc.com">
+
+  {%- assign header_font = settings.type_header_font -%}
+  {%- assign base_font = settings.type_base_font -%}
+  {%- assign base_font_bolder = base_font | font_modify: 'weight', 'bolder' -%}
+  {%- assign base_font_bold = base_font | font_modify: 'weight', 'bold' -%}
+  {%- assign base_font_italic = base_font | font_modify: 'style', 'italic' -%}
+  {%- assign base_font_bold_italic = base_font_bold | font_modify: 'style', 'italic' -%}
+
+  <link rel="preload" href="{{ 'theme.css' | asset_url }}" as="style">
+  <link rel="preload" href="{{ 'custom.css' | asset_url }}" as="style">
+  <link rel="preload" as="font" href="{{ header_font | font_url }}" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="{{ base_font | font_url }}" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="{{ base_font_bold | font_url }}" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ 'theme.js' | asset_url }}" as="script">
+  <link rel="preload" href="{{ 'lazysizes.js' | asset_url }}" as="script">
+  
+  
+  <!-- <script src="https://hosted-checkout-slim-backend.myhostedcheckout.com/assets/js/cart.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+  {%- if canonical_url != blank  -%}
+    <link rel="canonical" href="{{ canonical_url }}">
+  {%- endif -%}
+
+  {%- if settings.favicon != blank -%}
+    <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
+  {%- endif -%}
+
+  {%- capture seo_title -%}
+    {%- if request.page_type == 'search' and search.performed == true -%}
+      {{ 'general.search.heading' | t: count: search.results_count }}: {{ 'general.search.results_with_count' | t: terms: search.terms, count: search.results_count }}
+    {%- else -%}
+      {{ page_title }}
+    {%- endif -%}
+    {%- if current_tags -%}
+      {%- assign meta_tags = current_tags | join: ', ' -%} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags -}}
+    {%- endif -%}
+    {%- if current_page != 1 -%}
+      &ndash; {{ 'general.meta.page' | t: page: current_page }}
+    {%- endif -%}
+    {%- assign escaped_page_title = page_title | escape -%}
+    {%- unless escaped_page_title contains shop.name -%}
+      &ndash; {{ shop.name }}
+    {%- endunless -%}
+  {%- endcapture -%}
+  <title>{{ seo_title | strip }}</title>
+
+  {%- if page_description -%}
+    <meta name="description" content="{{ page_description | escape }}">
+  {%- endif -%}
+
+  {% include 'social-meta-tags' %}
+  {% include 'css-variables' %}
+
+  <style>*,::after,::before{box-sizing:border-box}body{margin:0}body,html{background-color:var(--color-body)}body,button{font-size:calc(var(--font-size-base) * 1px);font-family:var(--font-stack-body);font-style:var(--font-style-body);font-weight:var(--font-weight-body);color:var(--color-text);line-height:1.5}body,button{-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}.border-bottom{border-bottom:1px solid var(--color-border)}.btn--link{background-color:transparent;border:0;margin:0;color:var(--color-text);text-align:left}.text-right{text-align:right}.icon{display:inline-block;width:20px;height:20px;vertical-align:middle;fill:currentColor}.icon__fallback-text,.visually-hidden{position:absolute!important;overflow:hidden;clip:rect(0 0 0 0);height:1px;width:1px;margin:-1px;padding:0;border:0}svg.icon:not(.icon--full-color) circle,svg.icon:not(.icon--full-color) ellipse,svg.icon:not(.icon--full-color) g,svg.icon:not(.icon--full-color) line,svg.icon:not(.icon--full-color) path,svg.icon:not(.icon--full-color) polygon,svg.icon:not(.icon--full-color) polyline,svg.icon:not(.icon--full-color) rect,symbol.icon:not(.icon--full-color) circle,symbol.icon:not(.icon--full-color) ellipse,symbol.icon:not(.icon--full-color) g,symbol.icon:not(.icon--full-color) line,symbol.icon:not(.icon--full-color) path,symbol.icon:not(.icon--full-color) polygon,symbol.icon:not(.icon--full-color) polyline,symbol.icon:not(.icon--full-color) rect{fill:inherit;stroke:inherit}li{list-style:none}.list--inline{padding:0;margin:0}.list--inline>li{display:inline-block;margin-bottom:0;vertical-align:middle}a{color:var(--color-text);text-decoration:none}.h1,.h2,h1,h2{margin:0 0 17.5px;font-family:var(--font-stack-header);font-style:var(--font-style-header);font-weight:var(--font-weight-header);line-height:1.2;overflow-wrap:break-word;word-wrap:break-word}.h1 a,.h2 a,h1 a,h2 a{color:inherit;text-decoration:none;font-weight:inherit}.h1,h1{font-size:calc(((var(--font-h1-desktop))/ (var(--font-size-base))) * 1em);text-transform:none;letter-spacing:0}@media only screen and (max-width:749px){.h1,h1{font-size:calc(((var(--font-h1-mobile))/ (var(--font-size-base))) * 1em)}}.h2,h2{font-size:calc(((var(--font-h2-desktop))/ (var(--font-size-base))) * 1em);text-transform:uppercase;letter-spacing:.1em}@media only screen and (max-width:749px){.h2,h2{font-size:calc(((var(--font-h2-mobile))/ (var(--font-size-base))) * 1em)}}p{color:var(--color-body-text);margin:0 0 19.44444px}@media only screen and (max-width:749px){p{font-size:calc(((var(--font-size-base) - 1)/ (var(--font-size-base))) * 1em)}}p:last-child{margin-bottom:0}@media only screen and (max-width:749px){.small--hide{display:none!important}}.grid{list-style:none;margin:0;padding:0;margin-left:-30px}.grid::after{content:'';display:table;clear:both}@media only screen and (max-width:749px){.grid{margin-left:-22px}}.grid::after{content:'';display:table;clear:both}.grid--no-gutters{margin-left:0}.grid--no-gutters .grid__item{padding-left:0}.grid--table{display:table;table-layout:fixed;width:100%}.grid--table>.grid__item{float:none;display:table-cell;vertical-align:middle}.grid__item{float:left;padding-left:30px;width:100%}@media only screen and (max-width:749px){.grid__item{padding-left:22px}}.grid__item[class*="--push"]{position:relative}@media only screen and (min-width:750px){.medium-up--one-quarter{width:25%}.medium-up--push-one-third{width:33.33%}.medium-up--one-half{width:50%}.medium-up--push-one-third{left:33.33%;position:relative}}.site-header{position:relative;background-color:var(--color-body)}@media only screen and (max-width:749px){.site-header{border-bottom:1px solid var(--color-border)}}@media only screen and (min-width:750px){.site-header{padding:0 55px}.site-header.logo--center{padding-top:30px}}.site-header__logo{margin:15px 0}.logo-align--center .site-header__logo{text-align:center;margin:0 auto}@media only screen and (max-width:749px){.logo-align--center .site-header__logo{text-align:left;margin:15px 0}}@media only screen and (max-width:749px){.site-header__logo{padding-left:22px;text-align:left}.site-header__logo img{margin:0}}.site-header__logo-link{display:inline-block;word-break:break-word}@media only screen and (min-width:750px){.logo-align--center .site-header__logo-link{margin:0 auto}}.site-header__logo-image{display:block}@media only screen and (min-width:750px){.site-header__logo-image{margin:0 auto}}.site-header__logo-image img{width:100%}.site-header__logo-image--centered img{margin:0 auto}.site-header__logo img{display:block}.site-header__icons{position:relative;white-space:nowrap}@media only screen and (max-width:749px){.site-header__icons{width:auto;padding-right:13px}.site-header__icons .btn--link,.site-header__icons .site-header__cart{font-size:calc(((var(--font-size-base))/ (var(--font-size-base))) * 1em)}}.site-header__icons-wrapper{position:relative;display:-webkit-flex;display:-ms-flexbox;display:flex;width:100%;-ms-flex-align:center;-webkit-align-items:center;-moz-align-items:center;-ms-align-items:center;-o-align-items:center;align-items:center;-webkit-justify-content:flex-end;-ms-justify-content:flex-end;justify-content:flex-end}.site-header__account,.site-header__cart,.site-header__search{position:relative}.site-header__search.site-header__icon{display:none}@media only screen and (min-width:1400px){.site-header__search.site-header__icon{display:block}}.site-header__search-toggle{display:block}@media only screen and (min-width:750px){.site-header__account,.site-header__cart{padding:10px 11px}}.site-header__cart-title,.site-header__search-title{position:absolute!important;overflow:hidden;clip:rect(0 0 0 0);height:1px;width:1px;margin:-1px;padding:0;border:0;display:block;vertical-align:middle}.site-header__cart-title{margin-right:3px}.site-header__cart-count{display:flex;align-items:center;justify-content:center;position:absolute;right:.4rem;top:.2rem;font-weight:700;background-color:var(--color-btn-primary);color:var(--color-btn-primary-text);border-radius:50%;min-width:1em;height:1em}.site-header__cart-count span{font-family:HelveticaNeue,"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:calc(11em / 16);line-height:1}@media only screen and (max-width:749px){.site-header__cart-count{top:calc(7em / 16);right:0;border-radius:50%;min-width:calc(19em / 16);height:calc(19em / 16)}}@media only screen and (max-width:749px){.site-header__cart-count span{padding:.25em calc(6em / 16);font-size:12px}}.site-header__menu{display:none}@media only screen and (max-width:749px){.site-header__icon{display:inline-block;vertical-align:middle;padding:10px 11px;margin:0}}@media only screen and (min-width:750px){.site-header__icon .icon-search{margin-right:3px}}.announcement-bar{z-index:10;position:relative;text-align:center;border-bottom:1px solid transparent;padding:2px}.announcement-bar__link{display:block}.announcement-bar__message{display:block;padding:11px 22px;font-size:calc(((16)/ (var(--font-size-base))) * 1em);font-weight:var(--font-weight-header)}@media only screen and (min-width:750px){.announcement-bar__message{padding-left:55px;padding-right:55px}}.site-nav{position:relative;padding:0;text-align:center;margin:25px 0}.site-nav a{padding:3px 10px}.site-nav__link{display:block;white-space:nowrap}.site-nav--centered .site-nav__link{padding-top:0}.site-nav__link .icon-chevron-down{width:calc(8em / 16);height:calc(8em / 16);margin-left:.5rem}.site-nav__label{border-bottom:1px solid transparent}.site-nav__link--active .site-nav__label{border-bottom-color:var(--color-text)}.site-nav__link--button{border:none;background-color:transparent;padding:3px 10px}.site-header__mobile-nav{z-index:11;position:relative;background-color:var(--color-body)}@media only screen and (max-width:749px){.site-header__mobile-nav{display:-webkit-flex;display:-ms-flexbox;display:flex;width:100%;-ms-flex-align:center;-webkit-align-items:center;-moz-align-items:center;-ms-align-items:center;-o-align-items:center;align-items:center}}.mobile-nav--open .icon-close{display:none}.main-content{opacity:0}.main-content .shopify-section{display:none}.main-content .shopify-section:first-child{display:inherit}.critical-hidden{display:none}</style>
+
+  <script>
+    window.performance.mark('debut:theme_stylesheet_loaded.start');
+
+    function onLoadStylesheet() {
+      performance.mark('debut:theme_stylesheet_loaded.end');
+      performance.measure('debut:theme_stylesheet_loaded', 'debut:theme_stylesheet_loaded.start', 'debut:theme_stylesheet_loaded.end');
+
+      var url = "{{ 'theme.css' | asset_url }}";
+      var link = document.querySelector('link[href="' + url + '"]');
+      link.loaded = true;
+      link.dispatchEvent(new Event('load'));
+    }
+  </script>
+
+  <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}" type="text/css" media="print" onload="this.media='all';onLoadStylesheet()">
+
+  <style>
+    {{ header_font | font_face: font_display: 'swap' }}
+    {{ base_font | font_face: font_display: 'swap' }}
+    {{ base_font_bold | font_face: font_display: 'swap' }}
+    {{ base_font_bolder | font_face: font_display: 'swap' }}
+    {{ base_font_italic | font_face: font_display: 'swap' }}
+    {{ base_font_bold_italic | font_face: font_display: 'swap' }}
+  </style>
+
+  <script>
+    var theme = {
+      breakpoints: {
+        medium: 750,
+        large: 990,
+        widescreen: 1400
+      },
+      strings: {
+        addToCart: {{ 'products.product.add_to_cart' | t | json }},
+        soldOut: {{ 'products.product.sold_out' | t | json }},
+        unavailable: {{ 'products.product.unavailable' | t | json }},
+        regularPrice: {{ 'products.product.regular_price' | t | json }},
+        salePrice: {{ 'products.product.sale_price' | t | json }},
+        sale: {{ 'products.product.on_sale' | t | json }},
+        fromLowestPrice: {{ 'products.product.from_lowest_price_html' | t: lowest_price: '[price]' | json }},
+        vendor: {{'products.product.vendor' | t | json }},
+        showMore: {{ 'general.filters.show_more' | t | json }},
+        showLess: {{ 'general.filters.show_less' | t | json }},
+        searchFor: {{ 'general.search.search_for' | t | json }},
+        addressError: {{ 'sections.map.address_error' | t | json }},
+        addressNoResults: {{ 'sections.map.address_no_results' | t | json }},
+        addressQueryLimit: {{ 'sections.map.address_query_limit_html' | t | json }},
+        authError: {{ 'sections.map.auth_error_html' | t | json }},
+        newWindow: {{ 'general.accessibility.link_messages.new_window' | t | json }},
+        external: {{ 'general.accessibility.link_messages.external' | t | json }},
+        newWindowExternal: {{ 'general.accessibility.link_messages.new_window_and_external' | t | json }},
+        removeLabel: {{ 'cart.label.remove' | t: product: '[product]' | json }},
+        update: {{ 'cart.label.update' | t | json }},
+        quantity: {{ 'cart.label.quantity' | t | json }},
+        discountedTotal: {{ 'cart.label.discounted_total' | t | json }},
+        regularTotal: {{ 'cart.label.regular_total' | t | json }},
+        priceColumn: {{ 'cart.label.price_column' | t | json }},
+        quantityMinimumMessage: {{ 'products.product.quantity_minimum_message' | t | json }},
+        cartError: {{ 'cart.general.cart_error' | t | json }},
+        removedItemMessage: {{ 'cart.general.removed_item_html' | t: quantity: '[quantity]', link: '[link]' | json }},
+        unitPrice: {{ 'products.product.unit_price_label' | t | json }},
+        unitPriceSeparator: {{ 'general.accessibility.unit_price_separator' | t | json }},
+        oneCartCount: {{ 'cart.popup.cart_count' | t: count: 1 | json }},
+        otherCartCount: {{ 'cart.popup.cart_count' | t: count: '[count]' | json }},
+        quantityLabel: {{ 'cart.popup.quantity_label' | t: quantity_count: '[count]' | json }},
+        products: {{ 'general.search.products' | t | json }},
+        loading: {{ 'general.search.loading' | t | json }},
+        number_of_results: {{ 'general.search.number_of_results' | t: result_number: '[result_number]', results_count: '[results_count]' | json }},
+        number_of_results_found: {{ 'general.search.number_of_results_found' | t: results_count: '[results_count]' | json }},
+        one_result_found: {{ 'general.search.one_result_found' | t | json }}
+      },
+      moneyFormat: {{ shop.money_format | json }},
+      moneyFormatWithCurrency: {{ shop.money_with_currency_format | json }},
+      settings: {
+        predictiveSearchEnabled: {{ settings.predictive_search_enabled | json }},
+        predictiveSearchShowPrice: {{ settings.predictive_search_show_price | json }},
+        predictiveSearchShowVendor: {{ settings.predictive_search_show_vendor | json }}
+      },
+      stylesheet: "{{ 'theme.css' | asset_url }}"
+    }
+
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+  </script>
+
+  {%- if request.page_type contains 'customers/' -%}
+    <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer="defer"></script>
+  {%- endif -%}
+
+  <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'lazysizes.js' | asset_url }}" async="async"></script>
+  
+
+  <script type="text/javascript">
+    if (window.MSInputMethodContext && document.documentMode) {
+      var scripts = document.getElementsByTagName('script')[0];
+      var polyfill = document.createElement("script");
+      polyfill.defer = true;
+      polyfill.src = "{{ 'ie11CustomProperties.min.js' | asset_url }}";
+
+      scripts.parentNode.insertBefore(polyfill, scripts);
+    }
+  </script>
+
+  {{ content_for_header }}
+
+  	<script src="{{ 'custom.js' | asset_url }}" defer="defer"></script> 
+  
+<!-- Slider - starts -->
+{% if template == 'index' %}
+{% if settings.home_vendor_carousel_enable %} 
+{{ 'slick.css' | asset_url | stylesheet_tag }}
+{{ 'slick-theme.css' | asset_url | stylesheet_tag }}
+{% endif %}
+{% endif %}
+<!-- Slider - Ends -->
+
+  {{ 'new-custom.css' | asset_url | stylesheet_tag }}
+  {{ 'custom-dca.css' | asset_url | stylesheet_tag }}
+ {% comment %} {{ 'blogpost.css' | asset_url | stylesheet_tag }} {% endcomment %}
+  
+<meta name="google-site-verification" content="5hGLccWgANdi43HuN0bdz5EETDl9o01v_Yeq777f5Uc" />  
+	{{ shop.metafields.loox["global_html_head"] }}
+
+{% render 'ga4-product-datalayer.liquid' %}  
+  
+<img alt="icon" width="1400" height="1400" style="pointer-events: none; position: absolute; top: 0; left: 0; width: 99vw; height: 99vh; max-width: 99vw; max-height: 99vh;"  src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI5OTk5OXB4IiBoZWlnaHQ9Ijk5OTk5cHgiIHZpZXdCb3g9IjAgMCA5OTk5OSA5OTk5OSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48ZyBzdHJva2U9Im5vbmUiIGZpbGw9Im5vbmUiIGZpbGwtb3BhY2l0eT0iMCI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9Ijk5OTk5IiBoZWlnaHQ9Ijk5OTk5Ij48L3JlY3Q+IDwvZz4gPC9zdmc+"></head>
+
+{% comment %}
+<body class="template-{{ request.page_type | handle }}">
+{% endcomment %}
+  
+<body class="template-{{ request.page_type | handle }} template-{{ template | split: '.' | first }} {%- if product.id -%}product-{{ product.id }}{%- endif -%} {% if template == 'product.New-Template' %} New-Template {% endif %} {% if template == 'product.Razeburn' %} Razeburn-Template {% endif %} {% if template == 'product.prooduct-two' %} Whole-Template {% endif %} {% if template == 'product.Boost-Energy' %} Boost-Energy-Template {% endif %} ">
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MZN46G6"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+    
+  <a class="in-page-link visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
+
+  {%- if settings.enable_ajax -%}
+    {% include 'cart-popup' %}
+  {%- endif -%}
+
+  {% section 'header' %}
+
+  <div class="page-container drawer-page-content" id="PageContainer">
+
+    <main class="main-content js-focus-hidden" id="MainContent" role="main" tabindex="-1">
+      {{ content_for_layout }}
+    </main>
+
+    {% section 'footer' %}
+
+    
+
+    <div id="slideshow-info" class="visually-hidden" aria-hidden="true">
+      {{- 'sections.slideshow.navigation_instructions' | t -}}
+    </div>
+
+  </div>
+
+  <ul hidden>
+    <li id="a11y-refresh-page-message">{{ 'general.accessibility.refresh_page' | t }}</li>
+    <li id="a11y-selection-message">{{ 'general.accessibility.selection_help' | t }}</li>
+  </ul>
+
+
+
+
+<!-- slick slider -->
+  {% if template == 'index' %}
+{% if settings.home_vendor_carousel_enable %} 
+<!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+{{ 'slick.min.js' | asset_url | script_tag }}
+ <script type="text/javascript">
+ $(document).ready(function() {
+ $('.autoplay').slick({
+ dots: false,
+ infinite: true,
+ speed: 500,
+ slidesToShow: 5,
+ slidesToScroll: 1,
+ autoplay: true,
+ autoplaySpeed: 2000,
+ arrows: false,
+ variableWidth: true
+ });
+ });
+ </script>
+{% endif %}
+{% endif %}
+<!-- slick slider -->
+
+
+
+<!-- spurit_sri-added -->
+{% comment %}{% render 'spurit_sri-theme-snippet' %}{% endcomment %}
+<!-- /spurit_sri-added -->
+
+  <script type="text/javascript">
+(function(d, src, c) { var t=d.scripts[d.scripts.length - 1],s=d.createElement('script');s.id='la_x2s6df8d';s.async=true;s.src=src;s.onload=s.onreadystatechange=function(){var rs=this.readyState;if(rs&&(rs!='complete')&&(rs!='loaded')){return;}c(this);};t.parentElement.insertBefore(s,t.nextSibling);})(document,
+'//support.biosourcesecure.com/scripts/track.js',
+function(e){ LiveAgent.createButton('s15o8fq2', e); });
+
+  window.biosourcenutra = window.biosourcenutra || {};
+  biosourcenutra.cart_submit = document.querySelector('[type="submit"][name="checkout"]');
+  biosourcenutra.timer = 0;
+
+</script>
+
+{% if product %}
+  <script type="text/javascript">
+var _learnq = _learnq || [];
+var classname = document.getElementsByClassName("btn product-form__cart-submit btn--secondary-accent");
+var addToCart = function() {
+_learnq.push(['track', 'Added to Cart', item]);
+}; for (var i = 0; i < classname.length; i++) {
+classname[i].addEventListener('click', addToCart, false);
+}
+</script>
+
+
+  
+  {% endif %}
+
+  
+
+	{{ shop.metafields.loox["global_html_body"] }}
+
+
+
+<div id="ss-floating-bar" class="ss-left-sidebar ss-regular-icons ss-rounded-icons">
+	<div class="ss-floating-bar__inner">	
+    	{% comment %}
+        <h4 class="social__toggle" onClick="toggleStyles()">
+        <img id="mytoggleImage" onclick="changeImage()" src="https://cdn.shopify.com/s/files/1/0268/2306/5772/files/bulbon.png"/>
+  </h4>	{% endcomment %}
+      <script>
+function toggleStyles() {
+  var element = document.getElementById("toggle-social");
+  element.classList.toggle("social__icon__show");
+  
+}
+
+        function changeImage() {
+  var image = document.getElementById('mytoggleImage');
+  if (image.src.match("bulboff")) {
+    
+    image.src = "https://cdn.shopify.com/s/files/1/0268/2306/5772/files/bulbon.png";
+  } else {
+    image.src = "https://cdn.shopify.com/s/files/1/0268/2306/5772/files/pic_bulboff.png?v=1684152611";
+  }
+}
+
+</script>
+      <ul class="ss-social-icons-container" style="display:block;" id="toggle-social">
+                   {% if settings.share_facebook %}
+    <li>
+      <a target="_blank" href="//www.facebook.com/sharer.php?u={{ shop.url | append: share_permalink }}" class="ss-facebook-color btn btn--small btn--share share-facebook">
+       <span class="ss-share-network-content">
+			<i class="ss-network-icon"><svg class="ss-svg-icon" aria-hidden="true" role="img" focusable="false" width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M32 16.098C32 7.208 24.837 0 16 0S0 7.207 0 16.098C0 24.133 5.851 30.792 13.5 32V20.751H9.437v-4.653H13.5V12.55c0-4.034 2.389-6.263 6.043-6.263 1.751 0 3.582.315 3.582.315v3.961h-2.018c-1.987 0-2.607 1.241-2.607 2.514v3.02h4.438l-.71 4.653H18.5V32C26.149 30.792 32 24.133 32 16.098z"></path></svg></i>
+		</span>
+      </a>
+      <span class="ss-share-network-tooltip">Facebook</span>
+    </li>
+  {% endif %}
+
+  {% if settings.share_twitter %}
+    <li>
+      <a target="_blank" href="//twitter.com/share?text={{ share_title | url_param_escape }}&amp;url={{ shop.url | append: share_permalink }}" class="ss-twitter-color btn btn--small btn--share share-twitter">
+        <span class="ss-share-network-content">
+				<i class="ss-network-icon"><svg class="ss-svg-icon" aria-hidden="true" role="img" focusable="false" width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M28.75 9.5c0 0.25 0 0.563 0 0.813 0 8.688-6.625 18.688-18.688 18.688-3.688 0-7.188-1.063-10.063-2.938 0.5 0.063 1.063 0.063 1.563 0.063 3.063 0 5.938-1 8.188-2.813-2.875 0-5.313-1.938-6.188-4.563 0.438 0.125 0.813 0.125 1.25 0.125 0.625 0 1.188-0.063 1.75-0.188-3-0.625-5.25-3.313-5.25-6.438 0-0.063 0-0.063 0-0.125 0.875 0.5 1.875 0.813 2.938 0.813-1.75-1.125-2.938-3.188-2.938-5.438 0-1.188 0.375-2.313 0.938-3.313 3.188 4 8.063 6.625 13.5 6.875-0.125-0.5-0.188-1-0.188-1.5 0-3.625 2.938-6.563 6.563-6.563 1.938 0 3.625 0.813 4.813 2.063 1.5-0.313 2.938-0.813 4.188-1.563-0.5 1.5-1.563 2.813-2.875 3.625 1.313-0.188 2.563-0.5 3.75-1.063-0.875 1.313-2 2.5-3.25 3.438z"></path></svg></i>
+             </span>
+         </a>
+			<span class="ss-share-network-tooltip">Twitter</span>
+    </li>
+  {% endif %}
+
+  {% if settings.share_pinterest %}
+    <li>
+      <a target="_blank" href="//pinterest.com/pin/create/button/?url={{ shop.url | append: share_permalink }}&amp;media={{ share_image | img_url: '1024x1024' }}&amp;description={{ share_title | url_param_escape }}" class="ss-pinterest-color btn btn--small btn--share share-pinterest">
+        <span class="ss-share-network-content">
+				<i class="ss-network-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pinterest" viewBox="0 0 16 16"> <path d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0z"/> </svg></i>
+             </span>
+         </a>
+			<span class="ss-share-network-tooltip">Pinterest</span>
+    </li>
+  {% endif %}
+<!-- 			<li class="">
+				<a href="#" data-ss-ss-link="https://www.facebook.com/sharer.php?t=Effective%20Strategies%20for%20Managing%20Social%20Media%20Crises&amp;u=https%3A%2F%2Fsocialhospitality.com%2F2023%2F04%2Feffective-strategies-for-managing-social-media-crises-a-guide-to-best-practices%2F" class="ss-facebook-color" rel="nofollow noopener" data-ss-ss-network-id="facebook" data-ss-ss-post-id="25461" data-ss-ss-location="sidebar" data-ss-ss-permalink="https://socialhospitality.com/2023/04/effective-strategies-for-managing-social-media-crises-a-guide-to-best-practices/" data-ss-ss-type="share" data-has-api="true">
+						<span class="ss-share-network-content">
+							<i class="ss-network-icon"><svg class="ss-svg-icon" aria-hidden="true" role="img" focusable="false" width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M32 16.098C32 7.208 24.837 0 16 0S0 7.207 0 16.098C0 24.133 5.851 30.792 13.5 32V20.751H9.437v-4.653H13.5V12.55c0-4.034 2.389-6.263 6.043-6.263 1.751 0 3.582.315 3.582.315v3.961h-2.018c-1.987 0-2.607 1.241-2.607 2.514v3.02h4.438l-.71 4.653H18.5V32C26.149 30.792 32 24.133 32 16.098z"></path></svg></i>
+						</span>
+                    </a>
+					<span class="ss-share-network-tooltip">Facebook</span>
+			</li>
+			<li class="">
+                  <a href="#" data-ss-ss-link="https://twitter.com/intent/tweet?text=Effective+Strategies+for+Managing+Social+Media+Crises&amp;url=https%3A%2F%2Fsocialhospitality.com%2F2023%2F04%2Feffective-strategies-for-managing-social-media-crises-a-guide-to-best-practices%2F" class="ss-twitter-color" rel="nofollow noopener" data-ss-ss-network-id="twitter" data-ss-ss-post-id="25461" data-ss-ss-location="sidebar" data-ss-ss-permalink="https://socialhospitality.com/2023/04/effective-strategies-for-managing-social-media-crises-a-guide-to-best-practices/" data-ss-ss-type="share">
+					<span class="ss-share-network-content">
+							<i class="ss-network-icon"><svg class="ss-svg-icon" aria-hidden="true" role="img" focusable="false" width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M28.75 9.5c0 0.25 0 0.563 0 0.813 0 8.688-6.625 18.688-18.688 18.688-3.688 0-7.188-1.063-10.063-2.938 0.5 0.063 1.063 0.063 1.563 0.063 3.063 0 5.938-1 8.188-2.813-2.875 0-5.313-1.938-6.188-4.563 0.438 0.125 0.813 0.125 1.25 0.125 0.625 0 1.188-0.063 1.75-0.188-3-0.625-5.25-3.313-5.25-6.438 0-0.063 0-0.063 0-0.125 0.875 0.5 1.875 0.813 2.938 0.813-1.75-1.125-2.938-3.188-2.938-5.438 0-1.188 0.375-2.313 0.938-3.313 3.188 4 8.063 6.625 13.5 6.875-0.125-0.5-0.188-1-0.188-1.5 0-3.625 2.938-6.563 6.563-6.563 1.938 0 3.625 0.813 4.813 2.063 1.5-0.313 2.938-0.813 4.188-1.563-0.5 1.5-1.563 2.813-2.875 3.625 1.313-0.188 2.563-0.5 3.75-1.063-0.875 1.313-2 2.5-3.25 3.438z"></path></svg></i>
+                    </span>
+                </a>
+				<span class="ss-share-network-tooltip">Twitter</span>
+			</li>
+			<li class="">
+                <a href="#" data-ss-ss-link="https://www.linkedin.com/shareArticle?title=Effective%20Strategies%20for%20Managing%20Social%20Media%20Crises&amp;url=https%3A%2F%2Fsocialhospitality.com%2F2023%2F04%2Feffective-strategies-for-managing-social-media-crises-a-guide-to-best-practices%2F&amp;mini=true" class="ss-linkedin-color" rel="nofollow noopener" data-ss-ss-network-id="linkedin" data-ss-ss-post-id="25461" data-ss-ss-location="sidebar" data-ss-ss-permalink="https://socialhospitality.com/2023/04/effective-strategies-for-managing-social-media-crises-a-guide-to-best-practices/" data-ss-ss-type="share">
+						<span class="ss-share-network-content">
+							<i class="ss-network-icon"><svg class="ss-svg-icon" aria-hidden="true" role="img" focusable="false" width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M29.632 0C30.939 0 32 1.032 32 2.307v27.384C32 30.966 30.939 32 29.632 32H2.36C1.058 32 0 30.966 0 29.69V2.308C0 1.032 1.058 0 2.36 0h27.272zM9.149 11.638h-4.77V27h4.77V11.638zm12.133-.382c-2.318 0-3.874 1.273-4.509 2.48h-.066v-2.098H12.14V27h4.76v-7.599c0-2.004.378-3.946 2.858-3.946 2.447 0 2.475 2.29 2.475 4.072V27H27v-8.423c0-4.138-.893-7.32-5.718-7.32v-.001zM6.764 4A2.766 2.766 0 004 6.769a2.765 2.765 0 105.528 0A2.767 2.767 0 006.765 4h-.001z"></path></svg></i>
+						</span>
+			</a>
+					<span class="ss-share-network-tooltip">LinkedIn</span>
+						</li> -->
+<!-- 				<li>
+					<a href="#" class="ss-share-all ss-shareall-color" rel="nofollow noopener">
+						<span class="ss-share-network-content">
+							<i class="ss-network-icon"><svg class="ss-svg-icon" aria-hidden="true" role="img" focusable="false" width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M25.333 15.333h-8v-8c0-0.733-0.6-1.333-1.333-1.333s-1.333 0.6-1.333 1.333v8h-8c-0.733 0-1.333 0.6-1.333 1.333s0.6 1.333 1.333 1.333h8v8c0 0.733 0.6 1.333 1.333 1.333s1.333-0.6 1.333-1.333v-8h8c0.733 0 1.333-0.6 1.333-1.333s-0.6-1.333-1.333-1.333z"></path></svg></i>
+					</span>
+					     </a>
+						<span class="ss-share-network-tooltip">More Networks</span>
+					 </li>
+					</ul>
+				<span class="ss-hide-floating-bar">					
+					<svg width="5" height="8" viewBox="0 0 5 8">
+						<path d="M4.25 0.75L0.75 4L4.25 7.25"></path>
+					</svg>
+				</span> -->
+            </div>
+		</div>
+
+
+
+</body>
+                 
+</html>

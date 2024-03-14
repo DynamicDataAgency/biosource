@@ -1,0 +1,202 @@
+<div class="page-width">
+  {% if section.settings.title != blank %}
+    <div class="section-header text-center">
+      <h2>{{ section.settings.title | escape }}</h2>
+    </div>
+  {% endif %}
+
+  {% if section.blocks.size > 0 %}
+    <ul class="logo-bar{% if section.settings.title_enable %} logo-bar--large{% endif %}">
+      {% for block in section.blocks %}
+        <li class="logo-bar__item{% if section.settings.title_enable %} logo-bar__item--large{% endif %}" {{ block.shopify_attributes }}>
+          
+          <div>
+            <h2>{{ block.settings.mainhead }}</h2>
+          <h4>{{ block.settings.head }}</h4>
+            <p>{{ block.settings.par }}</p>
+          </div>
+          
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if section.blocks.size == 0 %}
+    {% include 'no-blocks' %}
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": {
+    "cs": "Seznam log",
+    "da": "Logoliste",
+    "de": "Logo-Liste",
+    "en": "text list",
+    "es": "Lista de logos",
+    "fi": "Logoluettelo",
+    "fr": "Liste des logos",
+    "it": "Elenco loghi",
+    "ja": "ロゴリスト",
+    "ko": "로고 목록",
+    "nb": "Logoliste",
+    "nl": "Logolijst",
+    "pl": "Lista logo",
+    "pt-BR": "Lista de logotipos",
+    "pt-PT": "Lista de logótipos",
+    "sv": "Logotyplista",
+    "th": "รายการโลโก้",
+    "tr": "Logo listesi",
+    "vi": "Danh sách logo",
+    "zh-CN": "logo 列表",
+    "zh-TW": "標誌清單"
+  },
+  "class": "index-section",
+  "max_blocks": 20,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": {
+        "cs": "Nadpis",
+        "da": "Overskrift",
+        "de": "Titel",
+        "en": "Heading",
+        "es": "Título",
+        "fi": "Otsake",
+        "fr": "En-tête",
+        "it": "Heading",
+        "ja": "見出し",
+        "ko": "제목",
+        "nb": "Overskrift",
+        "nl": "Kop",
+        "pl": "Nagłówek",
+        "pt-BR": "Título",
+        "pt-PT": "Título",
+        "sv": "Rubrik",
+        "th": "ส่วนหัว",
+        "tr": "Başlık",
+        "vi": "Tiêu đề",
+        "zh-CN": "标题",
+        "zh-TW": "標題"
+      },
+      "default": {
+        "cs": "Seznam log",
+        "da": "Logoliste",
+        "de": "Logo-Liste",
+        "en": "Logo list",
+        "es": "Lista de logos",
+        "fi": "Logoluettelo",
+        "fr": "Liste de logos",
+        "it": "Elenco loghi",
+        "ja": "ロゴリスト",
+        "ko": "로고 목록",
+        "nb": "Logoliste",
+        "nl": "Logolijst",
+        "pl": "Lista logo",
+        "pt-BR": "Lista de logotipos",
+        "pt-PT": "Lista de logótipos",
+        "sv": "Logotyplista",
+        "th": "รายการโลโก้",
+        "tr": "Logo listesi",
+        "vi": "Danh sách logo",
+        "zh-CN": "logo 列表",
+        "zh-TW": "標誌清單"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": {
+        
+        "en": "text"
+        
+      },
+      "settings": [
+        
+        
+{
+          "type": "text",
+          "id": "mainhead",
+          "label":"percentage"
+},
+{
+          "type": "text",
+          "id": "head",
+          "label":"heading here"
+},
+{
+          "type": "richtext",
+          "id": "par",
+          "label":"paragraph here"
+}
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": {
+        "cs": "Seznam log",
+        "da": "Logoliste",
+        "de": "Logo-Liste",
+        "en": "text",
+        "es": "Lista de logos",
+        "fi": "Logoluettelo",
+        "fr": "Liste de logos",
+        "it": "Elenco loghi",
+        "ja": "ロゴリスト",
+        "ko": "로고 목록",
+        "nb": "Logoliste",
+        "nl": "Logolijst",
+        "pl": "Lista logo",
+        "pt-BR": "Lista de logotipos",
+        "pt-PT": "Lista de logótipos",
+        "sv": "Logotyplista",
+        "th": "รายการโลโก้",
+        "tr": "Logo listesi",
+        "vi": "Danh sách logo",
+        "zh-CN": "logo 列表",
+        "zh-TW": "標誌清單"
+      },
+      "category": {
+        "cs": "Obrázek",
+        "da": "Billede",
+        "de": "Foto",
+        "en": "Image",
+        "es": "Imagen",
+        "fi": "Kuva",
+        "fr": "Image",
+        "it": "Immagine",
+        "ja": "画像",
+        "ko": "이미지",
+        "nb": "Bilde",
+        "nl": "Afbeelding",
+        "pl": "Obraz",
+        "pt-BR": "Imagem",
+        "pt-PT": "Imagem",
+        "sv": "Bild",
+        "th": "รูปภาพ",
+        "tr": "Görsel",
+        "vi": "Hình ảnh",
+        "zh-CN": "图片",
+        "zh-TW": "圖片"
+      },
+      "blocks": [
+        {
+          "type": "text"
+        },
+        {
+          "type": "text"
+        },
+        {
+          "type": "text"
+        },
+        {
+          "type": "text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
