@@ -669,7 +669,7 @@
   {% if blog.handle == 'latest-posts-2' %}
     <p style="color: white;">Test</p>
   
-      {% paginate blog.articles by 13 %}
+      {% paginate blogs.all.articles by 13 %}
         <!-- --firstpost--- -->
         {% assign newest_post = blog.articles.first %}
         <div class="list-item-blogpost-1">
