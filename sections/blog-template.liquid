@@ -678,8 +678,7 @@
       {% assign all_articles = all_articles | concat: blogs[handle].articles %}
     {% endfor %}
     {% assign sorted_articles = all_articles | sort: 'published_at' | reverse %}
-   
-    {% for blog in blogs %}
+
 
       {% paginate sorted_articles   by 13 %}
         <!-- --firstpost--- -->
@@ -1103,7 +1102,7 @@
           {% include 'pagination', paginate: paginate %}
         {%- endif -%}
       {% endpaginate %}
-    {%endfor%}    
+
   {% endif %}
 
   {% paginate blog.articles by 13 %}
