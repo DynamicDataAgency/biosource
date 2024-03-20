@@ -667,7 +667,7 @@
 
 <div class="page-width">
   {% if blog.handle == 'latest-posts-2' %}
-    <p style="color: white;">Test</p>
+    <p style="color: white;">Test2</p>
 
     {% assign all_articles = '' | split: '' %}
     {% assign blog_handles = 'health-well-being,weight-loss,quick-tips,recipes,weight-loss,diet-meal-plans,exercise,guides,lifestyle,nutrition'
@@ -677,430 +677,425 @@
       {% assign all_articles = all_articles | concat: blogs[handle].articles %}
     {% endfor %}
     {% assign blog = all_articles %}
-   
-      {% paginate all_articles by 13 %}
-        <!-- --firstpost--- -->
-        {% assign newest_post = blog.articles.first %}
-        <div class="list-item-blogpost-1">
-          <a href="{{ newest_post.url }}" class="article__link article_link_custom">
-            {% if newest_post.image %}
-              {% capture img_id %}ArticleImage-{{ newest_post.image.id }}{% endcapture %}
-              {% capture img_wrapper_id %}ArticleImageWrapper-{{ newest_post.image.id }}{% endcapture %}
-              {%- assign img_url = newest_post.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
 
-              {% include 'image-style',
-                image: newest_post.image,
-                height: 245,
-                wrapper_id: img_wrapper_id,
-                img_id: img_id
-              %}
+    {% paginate all_articles by 13 %}
+      <!-- --firstpost--- -->
+      {% assign newest_post = blog.articles.first %}
+      <div class="list-item-blogpost-1">
+        <a href="{{ newest_post.url }}" class="article__link article_link_custom">
+          {% if newest_post.image %}
+            {% capture img_id %}ArticleImage-{{ newest_post.image.id }}{% endcapture %}
+            {% capture img_wrapper_id %}ArticleImageWrapper-{{ newest_post.image.id }}{% endcapture %}
+            {%- assign img_url = newest_post.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
 
-              <div id="" class="first-article__grid-image-wrapper article__grid-image-wrapper js">
-                <div
-                  class="article__grid-image-container first-article__grid-image-container"
-                  style="padding-top:{{ 1 | divided_by: newest_post.image.aspect_ratio | times: 100 }}%;"
-                  data-image-loading-animation
+            {% include 'image-style',
+              image: newest_post.image,
+              height: 245,
+              wrapper_id: img_wrapper_id,
+              img_id: img_id
+            %}
+
+            <div id="" class="first-article__grid-image-wrapper article__grid-image-wrapper js">
+              <div
+                class="article__grid-image-container first-article__grid-image-container"
+                style="padding-top:{{ 1 | divided_by: newest_post.image.aspect_ratio | times: 100 }}%;"
+                data-image-loading-animation
+              >
+                <img
+                  id=""
+                  class="first-article__grid-image article__grid-image lazyload"
+                  data-src="{{ img_url }}"
+                  data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                  data-aspectratio="{{ newest_post.image.aspect_ratio }}"
+                  data-sizes="auto"
+                  alt=""
                 >
-                  <img
-                    id=""
-                    class="first-article__grid-image article__grid-image lazyload"
-                    data-src="{{ img_url }}"
-                    data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
-                    data-aspectratio="{{ newest_post.image.aspect_ratio }}"
-                    data-sizes="auto"
-                    alt=""
-                  >
-                </div>
               </div>
+            </div>
 
-              <noscript>
-                <div class="article__grid-image-wrapper">
-                  {{ newest_post | img_url: '345x345', scale: 2 | img_tag: newest_post.title, 'article__grid-image' }}
-                </div>
-              </noscript>
-            {% endif %}
-
-            <a href="{{ newest_post.url }}">
-              <h2 class="blogpost-title">
-                {{ newest_post.title | escape }}
-              </h2>
-            </a>
-            {% if newest_post.tags.size > 0 %}
-              <div class="blog-inner-tag-label">
-                <ul class="list--inline" aria-label="{{ 'blogs.newest_post.tags' | t }}">
-                  {% for tag in newest_post.tags %}
-                    <li>
-                      <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>
-                    </li>
-                  {% endfor %}
-                </ul>
+            <noscript>
+              <div class="article__grid-image-wrapper">
+                {{ newest_post | img_url: '345x345', scale: 2 | img_tag: newest_post.title, 'article__grid-image' }}
               </div>
-            {% endif %}
-            {% comment %}
-              {% if section.settings.blog_show_author %}
-                <div class="blogpost-title">{{ 'blogs.article.by_author' | t: author: newest_post.author }}</div>
-              {% endif %}
-            {% endcomment %}
+            </noscript>
+          {% endif %}
+
+          <a href="{{ newest_post.url }}">
+            <h2 class="blogpost-title">
+              {{ newest_post.title | escape }}
+            </h2>
           </a>
-        </div>
+          {% if newest_post.tags.size > 0 %}
+            <div class="blog-inner-tag-label">
+              <ul class="list--inline" aria-label="{{ 'blogs.newest_post.tags' | t }}">
+                {% for tag in newest_post.tags %}
+                  <li>
+                    <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endif %}
+          {% comment %}
+            {% if section.settings.blog_show_author %}
+              <div class="blogpost-title">{{ 'blogs.article.by_author' | t: author: newest_post.author }}</div>
+            {% endif %}
+          {% endcomment %}
+        </a>
+      </div>
 
-        <!-- ----- -->
+      <!-- ----- -->
 
-        {% comment %}<div class="blogs-archive article_main_div">{% endcomment %}
+      {% comment %}<div class="blogs-archive article_main_div">{% endcomment %}
+      <div class="">
         <div class="">
-          <div class="">
-            {% if section.settings.layout == 'grid' %}
-              {% comment %}  <ul class="grid grid--uniform grid--blog">{% endcomment %}
-              <ul class="grid grid--uniform grid--blog ul-list-blogpost">
-                {% for article in blog.articles %}
-                  {% unless forloop.first %}
-                    {% comment %}<li class="grid__item medium-up--one-third">{% endcomment %}
-                    <li class="list-item-blogpost">
-                      <a href="{{ article.url }}" class="article__link article_link_custom">
-                        {% if article.image %}
-                          {% capture img_id %}ArticleImage-{{ article.image.id }}{% endcapture %}
-                          {% capture img_wrapper_id %}ArticleImageWrapper-{{ article.image.id }}{% endcapture %}
-                          {%- assign img_url = article.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+          {% if section.settings.layout == 'grid' %}
+            {% comment %}  <ul class="grid grid--uniform grid--blog">{% endcomment %}
+            <ul class="grid grid--uniform grid--blog ul-list-blogpost">
+              {% for article in blog.articles %}
+                {% unless forloop.first %}
+                  {% comment %}<li class="grid__item medium-up--one-third">{% endcomment %}
+                  <li class="list-item-blogpost">
+                    <a href="{{ article.url }}" class="article__link article_link_custom">
+                      {% if article.image %}
+                        {% capture img_id %}ArticleImage-{{ article.image.id }}{% endcapture %}
+                        {% capture img_wrapper_id %}ArticleImageWrapper-{{ article.image.id }}{% endcapture %}
+                        {%- assign img_url = article.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
 
-                          {% include 'image-style',
-                            image: article.image,
-                            height: 345,
-                            wrapper_id: img_wrapper_id,
-                            img_id: img_id
-                          %}
-                          <div id="{{ img_wrapper_id }}" class="article__grid-image-wrapper js">
-                            <div
-                              class="article__grid-image-container"
-                              style="padding-top:{{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;"
-                              data-image-loading-animation
+                        {% include 'image-style',
+                          image: article.image,
+                          height: 345,
+                          wrapper_id: img_wrapper_id,
+                          img_id: img_id
+                        %}
+                        <div id="{{ img_wrapper_id }}" class="article__grid-image-wrapper js">
+                          <div
+                            class="article__grid-image-container"
+                            style="padding-top:{{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;"
+                            data-image-loading-animation
+                          >
+                            <img
+                              id="{{ img_id }}"
+                              class="article__grid-image lazyload"
+                              data-src="{{ img_url }}"
+                              data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                              data-aspectratio="{{ article.image.aspect_ratio }}"
+                              data-sizes="auto"
+                              alt=""
                             >
-                              <img
-                                id="{{ img_id }}"
-                                class="article__grid-image lazyload"
-                                data-src="{{ img_url }}"
-                                data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
-                                data-aspectratio="{{ article.image.aspect_ratio }}"
-                                data-sizes="auto"
-                                alt=""
-                              >
-                            </div>
                           </div>
-                          <noscript>
-                            <div class="article__grid-image-wrapper">
-                              {{
-                                article
-                                | img_url: '345x345', scale: 2
-                                | img_tag: article.title, 'article__grid-image'
-                              }}
-                            </div>
-                          </noscript>
-                        {% endif %}
-                      </a>
+                        </div>
+                        <noscript>
+                          <div class="article__grid-image-wrapper">
+                            {{ article | img_url: '345x345', scale: 2 | img_tag: article.title, 'article__grid-image' }}
+                          </div>
+                        </noscript>
+                      {% endif %}
+                    </a>
 
-                      <a href="{{ article.url }}" class="">
-                        <h2 class="blogpost-title">
-                          {{ article.title | escape }}
-                        </h2>
-                      </a>
-                      {% if article.tags.size > 0 %}
-                        {% comment %}<div class="article__tags rte blog-inner-tag">  {% endcomment %}
-                        <div class="">
-                          <div class="blog-inner-tag-label">
-                            <ul class="list--inline" aria-label="{{ 'blogs.article.tags' | t }}">
-                              {% for tag in article.tags %}
+                    <a href="{{ article.url }}" class="">
+                      <h2 class="blogpost-title">
+                        {{ article.title | escape }}
+                      </h2>
+                    </a>
+                    {% if article.tags.size > 0 %}
+                      {% comment %}<div class="article__tags rte blog-inner-tag">  {% endcomment %}
+                      <div class="">
+                        <div class="blog-inner-tag-label">
+                          <ul class="list--inline" aria-label="{{ 'blogs.article.tags' | t }}">
+                            {% for tag in article.tags %}
+                              <li>
+                                <a href="{{ blog.url }}/tagged/{{ tag | handle }}" class="article__grid-tag">
+                                  {{- tag -}}
+                                </a>
+                              </li>
+                            {% endfor %}
+                          </ul>
+                        </div>
+                      </div>
+                    {% endif %}
+                    {% comment %}
+                      {% if section.settings.blog_show_author %}
+                        <div class="blogpost-title" style="">{{ 'blogs.article.by_author' | t: author: article.author }}</div>
+                      {% endif %}
+                    {% endcomment %}
+
+                    {% comment %}
+                      <div class="article__grid-meta{% if article.image %} article__grid-meta--has-image{% endif %}">
+
+
+                        {% if section.settings.blog_show_date %}
+                          <span class="article__date">
+                            {{ article.published_at | time_tag: format: 'date' }}
+                          </span>
+                        {% endif %}
+
+                        <div class="rte article__grid-excerpt">
+                          {% if article.excerpt.size > 0 %}
+                            {{ article.excerpt }}
+                          {% else %}
+                            {{ article.content | strip_html | truncate: 150 }}
+                          {% endif %}
+                        </div>
+
+
+
+                        <ul class="list--inline article__meta-buttons">
+                          <li>
+                            <a href="{{ article.url }}" class="btn btn--tertiary btn--small" aria-label="{{ 'blogs.article.read_more_title' | t: title: article.title }}">
+                              {{ 'blogs.article.read_more' | t }}
+                            </a>
+                          </li>
+
+                          {% if blog.comments_enabled? and article.comments_count > 0 %}
+                            <li>
+                              <a href="{{ article.url }}#comments" class="article__comment-count btn btn--tertiary btn--small">
+                                {{ 'blogs.comments.comments_with_count' | t: count: article.comments_count }}
+                              </a>
+                            </li>
+                          {% endif %}
+                        </ul>
+                      </div>
+                    {% endcomment %}
+                  </li>
+                {% endunless %}
+              {% endfor %}
+            </ul>
+            </div>
+          {% else %}
+            <ul class="blog-list-view">
+              {% for article in blog.articles %}
+                {% unless forloop.first %}
+                  <li class="border-top">
+                    <div class="page-width">
+                      <div class="grid">
+                        <div class="grid__item medium-up--five-sixths medium-up--push-one-twelfth">
+                          <div class="article-listing">
+                            <h2 class="article__title h3">
+                              <a href="{{ article.url }}">{{ article.title }}</a>
+                            </h2>
+                            {% if section.settings.blog_show_author %}
+                              <span class="article__author">
+                                {{- 'blogs.article.by_author' | t: author: article.author -}}
+                              </span>
+                            {% endif %}
+
+                            {% if section.settings.blog_show_date %}
+                              <span class="article__date">
+                                {{ article.published_at | time_tag: format: 'date' }}
+                              </span>
+                            {% endif %}
+
+                            {% if article.image %}
+                              {% capture img_id %}ArticleImage-{{ article.image.id }}{% endcapture %}
+                              {% capture img_wrapper_id %}ArticleImageWrapper-{{ article.image.id }}{% endcapture %}
+                              {%- assign img_url = article.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+                              {% include 'image-style',
+                                image: article.image,
+                                height: 600,
+                                wrapper_id: img_wrapper_id,
+                                img_id: img_id
+                              %}
+
+                              <div id="{{ img_wrapper_id }}" class="article__list-image-wrapper js">
+                                <a
+                                  href="{{ article.url }}"
+                                  style="padding-top:{{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;"
+                                  class="article__list-image-container"
+                                  data-image-loading-animation
+                                >
+                                  <img
+                                    id="{{ img_id }}"
+                                    class="article__list-image lazyload"
+                                    data-src="{{ img_url }}"
+                                    data-widths="[180, 360, 540, 720, 905, 1090, 1296, 1512, 1728, 2048]"
+                                    data-aspectratio="{{ article.image.aspect_ratio }}"
+                                    data-sizes="auto"
+                                    alt=""
+                                  >
+                                </a>
+                              </div>
+
+                              <noscript>
+                                <p>
+                                  <a href="{{ article.url }}">
+                                    {{ article | img_url: '455x300', scale: 2 | img_tag: article.title }}
+                                  </a>
+                                </p>
+                              </noscript>
+                            {% endif %}
+
+                            <div class="rte">
+                              {% if article.excerpt.size > 0 %}
+                                {{ article.excerpt }}
+                              {% else %}
+                                {{ article.content | strip_html | truncate: 150 }}
+                              {% endif %}
+                            </div>
+
+                            {% if article.tags.size > 0 %}
+                              <div class="article__tags article__tags--list rte">
+                                {{ 'blogs.article.posted_in' | t }}
+                                {% for tag in article.tags %}
+                                  <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>
+                                  {%- unless forloop.last %}, {% endunless %}
+                                {% endfor %}
+                              </div>
+                            {% endif %}
+
+                            <ul class="list--inline article__meta-buttons">
+                              <li>
+                                <a
+                                  href="{{ article.url }}"
+                                  class="btn btn--tertiary btn--small"
+                                  aria-label="{{ 'blogs.article.read_more_title' | t: title: article.title }}"
+                                >
+                                  {{ 'blogs.article.read_more' | t }}
+                                </a>
+                              </li>
+
+                              {% if blog.comments_enabled? and article.comments_count > 0 %}
                                 <li>
-                                  <a href="{{ blog.url }}/tagged/{{ tag | handle }}" class="article__grid-tag">
-                                    {{- tag -}}
+                                  <a
+                                    href="{{ article.url }}#comments"
+                                    class="article__comment-count btn btn--tertiary btn--small"
+                                  >
+                                    {{ 'blogs.comments.comments_with_count' | t: count: article.comments_count }}
                                   </a>
                                 </li>
-                              {% endfor %}
+                              {% endif %}
                             </ul>
                           </div>
                         </div>
-                      {% endif %}
-                      {% comment %}
-                        {% if section.settings.blog_show_author %}
-                          <div class="blogpost-title" style="">{{ 'blogs.article.by_author' | t: author: article.author }}</div>
-                        {% endif %}
-                      {% endcomment %}
-
-                      {% comment %}
-                        <div class="article__grid-meta{% if article.image %} article__grid-meta--has-image{% endif %}">
-
-
-                          {% if section.settings.blog_show_date %}
-                            <span class="article__date">
-                              {{ article.published_at | time_tag: format: 'date' }}
-                            </span>
-                          {% endif %}
-
-                          <div class="rte article__grid-excerpt">
-                            {% if article.excerpt.size > 0 %}
-                              {{ article.excerpt }}
-                            {% else %}
-                              {{ article.content | strip_html | truncate: 150 }}
-                            {% endif %}
-                          </div>
-
-
-
-                          <ul class="list--inline article__meta-buttons">
-                            <li>
-                              <a href="{{ article.url }}" class="btn btn--tertiary btn--small" aria-label="{{ 'blogs.article.read_more_title' | t: title: article.title }}">
-                                {{ 'blogs.article.read_more' | t }}
-                              </a>
-                            </li>
-
-                            {% if blog.comments_enabled? and article.comments_count > 0 %}
-                              <li>
-                                <a href="{{ article.url }}#comments" class="article__comment-count btn btn--tertiary btn--small">
-                                  {{ 'blogs.comments.comments_with_count' | t: count: article.comments_count }}
-                                </a>
-                              </li>
-                            {% endif %}
-                          </ul>
-                        </div>
-                      {% endcomment %}
-                    </li>
-                  {% endunless %}
-                {% endfor %}
-              </ul>
-              </div>
-            {% else %}
-              <ul class="blog-list-view">
-                {% for article in blog.articles %}
-                  {% unless forloop.first %}
-                    <li class="border-top">
-                      <div class="page-width">
-                        <div class="grid">
-                          <div class="grid__item medium-up--five-sixths medium-up--push-one-twelfth">
-                            <div class="article-listing">
-                              <h2 class="article__title h3">
-                                <a href="{{ article.url }}">{{ article.title }}</a>
-                              </h2>
-                              {% if section.settings.blog_show_author %}
-                                <span class="article__author">
-                                  {{- 'blogs.article.by_author' | t: author: article.author -}}
-                                </span>
-                              {% endif %}
-
-                              {% if section.settings.blog_show_date %}
-                                <span class="article__date">
-                                  {{ article.published_at | time_tag: format: 'date' }}
-                                </span>
-                              {% endif %}
-
-                              {% if article.image %}
-                                {% capture img_id %}ArticleImage-{{ article.image.id }}{% endcapture %}
-                                {% capture img_wrapper_id %}ArticleImageWrapper-{{ article.image.id }}{% endcapture %}
-                                {%- assign img_url = article.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
-
-                                {% include 'image-style',
-                                  image: article.image,
-                                  height: 600,
-                                  wrapper_id: img_wrapper_id,
-                                  img_id: img_id
-                                %}
-
-                                <div id="{{ img_wrapper_id }}" class="article__list-image-wrapper js">
-                                  <a
-                                    href="{{ article.url }}"
-                                    style="padding-top:{{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;"
-                                    class="article__list-image-container"
-                                    data-image-loading-animation
-                                  >
-                                    <img
-                                      id="{{ img_id }}"
-                                      class="article__list-image lazyload"
-                                      data-src="{{ img_url }}"
-                                      data-widths="[180, 360, 540, 720, 905, 1090, 1296, 1512, 1728, 2048]"
-                                      data-aspectratio="{{ article.image.aspect_ratio }}"
-                                      data-sizes="auto"
-                                      alt=""
-                                    >
-                                  </a>
-                                </div>
-
-                                <noscript>
-                                  <p>
-                                    <a href="{{ article.url }}">
-                                      {{ article | img_url: '455x300', scale: 2 | img_tag: article.title }}
-                                    </a>
-                                  </p>
-                                </noscript>
-                              {% endif %}
-
-                              <div class="rte">
-                                {% if article.excerpt.size > 0 %}
-                                  {{ article.excerpt }}
-                                {% else %}
-                                  {{ article.content | strip_html | truncate: 150 }}
-                                {% endif %}
-                              </div>
-
-                              {% if article.tags.size > 0 %}
-                                <div class="article__tags article__tags--list rte">
-                                  {{ 'blogs.article.posted_in' | t }}
-                                  {% for tag in article.tags %}
-                                    <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>
-                                    {%- unless forloop.last %}, {% endunless %}
-                                  {% endfor %}
-                                </div>
-                              {% endif %}
-
-                              <ul class="list--inline article__meta-buttons">
-                                <li>
-                                  <a
-                                    href="{{ article.url }}"
-                                    class="btn btn--tertiary btn--small"
-                                    aria-label="{{ 'blogs.article.read_more_title' | t: title: article.title }}"
-                                  >
-                                    {{ 'blogs.article.read_more' | t }}
-                                  </a>
-                                </li>
-
-                                {% if blog.comments_enabled? and article.comments_count > 0 %}
-                                  <li>
-                                    <a
-                                      href="{{ article.url }}#comments"
-                                      class="article__comment-count btn btn--tertiary btn--small"
-                                    >
-                                      {{ 'blogs.comments.comments_with_count' | t: count: article.comments_count }}
-                                    </a>
-                                  </li>
-                                {% endif %}
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
                       </div>
-                    </li>
-                  {% endunless %}
-                {% endfor %}
-              </ul>
-            {% endif %}
-          </div>
-          {% comment %}
-            <div class="blogs-archive-right">
-                <div id="sidebar" class="blog-single__sidebar col-md-3 col-xs-12  pull-right">
-            <div id="secondary" class="widget-area" role="complementary">
-              <aside id="custom_html-2" class="widget_text widget widget_custom_html"><h4 class="widget-title">Subscribe</h4><div class="textwidget custom-html-widget"><!-- Begin MailChimp Signup Form -->
-            <div id="mc_embed_signup">
-                {% form 'customer', id: formId, novalidate: 'novalidate', class: 'contact-form form-single-field' %}
-                  {%- if form.posted_successfully? -%}
-                    <p class="form-message form-message--success" tabindex="-1" data-form-status>
-                      {{ 'general.newsletter_form.confirmation' | t }}
-
-            msg successful
-                    </p>
-                  {%- endif -%}
-                  <input type="hidden" name="contact[tags]" value="newsletter">
-                  <div class="input-group {% if form.errors %} input-group--error{% endif %}">
-                    <input type="email"
-                      name="contact[email]"
-                      id="{{ formId }}-email"
-                      class="input-group__field{% if form.errors %} input--error{% endif %}"
-                      value="{{ form.email }}"
-                      placeholder="{{ 'general.newsletter_form.email_placeholder' | t }}"
-                      aria-label="{{ 'general.newsletter_form.email_placeholder' | t }}"
-                      aria-required="true"
-                      autocorrect="off"
-                      autocapitalize="off"
-                      {% if form.errors %}
-                        aria-invalid="true"
-                        aria-describedby="{{ formId }}-email-error"
-                        data-form-status
-                      {% endif %}
-                      >
-                    <span class="input-group__btn">
-                      <button type="submit" class="btn" name="commit">
-                        <span>{{ 'general.newsletter_form.submit' | t }}</span>
-                      </button>
-                    </span>
-                  </div>
-                  {%- if form.errors contains 'email' -%}
-                    <span id="{{ formId }}-email-error" class="input-error-message">
-                      <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
-                      {% include 'icon-error' %}
-                      <span>{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.</span>
-                    </span>
-                  {%- endif -%}
-                {% endform %}
-            </div>
-
-            <!--End mc_embed_signup-->
-                </div></aside>
-
-             <aside id="categories-4" class="widget widget_categories">
-              <!--<h4 class="widget-title">Search by Blog Category</h4>-->
-                <form action="https://socialhospitality.com" method="get">
-                  <label class="screen-reader-text" for="cat">Search by Blog Category</label>
-                  <select name="cat" id="cat" class="postform">
-
-                    {% for link in linklists.blog-categores.links %}
-                     <option class="level-1" value="{{ link.url }}"> <a href="{{ link.url }}">{{ link.title }}</a></option>
-                    {% endfor %}
-                 </select>
-                </form>
-
-            <script type="text/javascript">
-
-            jQuery(function($) {
-              $('select').on('change', function() {
-                var url = $(this).val();
-                if (url) {
-                  window.location = url;
-                }
-                return false;
-              });
-            });
-            </script>
-             </aside>
-
-            <aside id="search-5" class="widget widget_search">
-              <div class="search-bar__interior">
-                <div class="search-form__container" data-search-form-container>
-                  <form class="search-form search-bar__form" action="{{ routes.search_url }}" method="get" role="search">
-                    <label class="screen-reader-text">Search for:</label>
-                    <div class="search-form__input-wrapper">
-                      <input
-                        type="text"
-                        name="q"
-                        placeholder="{{ 'general.search.placeholder' | t }}"
-                        role="combobox"
-                        aria-autocomplete="list"
-                        aria-owns="predictive-search-results"
-                        aria-expanded="false"
-                        aria-label="{{ 'general.search.placeholder' | t }}"
-                        aria-haspopup="listbox"
-                        class="search-form__input search-bar__input"
-                        data-predictive-search-drawer-input
-                      />
-                      <input type="hidden" name="options[prefix]" value="last" aria-hidden="true" />
-                      <div class="predictive-search-wrapper predictive-search-wrapper--drawer" data-predictive-search-mount="drawer"></div>
                     </div>
-
-                    <button class="search-bar__submit search-form__submit"
-                      type="submit"
-                      data-search-form-submit>
-                      {% include 'icon-search' %}
-                      <span class="icon__fallback-text">{{ 'general.search.submit' | t }}</span>
-                    </button>
-                  </form>
-                </div>
-              </div>
-            </aside>
-            </div>
-            </div>
-            </div>
-          {% endcomment %}
+                  </li>
+                {% endunless %}
+              {% endfor %}
+            </ul>
+          {% endif %}
         </div>
+        {% comment %}
+          <div class="blogs-archive-right">
+              <div id="sidebar" class="blog-single__sidebar col-md-3 col-xs-12  pull-right">
+          <div id="secondary" class="widget-area" role="complementary">
+            <aside id="custom_html-2" class="widget_text widget widget_custom_html"><h4 class="widget-title">Subscribe</h4><div class="textwidget custom-html-widget"><!-- Begin MailChimp Signup Form -->
+          <div id="mc_embed_signup">
+              {% form 'customer', id: formId, novalidate: 'novalidate', class: 'contact-form form-single-field' %}
+                {%- if form.posted_successfully? -%}
+                  <p class="form-message form-message--success" tabindex="-1" data-form-status>
+                    {{ 'general.newsletter_form.confirmation' | t }}
 
-        {%- if paginate.pages > 1 -%}
-          {% include 'pagination', paginate: paginate %}
-        {%- endif -%}
-      {% endpaginate %}
+          msg successful
+                  </p>
+                {%- endif -%}
+                <input type="hidden" name="contact[tags]" value="newsletter">
+                <div class="input-group {% if form.errors %} input-group--error{% endif %}">
+                  <input type="email"
+                    name="contact[email]"
+                    id="{{ formId }}-email"
+                    class="input-group__field{% if form.errors %} input--error{% endif %}"
+                    value="{{ form.email }}"
+                    placeholder="{{ 'general.newsletter_form.email_placeholder' | t }}"
+                    aria-label="{{ 'general.newsletter_form.email_placeholder' | t }}"
+                    aria-required="true"
+                    autocorrect="off"
+                    autocapitalize="off"
+                    {% if form.errors %}
+                      aria-invalid="true"
+                      aria-describedby="{{ formId }}-email-error"
+                      data-form-status
+                    {% endif %}
+                    >
+                  <span class="input-group__btn">
+                    <button type="submit" class="btn" name="commit">
+                      <span>{{ 'general.newsletter_form.submit' | t }}</span>
+                    </button>
+                  </span>
+                </div>
+                {%- if form.errors contains 'email' -%}
+                  <span id="{{ formId }}-email-error" class="input-error-message">
+                    <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+                    {% include 'icon-error' %}
+                    <span>{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.</span>
+                  </span>
+                {%- endif -%}
+              {% endform %}
+          </div>
 
+          <!--End mc_embed_signup-->
+              </div></aside>
+
+           <aside id="categories-4" class="widget widget_categories">
+            <!--<h4 class="widget-title">Search by Blog Category</h4>-->
+              <form action="https://socialhospitality.com" method="get">
+                <label class="screen-reader-text" for="cat">Search by Blog Category</label>
+                <select name="cat" id="cat" class="postform">
+
+                  {% for link in linklists.blog-categores.links %}
+                   <option class="level-1" value="{{ link.url }}"> <a href="{{ link.url }}">{{ link.title }}</a></option>
+                  {% endfor %}
+               </select>
+              </form>
+
+          <script type="text/javascript">
+
+          jQuery(function($) {
+            $('select').on('change', function() {
+              var url = $(this).val();
+              if (url) {
+                window.location = url;
+              }
+              return false;
+            });
+          });
+          </script>
+           </aside>
+
+          <aside id="search-5" class="widget widget_search">
+            <div class="search-bar__interior">
+              <div class="search-form__container" data-search-form-container>
+                <form class="search-form search-bar__form" action="{{ routes.search_url }}" method="get" role="search">
+                  <label class="screen-reader-text">Search for:</label>
+                  <div class="search-form__input-wrapper">
+                    <input
+                      type="text"
+                      name="q"
+                      placeholder="{{ 'general.search.placeholder' | t }}"
+                      role="combobox"
+                      aria-autocomplete="list"
+                      aria-owns="predictive-search-results"
+                      aria-expanded="false"
+                      aria-label="{{ 'general.search.placeholder' | t }}"
+                      aria-haspopup="listbox"
+                      class="search-form__input search-bar__input"
+                      data-predictive-search-drawer-input
+                    />
+                    <input type="hidden" name="options[prefix]" value="last" aria-hidden="true" />
+                    <div class="predictive-search-wrapper predictive-search-wrapper--drawer" data-predictive-search-mount="drawer"></div>
+                  </div>
+
+                  <button class="search-bar__submit search-form__submit"
+                    type="submit"
+                    data-search-form-submit>
+                    {% include 'icon-search' %}
+                    <span class="icon__fallback-text">{{ 'general.search.submit' | t }}</span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </aside>
+          </div>
+          </div>
+          </div>
+        {% endcomment %}
+      </div>
+
+      {%- if paginate.pages > 1 -%}
+        {% include 'pagination', paginate: paginate %}
+      {%- endif -%}
+    {% endpaginate %}
   {% endif %}
 
   {% paginate blog.articles by 13 %}
