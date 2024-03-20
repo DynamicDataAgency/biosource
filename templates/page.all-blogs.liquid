@@ -358,7 +358,7 @@
           <div style="color: white;">
             {% assign blog_handles = 'health-well-being,weight-loss' | split: ',' %}
             {% for handle in blog_handles %}
-              {% for article in blogs[handle].articles limit: 1  %}
+              {% for article in blogs[handle].articles limit: 1 %}
                 {% assign article_handles = article_handles | append: article.handle | append: ',' %}
 
                 <h2 style="color: white;">{{ article.title }}</h2>
@@ -367,11 +367,17 @@
             {% endfor %}
 
             <p style="color: white;">Test v4</p>
-            {% assign all_articles = blogs.first.articles %}
-            {% assign sorted_articles = all_articles | sort: 'published_at' | reverse %}
-            {% for article in sorted_articles limit: 3 %}
-              <h2 style="color: white;">{{ article.title }}</h2>
-              <!-- You can add more details about each blog post here if needed -->
+ 
+            {% assign blog_handles = 'health-well-being,weight-loss' | split: ',' %}
+            {% for handle in blog_handles %}
+              {% for article in blogs[handle].articles  %}
+                
+                {% assign sorted_articles = all_articles | append: article.handle | sort: 'published_at' | reverse %}
+
+                <h2 style="color: white;">{{ sorted_article }}</h2>
+                <h2 style="color: white;">{{ article.title }}</h2>
+                <p style="color: white;">{{ article.published_at }}</p>
+              {% endfor %}
             {% endfor %}
           </div>
         </div>
