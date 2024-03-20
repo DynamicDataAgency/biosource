@@ -681,7 +681,7 @@
 
 
         <!-- --firstpost--- -->
-        {% assign newest_post = blog.articles.first %}
+        {% assign newest_post = sorted_articles.first %}
         <div class="list-item-blogpost-1">
           <a href="{{ newest_post.url }}" class="article__link article_link_custom">
             {% if newest_post.image %}
@@ -1097,9 +1097,7 @@
           {% endcomment %}
         </div>
 
-        {%- if paginate.pages > 1 -%}
-          {% include 'pagination', paginate: paginate %}
-        {%- endif -%}
+
 
 
   {% endif %}
