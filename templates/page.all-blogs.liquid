@@ -359,7 +359,7 @@
 
           {% assign blog_handles = 'health-well-being,weight-loss' | split: ',' %}
           {% for handle in blog_handles %}
-            {% for article in blogs[handle].articles limit:5 %}
+            {% for article in blogs[handle].articles limit:3 %}
               {% assign article_handles = article_handles | append: article.handle | append: ',' %}
               <h2>{{ article.title }}</h2>
               <p>{{ article.published_at }}</p>
