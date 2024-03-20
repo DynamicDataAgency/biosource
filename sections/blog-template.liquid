@@ -679,7 +679,7 @@
     {% endfor %}
     {% assign sorted_articles = all_articles | sort: 'published_at' | reverse %}
    
-    {% for blog in  %}
+    {% for blog in blogs %}
 
       {% paginate blogs[blog_handles].articles   by 13 %}
         <!-- --firstpost--- -->
