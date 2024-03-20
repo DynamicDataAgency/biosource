@@ -358,9 +358,12 @@
             
           {% endfor %}
 
-          {% for blog in blogs %}
-            {% for article in blog.articles %}
-              {{ article.title }}
+          {% assign blog_handles = "health-well-being,weight-loss" | split: "," %}
+          {% for handle in blog_handles %}
+            {% for article in blogs[handle].articles %}
+              {% if article.tags contains blog_tag %}
+                {% assign article_handles = article_handles | append: article.handle | append: "," %}
+              {%endif%}
             {% endfor %}
           {% endfor %}
         </div>
