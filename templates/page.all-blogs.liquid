@@ -343,34 +343,27 @@
               </a>
             </div>
           </div>
-          <p>
-          Test v2
-          </p>
-          {% for blog in blogs %}
-            <p>
-            {{ blog.title }}
-            </p>
-              <ul>
-                {%- for article in blog.articles -%}
-                  <h2>{{ article.title }}</h2>
-                {%- endfor -%}
-              </ul>
-            
-          {% endfor %}
+          <p>Test v2</p>
 
-          {% assign blog_handles = "health-well-being,weight-loss" | split: "," %}
+
+          {% assign blog_handles = 'health-well-being,weight-loss' | split: ',' %}
           {% for handle in blog_handles %}
             {% for article in blogs[handle].articles %}
-           
-                {% assign article_handles = article_handles | append: article.handle | append: "," %}
-                <h2>{{ article.title }}</h2>
-              <p>{{ article.published_at }} </p>
+              {% assign article_handles = article_handles | append: article.handle | append: ',' %}
+              <h2>{{ article.title }}</h2>
+              <p>{{ article.published_at }}</p>
             {% endfor %}
+          {% endfor %}
+
+          <p>Test v3</p>
+          {% for link in linklists.blogs.links %}
+            {% assign blog = link.object %}
+            {% for article in blog.articles %}
+              <h2><a href="{{ article.url }}">{{ article.title }}</a></h2>
+            {% endfor %} 
           {% endfor %}
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
