@@ -369,11 +369,9 @@
             <p style="color: white;">Test v4</p>
  
             {% assign blog_handles = 'health-well-being,weight-loss' | split: ',' %}
-            {% for handle in blog_handles %}
-              {% for article in blogs[handle].articles | sort: 'published_at' | reverse%}
-                
-                {% assign sorted_articles = all_articles | append: article.handle | sort: 'published_at' | reverse %}
-
+            {% for handle in blog_handles | sort: 'published_at' | reverse%}
+              {% for article in blogs[handle].articles %}
+     
                 <h2 style="color: white;">{{ sorted_article }}</h2>
                 <h2 style="color: white;">{{ article.title }}</h2>
                 <p style="color: white;">{{ article.published_at }}</p>
