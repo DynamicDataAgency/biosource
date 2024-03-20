@@ -753,7 +753,7 @@
             {% if section.settings.layout == 'grid' %}
               {% comment %}  <ul class="grid grid--uniform grid--blog">{% endcomment %}
               <ul class="grid grid--uniform grid--blog ul-list-blogpost">
-                {% for article in blog.articles %}
+                {% for article in sorted_articles.articles %}
                   {% unless forloop.first %}
                     {% comment %}<li class="grid__item medium-up--one-third">{% endcomment %}
                     <li class="list-item-blogpost">
