@@ -668,14 +668,16 @@
 <div class="page-width">
   {% if blog.handle == 'latest-posts-2' %}
     <p style="color: white;">Test</p>
-  
-    {% assign all_articles = "" | split: "" %}
-    {% assign blog_handles = 'health-well-being,weight-loss,quick-tips,recipes,weight-loss,diet-meal-plans,exercise,guides,lifestyle,nutrition' | split: ',' %}
+
+    {% assign all_articles = '' | split: '' %}
+    {% assign blog_handles = 'health-well-being,weight-loss,quick-tips,recipes,weight-loss,diet-meal-plans,exercise,guides,lifestyle,nutrition'
+      | split: ','
+    %}
     {% for handle in blog_handles %}
       {% assign all_articles = all_articles | concat: blogs[handle].articles %}
     {% endfor %}
     {% assign blog = all_articles | sort: 'published_at' | reverse %}
-
+    {% for blog in blogs %}
       {% paginate blog.articles by 13 %}
         <!-- --firstpost--- -->
         {% assign newest_post = blog.articles.first %}
@@ -1098,7 +1100,7 @@
           {% include 'pagination', paginate: paginate %}
         {%- endif -%}
       {% endpaginate %}
-  
+    {% endfor %}
   {% endif %}
 
   {% paginate blog.articles by 13 %}
