@@ -676,7 +676,7 @@
     {% for handle in blog_handles %}
       {% assign all_articles = all_articles | concat: blogs[handle].articles %}
     {% endfor %}
-    {% assign blog = all_articles %}
+   
    
       {% paginate blogs.all_articles by 13 %}
         <!-- --firstpost--- -->
