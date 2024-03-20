@@ -361,8 +361,8 @@
           {% for handle in blog_handles %}
             {% for article in blogs[handle].articles limit:3 %}
               {% assign article_handles = article_handles | append: article.handle | append: ',' %}
-              <h2>{{ article.title }}</h2>
-              <p>{{ article.published_at }}</p>
+              <h2 style="color:white">{{ article.title }}</h2>
+              <p style="color:white"> {{ article.published_at }}</p>
             {% endfor %}
           {% endfor %} 
         </div>
