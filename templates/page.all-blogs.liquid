@@ -346,18 +346,19 @@
           <p>
           Test
           </p>
+          {% for blog in blogs %}
+            {%- if blog.articles_count > 0 -%}
+              <ul>
+                {%- for article in blog.articles -%}
+                  <h2>{{ article.title }}</h2>
+                {%- endfor -%}
+              </ul>
+            {%- endif -%}
+          {% endfor %}
         </div>
       </div>
     </div>
   </div>
 </div>
 
-{% for blog in blogs %}
-  {%- if blog.articles_count > 0 -%}
-    <ul>
-      {%- for article in blog.articles -%}
-        <h2>{{ article.title }}</h2>
-      {%- endfor -%}
-    </ul>
-  {%- endif -%}
-{% endfor %}
+
