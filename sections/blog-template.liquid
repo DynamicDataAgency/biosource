@@ -730,7 +730,7 @@
               <ul class="list--inline" aria-label="{{ 'blogs.newest_post.tags' | t }}">
                 {% for tag in newest_post.tags %}
                   <li>
-                    <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>
+                    <a href="{{ blogs.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>
                   </li>
                 {% endfor %}
               </ul>
@@ -752,7 +752,7 @@
           {% if section.settings.layout == 'grid' %}
             {% comment %}  <ul class="grid grid--uniform grid--blog">{% endcomment %}
             <ul class="grid grid--uniform grid--blog ul-list-blogpost">
-              {% for article in blog.articles %}
+              {% for article in blogs.articles %}
                 {% unless forloop.first %}
                   {% comment %}<li class="grid__item medium-up--one-third">{% endcomment %}
                   <li class="list-item-blogpost">
@@ -805,7 +805,7 @@
                           <ul class="list--inline" aria-label="{{ 'blogs.article.tags' | t }}">
                             {% for tag in article.tags %}
                               <li>
-                                <a href="{{ blog.url }}/tagged/{{ tag | handle }}" class="article__grid-tag">
+                                <a href="{{ blogs.url }}/tagged/{{ tag | handle }}" class="article__grid-tag">
                                   {{- tag -}}
                                 </a>
                               </li>
@@ -938,7 +938,7 @@
                               <div class="article__tags article__tags--list rte">
                                 {{ 'blogs.article.posted_in' | t }}
                                 {% for tag in article.tags %}
-                                  <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>
+                                  <a href="{{ blogs.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>
                                   {%- unless forloop.last %}, {% endunless %}
                                 {% endfor %}
                               </div>
