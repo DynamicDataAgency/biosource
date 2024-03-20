@@ -668,7 +668,7 @@
 <div class="page-width">
   <div> {{blog.articles }} </div>
   {% if blog.handle == 'latest-posts-2' %}
-    <p style="color: white;">Test 2</p>
+    
     
     {% assign all_articles = '' | split: '' %}
     {% assign blog_handles = 'health-well-being,weight-loss,quick-tips,recipes,weight-loss,diet-meal-plans,exercise,guides,lifestyle,nutrition'
@@ -753,7 +753,7 @@
             {% if section.settings.layout == 'grid' %}
               {% comment %}  <ul class="grid grid--uniform grid--blog">{% endcomment %}
               <ul class="grid grid--uniform grid--blog ul-list-blogpost">
-                {% for article in sorted_articles limit:3 %}
+                {% for article in sorted_articles limit:9 %}
                   {% unless forloop.first %}
                     {% comment %}<li class="grid__item medium-up--one-third">{% endcomment %}
                     <li class="list-item-blogpost">
