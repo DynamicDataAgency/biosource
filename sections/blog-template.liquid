@@ -645,7 +645,7 @@
             <option class="level-1" value="/blogs/diet-profiles-meal-plans">Diet / Meal Plans</option>
             <option class="level-1" value="/blogs/quick-tips">Quick Tips</option>
             <option class="level-1" value="/blogs/guides">Guides</option>
-            <option class="level-1" value="/blogs/latests-post">Latestss Posts</option>
+            <option class="level-1" value="/blogs/latest-posts">Latest Posts</option>
           </select>
         </form>
 
@@ -668,7 +668,7 @@
 <div class="page-width">
   {% if blog.handle == 'latests-post' %}
     <p style="color: white;">Test</p>
-    {% for blog in blogs %}
+  
       {% paginate blog.articles by 13 %}
         <!-- --firstpost--- -->
         {% assign newest_post = blog.articles.first %}
@@ -1091,7 +1091,7 @@
           {% include 'pagination', paginate: paginate %}
         {%- endif -%}
       {% endpaginate %}
-    {% endfor %}
+  
   {% endif %}
 
   {% paginate blog.articles by 13 %}
