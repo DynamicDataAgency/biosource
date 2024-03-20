@@ -667,6 +667,11 @@
 </div>
 
 <div class="page-width">
+
+{% if blog = latest-posts %}
+  <p style="color: white;">Test</p>
+{% endif %}
+
   {% paginate blog.articles by 13 %}
     <!-- --firstpost--- -->
     {% assign newest_post = blog.articles.first %}
