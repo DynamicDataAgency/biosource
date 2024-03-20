@@ -343,40 +343,9 @@
               </a>
             </div>
           </div>
-          <p>Test v2</p>
 
-          {% assign blog_handles = 'health-well-being,weight-loss' | split: ',' %}
-          {% for handle in blog_handles %}
-            {% for article in blogs[handle].articles %}
-              {% assign article_handles = article_handles | append: article.handle | append: ',' %}
-              <h2>{{ article.title }}</h2>
-              <p>{{ article.published_at }}</p>
-            {% endfor %}
-          {% endfor %}
 
-          <p style="color: white;">Test v3</p>
-          <div style="color: white;">
-            {% assign blog_handles = 'health-well-being,weight-loss' | split: ',' %}
-            {% for handle in blog_handles %}
-              {% for article in blogs[handle].articles limit: 1 %}
-                {% assign article_handles = article_handles | append: article.handle | append: ',' %}
-
-                <h2 style="color: white;">{{ article.title }}</h2>
-                <p style="color: white;">{{ article.published_at }}</p>
-              {% endfor %}
-            {% endfor %}
-
-            <p style="color: white;">Test v4</p>
-
-            {% assign blog_handles = 'health-well-being,weight-loss' | split: ',' %}
-            {% for handle in blog_handles | sort: 'published_at' | reverse %}
-              {% for article in blogs[handle].articles %}
-                <p style="color: white;">{{ article.published_at }}</p>
-                <h2 style="color: white;">{{ article.title }}</h2>
-              {% endfor %}
-            {% endfor %}
-
-            <p style="color: white;">Test v5</p>
+            <p style="color: white;">Latest Posts</p>
 
             {% assign all_articles = "" | split: "" %}
             {% assign blog_handles = 'health-well-being,weight-loss,quick-tips,recipes,weight-loss,diet-meal-plans,exercise,guides,lifestyle,nutrition' | split: ',' %}
