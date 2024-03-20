@@ -365,6 +365,14 @@
               <p style="color: white;"> {{ article.published_at }}</p>
             {% endfor %}
           {% endfor %} 
+
+          <p style="color: white;">Test v4</p>
+          {% assign all_articles = blogs.first.articles %}
+{% assign sorted_articles = all_articles | sort: 'published_at' | reverse %}
+{% for article in sorted_articles limit:3 %}
+  <h2 style="color: white;">{{ article.title }}</h2>
+  <!-- You can add more details about each blog post here if needed -->
+{% endfor %}
         </div>
         </div>
       </div>
