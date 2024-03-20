@@ -677,8 +677,8 @@
       {% assign all_articles = all_articles | concat: blogs[handle].articles %}
     {% endfor %}
     {% assign blog = all_articles %}
-    {% for blog in blogs %}
-      {% paginate blog.articles by 13 %}
+   
+      {% paginate all_articles by 13 %}
         <!-- --firstpost--- -->
         {% assign newest_post = blog.articles.first %}
         <div class="list-item-blogpost-1">
@@ -1100,7 +1100,7 @@
           {% include 'pagination', paginate: paginate %}
         {%- endif -%}
       {% endpaginate %}
-    {% endfor %}
+
   {% endif %}
 
   {% paginate blog.articles by 13 %}
