@@ -347,7 +347,9 @@
           Test
           </p>
           {% for blog in blogs %}
-         
+            <p>
+            {{ blog.title }}
+            </p>
               <ul>
                 {%- for article in blog.articles -%}
                   <h2>{{ article.title }}</h2>
