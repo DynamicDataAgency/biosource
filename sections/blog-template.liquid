@@ -668,7 +668,7 @@
 <div class="page-width">
   {% if blog.handle == 'latest-posts-2' %}
     <p style="color: white;">Test</p>
-
+    {{blog.articles }}
     {% assign all_articles = '' | split: '' %}
     {% assign blog_handles = 'health-well-being,weight-loss,quick-tips,recipes,weight-loss,diet-meal-plans,exercise,guides,lifestyle,nutrition'
       | split: ','
