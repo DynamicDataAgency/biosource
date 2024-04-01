@@ -1028,7 +1028,10 @@
               width: 250px;
                   margin-left: 0px;
                 }
-              
+              .latest-posts-title-container{
+              width:100%;
+              display: flex;
+              }
               .latest-posts-title{
                 font-size: 24px !important;
                 line-height: 24px !important;
@@ -1037,12 +1040,14 @@
                 color: white !important;
 
               }
+
             }
             
           
         </style>
+        <div class="latest-posts-title-container">
         <h2 class="latest-posts-title">Latest Posts</h2>
-
+      </div>
         <div class="">
           {% assign all_articles = '' | split: '' %}
           {% assign blog_handles = 'health-well-being,weight-loss,quick-tips,recipes,weight-loss,diet-meal-plans,exercise,guides,lifestyle,nutrition'
