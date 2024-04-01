@@ -431,7 +431,7 @@
             {% endfor %}
 
             {% comment %} Sort all articles by published date {% endcomment %}
-            {% assign sorted_articles = all_articles | sort: 'published_at' | reverse | limit:3%}
+            {% assign sorted_articles = all_articles | sort: 'published_at' | reverse %}
 
             {% comment %} Display the three latest articles {% endcomment %}
             {% for article in sorted_articles limit: 3 %}
@@ -1057,7 +1057,7 @@
         <div class="">
           {% comment %}  <ul class="grid grid--uniform grid--blog">{% endcomment %}
           <ul class="grid grid--uniform grid--blog ul-list-blogpost">
-            {% for article in sorted_articles  %}
+            {% for article in sorted_articles limit: 6 %}
               {% unless forloop.first %}
                 {% comment %}<li class="grid__item medium-up--one-third">{% endcomment %}
                 <li class="list-item-blogpost">
