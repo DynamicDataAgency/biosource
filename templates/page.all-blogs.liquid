@@ -1085,7 +1085,7 @@
           {% assign unique_articles = '' %}
           {% for article in all_articles %}
             {% unless unique_articles contains article.title %}
-              {% assign unique_articles = unique_articles | join: article.title | append: article.title | split: article.title %}
+              {% assign unique_articles = unique_articles | join: article.title | append: article| split: article.title %}
             {% endunless %}
           {% endfor %}
           
