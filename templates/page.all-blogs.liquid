@@ -1076,7 +1076,7 @@
 
           {% comment %} Aggregate all articles {% endcomment %}
           {% for handle in blog_handles %}
-            {% assign all_articles = all_articles | concat: blogs[handle].articles %}
+            {% assign all_articles = all_articles | concat: blogs[handle].articles | uniq %}
           {% endfor %}
 
           {% comment %} Sort all articles by published date {% endcomment %}
