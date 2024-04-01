@@ -257,123 +257,17 @@
         <!-- <h1>{{ page.title }}</h1> -->
         <h1 style="color: white !important;">Categories</h1>
       </div>
-      <div class="main-div">      
-       <div class="main-width">
-            <div class="rte all-blogs-page">
-
-
-              
-
-                  <div class="row">
-                    <a href="/blogs/health-well-being">
-                      <div class="category insulin-category">
-                        <h2>Health & Well-Being</h2>
-                        <p>Holistic health, wellness, and natural approaches to staying fit.</p>
-                        <div class="btn btn-outline-light" href="/blogs/health-well-being">
-                          Browse Articles
-                        </div>
-                        
-                      </div>
-                    </a>
-                  </div>
-
-                  <div class="row">
-                    <a href="/blogs/weight-loss">
-                      <div class="category weight-loss-category">
-                        <h2> Weight Loss </h2>
-                        <p>Effective weight loss strategies, balanced diets, and maintaining a healthy weight.</p>
-                        <div class="btn btn-outline-light" href="/blogs/weight-loss">
-                          Browse Articles
-                        </div>
-                        
-                      </div>
-                    </a>
-                  </div>
-                  <div class="row">
-                    <a href="/blogs/nutrition">
-                      <div class="category nutrition-category">
-                        <h2>Nutrition</h2>
-                        <p>Discover nutritious foods, dietary benefits, and tips for a balanced, health-boosting diet.</p>
-                        <div class="btn btn-outline-light" href="/blogs/nutrition">
-                          Browse Articles
-                        </div>
-                        
-                      </div>
-                    </a>
-                  </div>
-                  <div class="row">
-                    <a href="/blogs/lifestyle">
-                      <div class="category lifestyle-category">
-                        <h2>Lifestyle & Mindset</h2>
-                        <p>Explore how lifestyle shifts can significantly enhance your overall health.</p>
-                        <div class="btn btn-outline-light" href="/blogs/lifestyle">
-                          Browse Articles
-                        </div>
-                        
-                      </div>
-                    </a>
-                  </div>
-                  <div class="row">
-                    <a href="/blogs/exercise">
-                      <div class="category excercise-category">
-                        <h2>Exercise</h2>
-                        <p>Learn about impactful exercises, fitness routines, and staying active for optimal health.</p>
-                        <div class="btn btn-outline-light" href="/blogs/exercise">
-                          Browse Articles
-                        </div>
-                        
-                      </div>
-                    </a>
-                  </div>
-                  <div class="row">
-                    <a href="/blogs/recipes">
-                      <div class="category recipes-category">
-                        <h2>Recipes</h2>
-                        <p>Enjoy a variety of healthy, delicious recipes that are easy to prepare and nutritious.</p>
-                        <div class="btn btn-outline-light" href="/blogs/recipes">
-                          Browse Articles
-                        </div>
-                        
-                      </div>
-                    </a>
-                  </div>
-                  <div class="row">
-                    <a href="/blogs/diet-meal-plans">
-                      <div class="category diet-profiles-meal-plans-category">
-                        <h2>Diet / Meal Plans</h2>
-                        <p>Find customized diet plans and meal suggestions to meet your health and fitness goals.</p>
-                        <div class="btn btn-outline-light" href="/blogs/diet-meal-plans">
-                          Browse Articles
-                        </div>
-                        
-                      </div>
-                    </a>
-                  </div>
-                  <div class="row">
-                    <a href="/blogs/quick-tips">
-                      <div class="category quick-tips-category">
-                        <h2>Quick Tips</h2>
-                        <p>Quick, practical health tips for busy lifestyles, offering easy ways to stay healthy.</p>
-                        <div class="btn btn-outline-light" href="/blogs/quick-tips">
-                          Browse Articles
-                        </div>
-                        
-                      </div>
-                    </a>
-                  </div>
-                  <div class="row">
-                    <a href="/blogs/guides">
-                      <div class="category guides-category">
-                        <h2>Guides</h2>
-                        <p>Comprehensive guides to navigate health, wellness, and nutrition for a balanced life.</p>
-                        <div class="btn btn-outline-light" href="/blogs/guides">
-                          Browse Articles
-                        </div>
-                        
-                      </div>
-                    </a>
-                  </div>
-
+      <div class="main-div">
+        <div class="main-width">
+          <div class="rte all-blogs-page">
+            <div class="row">
+              <a href="/blogs/health-well-being">
+                <div class="category insulin-category">
+                  <h2>Health & Well-Being</h2>
+                  <p>Holistic health, wellness, and natural approaches to staying fit.</p>
+                  <div class="btn btn-outline-light" href="/blogs/health-well-being">Browse Articles</div>
+                </div>
+              </a>
             </div>
 
             <div class="row">
@@ -404,11 +298,11 @@
               </a>
             </div>
             <div class="row">
-              <a href="/blogs/excercise">
+              <a href="/blogs/exercise">
                 <div class="category excercise-category">
                   <h2>Exercise</h2>
                   <p>Learn about impactful exercises, fitness routines, and staying active for optimal health.</p>
-                  <div class="btn btn-outline-light" href="/blogs/excercise">Browse Articles</div>
+                  <div class="btn btn-outline-light" href="/blogs/exercise">Browse Articles</div>
                 </div>
               </a>
             </div>
@@ -426,7 +320,7 @@
                 <div class="category diet-profiles-meal-plans-category">
                   <h2>Diet / Meal Plans</h2>
                   <p>Find customized diet plans and meal suggestions to meet your health and fitness goals.</p>
-                  <div class="btn btn-outline-light" href="/blogs/diet-profiles-meal-plans">Browse Articles</div>
+                  <div class="btn btn-outline-light" href="/blogs/diet-meal-plans">Browse Articles</div>
                 </div>
               </a>
             </div>
@@ -450,29 +344,100 @@
             </div>
           </div>
 
-
-            <p style="color: white;">Latest Posts</p>
-
-            {% assign all_articles = "" | split: "" %}
-            {% assign blog_handles = 'health-well-being,weight-loss,quick-tips,recipes,weight-loss,diet-meal-plans,exercise,guides,lifestyle,nutrition' | split: ',' %}
-            
-            {% comment %} Aggregate all articles {% endcomment %}
-            {% for handle in blog_handles %}
-              {% assign all_articles = all_articles | concat: blogs[handle].articles %}
-            {% endfor %}
-            
-            {% comment %} Sort all articles by published date {% endcomment %}
-            {% assign sorted_articles = all_articles | sort: 'published_at' | reverse %}
-            
-            {% comment %} Display the three latest articles {% endcomment %}
-            {% for article in sorted_articles limit: 3 %}
-              <p style="color: white;">{{ article.published_at }}</p>
-              <h2 style="color: white;">{{ article.title }}</h2>
-            {% endfor %}
-            
-          
+          <div class="row">
+            <a href="/blogs/weight-loss">
+              <div class="category weight-loss-category">
+                <h2>Weight Loss</h2>
+                <p>Effective weight loss strategies, balanced diets, and maintaining a healthy weight.</p>
+                <div class="btn btn-outline-light" href="/blogs/weight-loss">Browse Articles</div>
+              </div>
+            </a>
+          </div>
+          <div class="row">
+            <a href="/blogs/nutrition">
+              <div class="category nutrition-category">
+                <h2>Nutrition</h2>
+                <p>Discover nutritious foods, dietary benefits, and tips for a balanced, health-boosting diet.</p>
+                <div class="btn btn-outline-light" href="/blogs/nutrition">Browse Articles</div>
+              </div>
+            </a>
+          </div>
+          <div class="row">
+            <a href="/blogs/lifestyle">
+              <div class="category lifestyle-category">
+                <h2>Lifestyle & Mindset</h2>
+                <p>Explore how lifestyle shifts can significantly enhance your overall health.</p>
+                <div class="btn btn-outline-light" href="/blogs/lifestyle">Browse Articles</div>
+              </div>
+            </a>
+          </div>
+          <div class="row">
+            <a href="/blogs/excercise">
+              <div class="category excercise-category">
+                <h2>Exercise</h2>
+                <p>Learn about impactful exercises, fitness routines, and staying active for optimal health.</p>
+                <div class="btn btn-outline-light" href="/blogs/excercise">Browse Articles</div>
+              </div>
+            </a>
+          </div>
+          <div class="row">
+            <a href="/blogs/recipes">
+              <div class="category recipes-category">
+                <h2>Recipes</h2>
+                <p>Enjoy a variety of healthy, delicious recipes that are easy to prepare and nutritious.</p>
+                <div class="btn btn-outline-light" href="/blogs/recipes">Browse Articles</div>
+              </div>
+            </a>
+          </div>
+          <div class="row">
+            <a href="/blogs/diet-meal-plans">
+              <div class="category diet-profiles-meal-plans-category">
+                <h2>Diet / Meal Plans</h2>
+                <p>Find customized diet plans and meal suggestions to meet your health and fitness goals.</p>
+                <div class="btn btn-outline-light" href="/blogs/diet-profiles-meal-plans">Browse Articles</div>
+              </div>
+            </a>
+          </div>
+          <div class="row">
+            <a href="/blogs/quick-tips">
+              <div class="category quick-tips-category">
+                <h2>Quick Tips</h2>
+                <p>Quick, practical health tips for busy lifestyles, offering easy ways to stay healthy.</p>
+                <div class="btn btn-outline-light" href="/blogs/quick-tips">Browse Articles</div>
+              </div>
+            </a>
+          </div>
+          <div class="row">
+            <a href="/blogs/guides">
+              <div class="category guides-category">
+                <h2>Guides</h2>
+                <p>Comprehensive guides to navigate health, wellness, and nutrition for a balanced life.</p>
+                <div class="btn btn-outline-light" href="/blogs/guides">Browse Articles</div>
+              </div>
+            </a>
           </div>
         </div>
+
+        <p style="color: white;">Latest Posts</p>
+
+        {% assign all_articles = '' | split: '' %}
+        {% assign blog_handles = 'health-well-being,weight-loss,quick-tips,recipes,weight-loss,diet-meal-plans,exercise,guides,lifestyle,nutrition'
+          | split: ','
+        %}
+
+        {% comment %} Aggregate all articles {% endcomment %}
+        {% for handle in blog_handles %}
+          {% assign all_articles = all_articles | concat: blogs[handle].articles %}
+        {% endfor %}
+
+        {% comment %} Sort all articles by published date {% endcomment %}
+        {% assign sorted_articles = all_articles | sort: 'published_at' | reverse %}
+
+        {% comment %} Display the three latest articles {% endcomment %}
+        {% for article in sorted_articles limit: 3 %}
+          <p style="color: white;">{{ article.published_at }}</p>
+          <h2 style="color: white;">{{ article.title }}</h2>
+        {% endfor %}
       </div>
     </div>
   </div>
