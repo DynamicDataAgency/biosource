@@ -1085,7 +1085,7 @@
           {% for article in all_articles %}
             {% assign articlesToCheck = article_titles | append: article.title %}
           {% endfor %}
-          {% assign articlesToCheck = article_titles | uniq %}
+          {% assign articlesToCheck = article_titles  %}
           <p>{{ articlesToCheck | uniq | join: ", "}}</p> 
 
           {% comment %}
