@@ -1090,15 +1090,14 @@
           {% assign articlesToCheck3 = articlesToCheck2 | uniq | join: "," %}
           <p>{{ articlesToCheck3 }}</p>
 
-          {% assign sorted_articles = "" %}
+{% comment %}
           {% for article in all_articles %}
             {% if article.title contains articlesToCheck %}
               <p>{{ article.title }}</p>
               <!-- Add any other code to display the article -->
-              {% assign sorted_articles = all_articles | append: article %}
             {% endif %}
           {% endfor %}
-
+{% endcomment %}
 
           {% comment %} Display the three latest articles {% endcomment %}
 
