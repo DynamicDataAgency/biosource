@@ -417,31 +417,10 @@
               </div>
             </a>
           </div>
-          <div>
-            <p style="color: white;">Latest Posts</p>
 
-            {% assign all_articles = '' | split: '' %}
-            {% assign blog_handles = 'health-well-being,weight-loss,quick-tips,recipes,weight-loss,diet-meal-plans,exercise,guides,lifestyle,nutrition'
-              | split: ','
-            %}
-
-            {% comment %} Aggregate all articles {% endcomment %}
-            {% for handle in blog_handles %}
-              {% assign all_articles = all_articles | concat: blogs[handle].articles %}
-            {% endfor %}
-
-            {% comment %} Sort all articles by published date {% endcomment %}
-            {% assign sorted_articles = all_articles | sort: 'published_at' | reverse %}
-
-            {% comment %} Display the three latest articles {% endcomment %}
-            {% for article in sorted_articles limit: 3 %}
-              <p style="color: white;">{{ article.published_at }}</p>
-              <h2 style="color: white;">{{ article.title }}</h2>
-            {% endfor %}
-          </div>
         </div>
       </div>
-      <div class="">
+      <div class="latest-post-container">
         <h2 class="latest-posts-title" style="color: white;">Latest Posts</h2>
         <style>
           :root {
