@@ -1086,7 +1086,7 @@
             {% assign articlesToCheck = articlesToCheck | append:","| append: article.title  %}
             
           {% endfor %}
-          {% assign articlesToCheck2 = articlesToCheck | split: ", "  %}
+          {% assign articlesToCheck2 = articlesToCheck | split: ","  %}
           {% assign articlesToCheck3 = articlesToCheck2 | uniq | join: "," %}
           <p>{{ articlesToCheck3 }}</p>
 
