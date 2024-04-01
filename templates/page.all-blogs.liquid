@@ -1089,7 +1089,7 @@
               {% comment %} Your existing code to sort and display articles {% endcomment %}
               {% assign sorted_articles = all_articles | sort: 'published_at' | reverse %}
               {% for sorted_article in sorted_articles %}
-                {% if sorted_article.id == article.id %}
+                {% if sorted_article.title == article.title %}
                   {% assign sorted_articles = sorted_articles | remove: sorted_article %}
                   {% break %}
                 {% endif %}
