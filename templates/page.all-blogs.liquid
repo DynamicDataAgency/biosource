@@ -1082,7 +1082,21 @@
           {% endfor %}
 
           {% comment %} Sort all articles by published date {% endcomment %}
-          {% assign sorted_articles = all_articles | sort: 'published_at' | reverse | uniq%}
+          {% assign sorted_articles = all_articles | sort: 'published_at' | reverse %}
+
+
+          {% assign unique_titles = '' %}
+          {% for post in sorted_articles %}
+            {% unless unique_titles contains post.title %}
+              {% assign unique_titles = unique_titles | append: post.title | append: '|' %}
+             
+              <div class="blog-post">
+                <h2>{{ post.title }}</h2>
+                <!-- Display other information about the blog post here -->
+              </div>
+            {% endunless %}
+          {% endfor %}
+
 
           {% comment %} Display the three latest articles {% endcomment %}
 
