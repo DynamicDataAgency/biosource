@@ -478,7 +478,7 @@
 
             <div class="">
               <div class="">
-                {% if section.settings.layout == 'grid' %}
+              
                   {% comment %}  <ul class="grid grid--uniform grid--blog">{% endcomment %}
                   <ul class="grid grid--uniform grid--blog ul-list-blogpost">
                     {% for article in sorted_articles limit:3 %}
@@ -595,7 +595,7 @@
                     {% endfor %}
                   </ul>
                   </div>
-                {% else %}
+                
                   <ul class="blog-list-view">
                     {% for article in blog.articles %}
                       {% unless forloop.first %}
@@ -707,7 +707,7 @@
                       {% endunless %}
                     {% endfor %}
                   </ul>
-                {% endif %}
+          
               </div>
               {% comment %}
                 <div class="blogs-archive-right">
@@ -835,177 +835,3 @@
 
 
 
-
-{% schema %}
-{
-  "name": {
-    "cs": "Stránky blogu",
-    "da": "Blogsider",
-    "de": "Blogseiten",
-    "en": "Blog pages",
-    "es": "Páginas del blog",
-    "fi": "Blogisivut",
-    "fr": "Pages du blog",
-    "hi": "ब्लॉग पेज",
-    "it": "Pagine del blog",
-    "ja": "ブログページ",
-    "ko": "블로그 페이지",
-    "nb": "Bloggsider",
-    "nl": "Blogpagina's",
-    "pl": "Strony blogu",
-    "pt-BR": "Páginas do blog",
-    "pt-PT": "Páginas do blogue",
-    "sv": "Bloggsidor",
-    "th": "หน้าบล็อก",
-    "tr": "Blog sayfaları",
-    "vi": "Trang blog",
-    "zh-CN": "博客页面",
-    "zh-TW": "部落格頁面"
-  },
-  "settings": [
-    {
-      "type": "select",
-      "id": "layout",
-      "label": {
-        "cs": "Rozvržení",
-        "da": "Layout",
-        "de": "Layout",
-        "en": "Layout",
-        "es": "Diseño",
-        "fi": "Asettelu",
-        "fr": "Mise en page",
-        "hi": "लेआउट",
-        "it": "Layout",
-        "ja": "レイアウト",
-        "ko": "레이아웃",
-        "nb": "Oppsett",
-        "nl": "Opmaak",
-        "pl": "Układ",
-        "pt-BR": "Layout",
-        "pt-PT": "Esquema",
-        "sv": "Layout",
-        "th": "เลย์เอาต์",
-        "tr": "Düzen",
-        "vi": "Bố cục",
-        "zh-CN": "布局",
-        "zh-TW": "版面配置"
-      },
-      "default": "list",
-      "options": [
-        {
-          "value": "grid",
-          "label": {
-            "cs": "Mřížka",
-            "da": "Gitter",
-            "de": "Raster",
-            "en": "Grid",
-            "es": "Cuadrícula",
-            "fi": "Ruudukko",
-            "fr": "Grille",
-            "hi": "ग्रिड",
-            "it": "Griglia",
-            "ja": "グリッド",
-            "ko": "그리드",
-            "nb": "Rutenett",
-            "nl": "Raster",
-            "pl": "Siatka",
-            "pt-BR": "Grade",
-            "pt-PT": "Grelha",
-            "sv": "Rutnät",
-            "th": "กริด",
-            "tr": "Izgara",
-            "vi": "Lưới",
-            "zh-CN": "网格",
-            "zh-TW": "網格"
-          }
-        },
-        {
-          "value": "list",
-          "label": {
-            "cs": "Seznam",
-            "da": "Liste",
-            "de": "Liste",
-            "en": "List",
-            "es": "Lista",
-            "fi": "Luettelo",
-            "fr": "Liste",
-            "hi": "सूची",
-            "it": "Elenco",
-            "ja": "リスト",
-            "ko": "목록",
-            "nb": "Liste",
-            "nl": "Lijst",
-            "pl": "Lista",
-            "pt-BR": "Lista",
-            "pt-PT": "Lista",
-            "sv": "Lista",
-            "th": "รายการ",
-            "tr": "Liste",
-            "vi": "Danh sách",
-            "zh-CN": "列表",
-            "zh-TW": "清單"
-          }
-        }
-      ]
-    },
-    {
-      "type": "checkbox",
-      "id": "blog_show_author",
-      "label": {
-        "cs": "Zobrazit autora",
-        "da": "Vis forfatter",
-        "de": "Autor anzeigen",
-        "en": "Show author",
-        "es": "Mostrar autor",
-        "fi": "Näytä tekijä",
-        "fr": "Afficher l'auteur",
-        "hi": "लेखक दिखाएं",
-        "it": "Mostra autore",
-        "ja": "執筆者を表示する",
-        "ko": "작성자 표시",
-        "nb": "Vis forfatter",
-        "nl": "Auteur weergeven",
-        "pl": "Pokaż autora",
-        "pt-BR": "Exibir autor",
-        "pt-PT": "Mostrar autor",
-        "sv": "Visa författare",
-        "th": "แสดงผู้เขียน",
-        "tr": "Yazarı göster",
-        "vi": "Hiển thị tác giả",
-        "zh-CN": "显示作者",
-        "zh-TW": "顯示作者"
-      },
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "blog_show_date",
-      "label": {
-        "cs": "Zobrazit datum",
-        "da": "Vis dato",
-        "de": "Datum anzeigen",
-        "en": "Show date",
-        "es": "Mostrar fecha",
-        "fi": "Näytä päivämäärä",
-        "fr": "Afficher la date",
-        "hi": "दिनांक दिखाएं",
-        "it": "Mostra data",
-        "ja": "日付を表示する",
-        "ko": "날짜 표시",
-        "nb": "Vis dato",
-        "nl": "Datum weergeven",
-        "pl": "Pokaż datę",
-        "pt-BR": "Exibir data",
-        "pt-PT": "Mostrar data",
-        "sv": "Visa datum",
-        "th": "แสดงวันที่",
-        "tr": "Tarihi göster",
-        "vi": "Hiển thị ngày",
-        "zh-CN": "显示日期",
-        "zh-TW": "顯示日期"
-      },
-      "default": true
-    }
-  ]
-}
-{% endschema %}
