@@ -1084,18 +1084,19 @@
           {% assign article_titles = '' %}
           {% for article in all_articles %}
             {% assign articlesToCheck = article_titles | append: article.title %}
+            
           {% endfor %}
-          {% assign articlesToCheck = article_titles  %}
-          <p>{{ articlesToCheck }}</p> 
+          {% assign articlesToCheck = article_titles | uniq %}
+          <p>{{ articlesToCheck }}</p>
 
-          {% comment %}
-            {% for article in all_articles %}
-              {% if article.title contains articlesToCheck %}
-                <p>{{ article.title }}</p>
-                <!-- Add any other code to display the article -->
-              {% endif %}
-            {% endfor %}
-          {% endcomment %}
+{% comment %}
+          {% for article in all_articles %}
+            {% if article.title contains articlesToCheck %}
+              <p>{{ article.title }}</p>
+              <!-- Add any other code to display the article -->
+            {% endif %}
+          {% endfor %}
+{% endcomment %}
 
           {% comment %} Display the three latest articles {% endcomment %}
 
