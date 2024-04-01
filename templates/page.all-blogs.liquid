@@ -1093,7 +1093,7 @@
          
 
           {% for article in all_articles %}
-            {% if article_tiles contains article.title %}
+            {% if articlesToCheck contains article.title %}
               <p>{{ article.title }}</p>
               <!-- Add any other code to display the article -->
             {% endif %}
