@@ -1080,16 +1080,24 @@
           {% endfor %}
 
           {% comment %} Sort all articles by published date {% endcomment %}
-          {% assign sorted_articles = all_articles | sort: 'published_at' | reverse %}
-
-          {% assign filtered_articles = '' %}
-          {% for article in sorted_articles %}
-            {% unless unique_titles contains article.title %}
-              {% capture unique_titles %}{{ unique_titles }}|{{ article.title }}{% endcapture %}
-              {% assign sorted_articles = filtered_articles | append: article | append: ',' %}
+          {% assign all_articles = blog.articles %}
+          {% assign unique_articles = '' | split: ',' %}
+          
+          {% for article in all_articles %}
+            {% unless unique_articles contains article.id %}
+              {% assign unique_articles = unique_articles | push: article.id %}
+              {% comment %} Your existing code to sort and display articles {% endcomment %}
+              {% assign sorted_articles = all_articles | sort: 'published_at' | reverse %}
+              {% for sorted_article in sorted_articles %}
+                {% if sorted_article.id == article.id %}
+                  {% assign sorted_articles = sorted_articles | remove: sorted_article %}
+                  {% break %}
+                {% endif %}
+              {% endfor %}
             {% endunless %}
           {% endfor %}
-          {% assign sorted_articles = filtered_articles | split: ',' | reverse %}
+          
+
           {% comment %} Display the three latest articles {% endcomment %}
 
           {% comment %}  <ul class="grid grid--uniform grid--blog">{% endcomment %}
