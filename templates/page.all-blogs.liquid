@@ -1103,7 +1103,7 @@
 
           {% comment %}  <ul class="grid grid--uniform grid--blog">{% endcomment %}
           <ul class="grid grid--uniform grid--blog ul-list-blogpost">
-            {% for article in sorted_articles limit: 6  | uniq %}
+            {% for article in sorted_articles limit: 6 %}
               {% comment %}<li class="grid__item medium-up--one-third">{% endcomment %}
               <li class="list-item-blogpost">
                 <a href="{{ article.url }}" class="article__link article_link_custom">
