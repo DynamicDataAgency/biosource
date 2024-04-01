@@ -1083,9 +1083,9 @@
 
           {% comment %} Sort all articles by published date {% endcomment %}
           {% assign sorted_articles = all_articles | sort: 'published_at' | reverse %}
-
+          {% assign article_titles = "" %}
           {% for article in all_articles %}
-            {% assign article_titles = "" %}
+            
             {% assign article_titles =  article_titles | append: article.title %}
             <p>{{ article_titles }}</p>
           {% endfor %}
