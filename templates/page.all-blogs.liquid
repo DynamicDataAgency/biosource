@@ -1085,11 +1085,11 @@
           {% assign sorted_articles = all_articles | sort: 'published_at' | reverse %}
 
           {% for article in all_articles %}
-            {% assign article_tiles = "" %}
-            {% article_tiles =  article_tiles | append: article.title | join:","%}
+            {% assign article_titles = "" %}
+            {% article_titles =  article_titles | append: article.title %}
             <p>{{ article.title }}</p>
           {% endfor %}
-          {% assign articlesToCheck =  article_tiles | uniq%}
+          {% assign articlesToCheck =  article_titles | uniq%}
 
          
 
