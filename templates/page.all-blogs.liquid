@@ -1090,10 +1090,7 @@
             {% unless unique_titles contains post.title %}
               {% assign unique_titles = unique_titles | append: post.title | append: '|' %}
              
-              <div class="blog-post">
-                <h2>{{ post.title }}</h2>
-                <!-- Display other information about the blog post here -->
-              </div>
+
             {% endunless %}
           {% endfor %}
 
@@ -1103,6 +1100,8 @@
           {% comment %}  <ul class="grid grid--uniform grid--blog">{% endcomment %}
           <ul class="grid grid--uniform grid--blog ul-list-blogpost">
             {% for article in sorted_articles limit: 6 %}
+              {% unless unique_titles contains post.title %}
+                {% assign unique_titles = unique_titles | append: post.title | append: '|' %}
               {% comment %}<li class="grid__item medium-up--one-third">{% endcomment %}
               <li class="list-item-blogpost">
                 <a href="{{ article.url }}" class="article__link article_link_custom">
@@ -1207,6 +1206,7 @@
                   </div>
                 {% endcomment %}
               </li>
+            {% endunless %}
             {% endfor %}
           </ul>
         </div>
