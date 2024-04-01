@@ -1082,7 +1082,7 @@
           {% comment %} Sort all articles by published date {% endcomment %}
           {% assign sorted_articles = all_articles | sort: 'published_at' | reverse %}
           {% assign articlesToCheck = '' %}
-          {% for article in all_articles %}
+          {% for article in sorted_articles %}
             {% assign articlesToCheck = articlesToCheck | append: article.title | join:"," %}
             
           {% endfor %}
