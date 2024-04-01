@@ -431,7 +431,7 @@
             {% endfor %}
 
             {% comment %} Sort all articles by published date {% endcomment %}
-            {% assign sorted_articles = all_articles | sort: 'published_at' | reverse %}
+            {% assign sorted_articles = all_articles | sort: 'published_at' | reverse | limit:3%}
 
             {% comment %} Display the three latest articles {% endcomment %}
             {% for article in sorted_articles limit: 3 %}
