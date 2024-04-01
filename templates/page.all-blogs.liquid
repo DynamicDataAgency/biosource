@@ -1082,14 +1082,7 @@
           {% comment %} Sort all articles by published date {% endcomment %}
           {% assign sorted_articles = all_articles | sort: 'published_at' | reverse %}
 
-          {% assign filtered_articles = '' %}
-          {% for article in sorted_articles %}
-            {% unless unique_titles contains article.title %}
-              {% capture unique_titles %}{{ unique_titles }}|{{ article.title }}{% endcapture %}
-              {% assign sorted_articles = filtered_articles | append: article | append: ',' %}
-            {% endunless %}
-          {% endfor %}
-          {% assign sorted_articles = filtered_articles | split: ',' | reverse %}
+
           {% comment %} Display the three latest articles {% endcomment %}
 
           {% comment %}  <ul class="grid grid--uniform grid--blog">{% endcomment %}
