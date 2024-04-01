@@ -1085,14 +1085,7 @@
           {% assign sorted_articles = all_articles | sort: 'published_at' | reverse %}
 
 
-          {% assign unique_titles = '' %}
-          {% for post in sorted_articles %}
-            {% unless unique_titles contains post.title %}
-              {% assign unique_titles = unique_titles | append: post.title | append: '|' %}
-             
 
-            {% endunless %}
-          {% endfor %}
 
 
           {% comment %} Display the three latest articles {% endcomment %}
