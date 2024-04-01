@@ -1081,14 +1081,7 @@
 
           {% comment %} Sort all articles by published date {% endcomment %}
           {% assign sorted_articles = all_articles | sort: 'published_at' | reverse %}
-          {% assign articlesToCheck = '' %}
-          {% for article in sorted_articles %}
-            {% assign articlesToCheck = articlesToCheck | append:","| append: article.title  %}
-            
-          {% endfor %}
-          {% assign articlesToCheck2 = articlesToCheck | split: ","  %}
-          {% assign articlesToCheck3 = articlesToCheck2 | uniq | join: "," %}
-          <p>{{ articlesToCheck3 }}</p>
+
 
 {% comment %}
           {% for article in all_articles %}
