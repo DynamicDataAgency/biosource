@@ -1076,30 +1076,26 @@
 
           {% comment %} Aggregate all articles {% endcomment %}
           {% for handle in blog_handles %}
-         
             {% assign all_articles = all_articles | concat: blogs[handle].articles %}
-        
           {% endfor %}
 
           {% comment %} Sort all articles by published date {% endcomment %}
           {% assign sorted_articles = all_articles | sort: 'published_at' | reverse %}
-          {% assign article_titles = "" %}
+          {% assign article_titles = '' %}
           {% for article in all_articles %}
-            
-            {% assign article_titles =  article_titles | append: article.title %}
-            <p>{{ article_titles }}</p>
+            {% assign articlesToCheck = article_titles | append: article.title %}
+            <p>{{ articlesToCheck }}</p>
           {% endfor %}
-          {% assign articlesToCheck =  article_titles | uniq%}
+          {% assign articlesToCheck = article_titles | uniq %}
 
-         
-
+{% comment %}
           {% for article in all_articles %}
             {% if article.title contains articlesToCheck %}
               <p>{{ article.title }}</p>
               <!-- Add any other code to display the article -->
             {% endif %}
           {% endfor %}
-
+{% endcomment %}
 
           {% comment %} Display the three latest articles {% endcomment %}
 
