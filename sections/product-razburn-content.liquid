@@ -287,7 +287,26 @@
         
         
 		<div class="New-Product-Form">	        
-          {% form 'product', product, data-productid: product.id, class:form_classes, novalidate: 'novalidate', data-product-form: '' %}
+          {% form 'product', product, data-productid: product.id, class:form_classes, novalidate: 'novalidate', data-product-form: ''  ,data-loop-product-id:product.id %}
+{% comment %}
+  DO NOT modify this source code
+  LOOP WIDGET CODE STARTS
+{% endcomment %}
+{% assign template_exists = false %}
+{% capture template_content %}
+    {% render 'loop-subscriptions', type: 'product-widget', product: product %}
+{% endcapture %}
+
+{% if template_content contains 'Rendering loop-subscriptions' %}
+  {% assign template_exists = true %}
+{% endif %}
+
+{% if template_exists %}
+  {% render 'loop-subscriptions', type: 'product-widget', product: product %}
+{% endif %}
+{% comment %}
+  LOOP WIDGET CODE ENDS
+{% endcomment %}
             {% unless product.has_only_default_variant %}
               <div class="product-form__controls-group" id="scrolltop">
                 {% for option in product.options_with_values %}
