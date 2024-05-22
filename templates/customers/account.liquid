@@ -6,8 +6,8 @@
 
   <div class="grid myaccount">
     <div class="grid__item myaccount__order-history">
-      {% render 'loop-subscriptions', type: 'customer-portal-link' %}
       <h2>{{ 'customer.orders.title' | t }}</h2>
+      {% render 'loop-subscriptions', type: 'customer-portal-link' %}
       {% paginate customer.orders by 20 %}
         {% if customer.orders.size != 0 %}
 
