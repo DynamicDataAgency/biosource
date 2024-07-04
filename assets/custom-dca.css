@@ -98,3 +98,6 @@ h2.article__title.h3.article__title--has-image {
         align-items: center;
     }
 } */
+li.grid__item.pt-hidden {
+    display: none;
+}
