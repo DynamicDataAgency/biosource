@@ -203,46 +203,7 @@
             {% endif %}
           </div>
         </div> -->
-
-        
-          {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
-            <div class="product__policies rte" data-product-policies>
-              {%- if shop.taxes_included -%}
-                {{ 'products.product.include_taxes' | t }}
-              {%- endif -%}
-              {%- if shop.shipping_policy.body != blank -%}
-                {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
-              {%- endif -%}
-            </div>
-          {%- endif -%}
-
-          {% capture "form_classes" -%}
-            product-form product-form-{{ section.id }}
-            {%- if section.settings.enable_payment_button and product.has_only_default_variant %} product-form--payment-button-no-variants {%- endif -%}
-            {%- if current_variant.available == false %} product-form--variant-sold-out {%- endif -%}
-          {%- endcapture %}
-
-          {% form 'product', product, data-productid: product.id, class:form_classes, novalidate: 'novalidate', data-product-form: ''  ,data-loop-product-id:product.id %}
-{% comment %}
-  DO NOT modify this source code
-  LOOP WIDGET CODE STARTS
-{% endcomment %}
-{% assign template_exists = false %}
-{% capture template_content %}
-    {% render 'loop-subscriptions', type: 'product-widget', product: product %}
-{% endcapture %}
-
-{% if template_content contains 'Rendering loop-subscriptions' %}
-  {% assign template_exists = true %}
-{% endif %}
-
-{% if template_exists %}
-  {% render 'loop-subscriptions', type: 'product-widget', product: product %}
-{% endif %}
-{% comment %}
-  LOOP WIDGET CODE ENDS
-{% endcomment %}
-            {% unless product.has_only_default_variant %}
+{% unless product.has_only_default_variant %}
               <div class="product-form__controls-group" id="scrolltop">
                 {% for option in product.options_with_values %}
                   <div class="selector-wrapper js product-form__item {{option | json}}">
@@ -309,6 +270,44 @@
                 {% endfor %}
               </div>
             {% endunless %}
+        
+          {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
+            <div class="product__policies rte" data-product-policies>
+              {%- if shop.taxes_included -%}
+                {{ 'products.product.include_taxes' | t }}
+              {%- endif -%}
+              {%- if shop.shipping_policy.body != blank -%}
+                {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+
+          {% capture "form_classes" -%}
+            product-form product-form-{{ section.id }}
+            {%- if section.settings.enable_payment_button and product.has_only_default_variant %} product-form--payment-button-no-variants {%- endif -%}
+            {%- if current_variant.available == false %} product-form--variant-sold-out {%- endif -%}
+          {%- endcapture %}
+
+          {% form 'product', product, data-productid: product.id, class:form_classes, novalidate: 'novalidate', data-product-form: ''  ,data-loop-product-id:product.id %}
+{% comment %}
+  DO NOT modify this source code
+  LOOP WIDGET CODE STARTS
+{% endcomment %}
+{% assign template_exists = false %}
+{% capture template_content %}
+    {% render 'loop-subscriptions', type: 'product-widget', product: product %}
+{% endcapture %}
+
+{% if template_content contains 'Rendering loop-subscriptions' %}
+  {% assign template_exists = true %}
+{% endif %}
+
+{% if template_exists %}
+  {% render 'loop-subscriptions', type: 'product-widget', product: product %}
+{% endif %}
+{% comment %}
+  LOOP WIDGET CODE ENDS
+{% endcomment %}
         
         <div class="product__price pmobile">
           {% include 'product-price', variant: current_variant, show_vendor: section.settings.show_vendor %} <span class="finalPrice"></span>
