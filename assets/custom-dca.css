@@ -76,11 +76,11 @@ h2.article__title.h3.article__title--has-image {
     FONT-WEIGHT: 600;
 }
 @media only screen and (min-width: 769px){
-.gm-submenu-align-full .gm-submenu.gm-dropdown, .gm-submenu-align-full>.gm-submenu {
+/* .gm-submenu-align-full .gm-submenu.gm-dropdown, .gm-submenu-align-full>.gm-submenu {
     width: 900px !important;
     flex-wrap: wrap;
     justify-content: center;
-}
+} */
 }
 
  /* @media screen and (max-width: 914px) { 
