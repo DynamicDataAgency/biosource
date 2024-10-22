@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "color_text": "#3a3a3a",
@@ -41,10 +41,10 @@
     "social_snapchat_link": "",
     "social_youtube_link": "",
     "social_vimeo_link": "",
-    "favicon": "shopify:\/\/shop_images\/BioSource_Nutra_Favicon_blue_50320709-4623-45ef-9784-538d2eda1a58.png",
+    "favicon": "shopify://shop_images/BioSource_Nutra_Favicon_blue_50320709-4623-45ef-9784-538d2eda1a58.png",
     "enable_ajax": true,
     "checkout_header_image": "",
-    "checkout_logo_image": "shopify:\/\/shop_images\/BioSource_Nutra_Logo_blue.png",
+    "checkout_logo_image": "shopify://shop_images/BioSource_Nutra_Logo_blue.png",
     "checkout_logo_position": "left",
     "checkout_logo_size": "medium",
     "checkout_body_background_image": "",
@@ -65,13 +65,13 @@
         ],
         "settings": {
           "align_logo": "left",
-          "logo": "shopify:\/\/shop_images\/BioSource_Nutra_Logo_blue.png",
+          "logo": "shopify://shop_images/BioSource_Nutra_Logo_blue.png",
           "logo_max_width": 200,
           "main_linklist": "main-menu",
           "message": false,
           "home_page_only": false,
           "message_text": "Give Your Friends $40 To Spend On Us!",
-          "message_link": "shopify:\/\/pages\/referrals",
+          "message_link": "shopify://pages/referrals",
           "color_bg": "#94cc09",
           "color_text": "#ffffff",
           "submenu": "main-menu"
@@ -83,12 +83,12 @@
 
         ],
         "settings": {
-          "image": "shopify:\/\/shop_images\/biosourcenutra-home-banner.webp",
+          "image": "shopify://shop_images/biosourcenutra-home-banner.webp",
           "layout": "left",
           "title": "Kickstart your body’s metabolism!",
-          "text": "<p><strong>Give us just 21 days and see the amazing results for yourself!<\/strong><\/p><p>Complex Diet Drops is our best-selling formula, helping thousands of users every year reach their weight loss goals. This synergistic blend of over 25 different ingredients known to help reduce hunger, balance many different bodily processes, and give you energy to spare will help support you through the quick, yet powerful “body reset”diet protocol.<\/p>",
+          "text": "<p><strong>Give us just 21 days and see the amazing results for yourself!</strong></p><p>Complex Diet Drops is our best-selling formula, helping thousands of users every year reach their weight loss goals. This synergistic blend of over 25 different ingredients known to help reduce hunger, balance many different bodily processes, and give you energy to spare will help support you through the quick, yet powerful “body reset”diet protocol.</p>",
           "button_label": "Learn More",
-          "button_link": "shopify:\/\/products\/complex-diet"
+          "button_link": "shopify://products/complex-diet"
         }
       },
       "feature-columns": {
@@ -98,9 +98,9 @@
             "type": "text_block",
             "settings": {
               "enable_image": true,
-              "image": "shopify:\/\/shop_images\/weighing-machine_221e97ff-c17a-4fed-aa75-bbec2b167e0d.png",
+              "image": "shopify://shop_images/weighing-machine_221e97ff-c17a-4fed-aa75-bbec2b167e0d.png",
               "title": "Weight Loss",
-              "text": "<p>Turn fat into Fuel. Easy for begineers and effective for pros.<\/p>",
+              "text": "<p>Turn fat into Fuel. Easy for begineers and effective for pros.</p>",
               "button_label": ""
             }
           },
@@ -108,9 +108,9 @@
             "type": "text_block",
             "settings": {
               "enable_image": true,
-              "image": "shopify:\/\/shop_images\/lighting_1491341d-a968-4236-a9a3-d3ed985f7a2a.png",
+              "image": "shopify://shop_images/lighting_1491341d-a968-4236-a9a3-d3ed985f7a2a.png",
               "title": "Increase Energy",
-              "text": "<p>You can still indulge. A keto diet is a delicious diet that fuels your body and mind.<\/p>",
+              "text": "<p>You can still indulge. A keto diet is a delicious diet that fuels your body and mind.</p>",
               "button_label": ""
             }
           },
@@ -118,9 +118,9 @@
             "type": "text_block",
             "settings": {
               "enable_image": true,
-              "image": "shopify:\/\/shop_images\/food_299c88d8-2dbd-4340-966f-ddee9d0d421b.png",
+              "image": "shopify://shop_images/food_299c88d8-2dbd-4340-966f-ddee9d0d421b.png",
               "title": "Improve Overall Health",
-              "text": "<p>Focus for longer, think more clearly, and power through your workouts.<\/p>",
+              "text": "<p>Focus for longer, think more clearly, and power through your workouts.</p>",
               "button_label": ""
             }
           }
@@ -154,21 +154,21 @@
           "quotes-0": {
             "type": "quote",
             "settings": {
-              "quote": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+              "quote": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
               "author": "Author's name"
             }
           },
           "quotes-1": {
             "type": "quote",
             "settings": {
-              "quote": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+              "quote": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
               "author": "Author's name"
             }
           },
           "quotes-2": {
             "type": "quote",
             "settings": {
-              "quote": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+              "quote": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
               "author": "Author's name"
             }
           }
@@ -225,8 +225,8 @@
             "type": "text",
             "settings": {
               "title": "",
-              "customloquid": "<p style=\"margin-bottom: 10px;\"><strong>Subscribe to our newsletter for the latest info, tips, and special promos.<\/strong><\/p>\n<div class=\"klaviyo-form-VN6UwJ\"><\/div>",
-              "text": "<p>These statements have not been evaluated or approved by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.<\/p>"
+              "customloquid": "<p style=\"margin-bottom: 10px;\"><strong>Subscribe to our newsletter for the latest info, tips, and special promos.</strong></p>\n<div class=\"klaviyo-form-VN6UwJ\"></div>",
+              "text": "<p>These statements have not been evaluated or approved by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>"
             }
           },
           "2956fbbd-7cb6-41aa-9839-e27687b3a61c": {
@@ -248,7 +248,7 @@
             "settings": {
               "title": "Contact Us",
               "customloquid": "",
-              "text": "<p>BioSource Nutra LLC<br\/>30 N Gould St. Ste. 2001<br\/>Sheridan, WY 82801<br\/>Phone: 307-224-6846<br\/>Email: <a href=\"mailto:support@biosourcenutra.com\" target=\"_blank\">support@biosourcenutra.com<\/a><\/p>"
+              "text": "<p>BioSource Nutra LLC<br/>30 N Gould St. Ste. 2001<br/>Sheridan, WY 82801<br/>Phone: 307-224-6846<br/>Email: <a href=\"mailto:support@biosourcenutra.com\" target=\"_blank\">support@biosourcenutra.com</a></p>"
             }
           }
         },
@@ -274,9 +274,9 @@
             "type": "text_block",
             "settings": {
               "enable_image": true,
-              "image": "shopify:\/\/shop_images\/free-delivery_eb184a3c-2c78-4129-9f2b-c974d84484ad.png",
+              "image": "shopify://shop_images/free-delivery_eb184a3c-2c78-4129-9f2b-c974d84484ad.png",
               "title": "",
-              "text": "<p><strong>Free Shipping<\/strong> for US orders over $100<\/p>",
+              "text": "<p><strong>Free Shipping</strong> for US orders over $100</p>",
               "button_label": "",
               "button_link": ""
             }
@@ -285,9 +285,9 @@
             "type": "text_block",
             "settings": {
               "enable_image": true,
-              "image": "shopify:\/\/shop_images\/shield.png",
+              "image": "shopify://shop_images/shield.png",
               "title": "",
-              "text": "<p><strong>100% NO-RISK<\/strong> Money Back Guarantee<\/p>",
+              "text": "<p><strong>100% NO-RISK</strong> Money Back Guarantee</p>",
               "button_label": "",
               "button_link": ""
             }
@@ -296,9 +296,9 @@
             "type": "text_block",
             "settings": {
               "enable_image": true,
-              "image": "shopify:\/\/shop_images\/free-shipping_54de316d-f196-47f4-8dcd-951db7bdc0cf.png",
+              "image": "shopify://shop_images/free-shipping_54de316d-f196-47f4-8dcd-951db7bdc0cf.png",
               "title": "",
-              "text": "<p><strong>Next Day Shipping<\/strong> Orders ship next business day<\/p>",
+              "text": "<p><strong>Next Day Shipping</strong> Orders ship next business day</p>",
               "button_label": "",
               "button_link": ""
             }
@@ -357,9 +357,9 @@
             "type": "text_block",
             "settings": {
               "enable_image": true,
-              "image": "shopify:\/\/shop_images\/success.png",
+              "image": "shopify://shop_images/success.png",
               "title": "10 years of Success!",
-              "text": "<p>We’ve been at this for a decade. Results speak for themselves.<\/p>",
+              "text": "<p>We’ve been at this for a decade. Results speak for themselves.</p>",
               "button_label": "",
               "button_link": ""
             }
@@ -368,7 +368,7 @@
             "type": "text_block",
             "settings": {
               "enable_image": true,
-              "image": "shopify:\/\/shop_images\/diabetes-plate-method-medium.webp",
+              "image": "shopify://shop_images/diabetes-plate-method-medium.webp",
               "title": "",
               "text": "",
               "button_label": "",
@@ -379,9 +379,9 @@
             "type": "text_block",
             "settings": {
               "enable_image": true,
-              "image": "shopify:\/\/shop_images\/safety.png",
+              "image": "shopify://shop_images/safety.png",
               "title": "Quality and Safety",
-              "text": "<p>GMP certified, made in USA<\/p>",
+              "text": "<p>GMP certified, made in USA</p>",
               "button_label": "",
               "button_link": ""
             }
@@ -390,7 +390,7 @@
             "type": "text_block",
             "settings": {
               "enable_image": true,
-              "image": "shopify:\/\/shop_images\/ingredient.png",
+              "image": "shopify://shop_images/ingredient.png",
               "title": "Cleaner Ingredients",
               "text": "",
               "button_label": "",
@@ -411,7 +411,7 @@
             "type": "text_block",
             "settings": {
               "enable_image": true,
-              "image": "shopify:\/\/shop_images\/money-back.png",
+              "image": "shopify://shop_images/money-back.png",
               "title": "30-Day Money Back Return Period",
               "text": "",
               "button_label": "",
@@ -437,7 +437,7 @@
         "settings": {
           "layout": "right",
           "title": "Our Promise To You",
-          "text": "<p>Our business is YOU! Over the past 10 years hundreds of thousands of people have entrusted BioSource Nutra to help them achieve dramatic improvements in their well-being through incredible weight loss results, better nutrition, and ongoing healthy living with our advanced formulations.<\/p><p>We promise to give you all the tools, the information, and the support you need to make the positive changes that so many of our customers have experienced.<\/p><p>If you are unsatisfied for any reason, we’ll make it right or give you a refund. Zero hassles!<\/p>",
+          "text": "<p>Our business is YOU! Over the past 10 years hundreds of thousands of people have entrusted BioSource Nutra to help them achieve dramatic improvements in their well-being through incredible weight loss results, better nutrition, and ongoing healthy living with our advanced formulations.</p><p>We promise to give you all the tools, the information, and the support you need to make the positive changes that so many of our customers have experienced.</p><p>If you are unsatisfied for any reason, we’ll make it right or give you a refund. Zero hassles!</p>",
           "button_label": "",
           "button_link": ""
         }
@@ -460,21 +460,21 @@
           "16093254090bfc9dfa-0": {
             "type": "quote",
             "settings": {
-              "quote": "<p>I discovered this product and was able to loose weight faster and with less hunger pangs. I followed the directions and the diet to a T! It works!<br\/><\/p>",
+              "quote": "<p>I discovered this product and was able to loose weight faster and with less hunger pangs. I followed the directions and the diet to a T! It works!<br/></p>",
               "author": "Michelle P."
             }
           },
           "16093254090bfc9dfa-1": {
             "type": "quote",
             "settings": {
-              "quote": "<p>I’m on my 2nd round of these drops and I’ve lost almost 30 pounds so far...<\/p>",
+              "quote": "<p>I’m on my 2nd round of these drops and I’ve lost almost 30 pounds so far...</p>",
               "author": "Tonya Rains"
             }
           },
           "16093254090bfc9dfa-2": {
             "type": "quote",
             "settings": {
-              "quote": "<p>I love this product. I started out at 198 lbs and I am down to 176 in just 2 months.<\/p>",
+              "quote": "<p>I love this product. I started out at 198 lbs and I am down to 176 in just 2 months.</p>",
               "author": "BobbyJean Kosinski"
             }
           }
@@ -492,7 +492,7 @@
         "type": "product-video",
         "settings": {
           "image_position": "center center",
-          "video_link": "https:\/\/youtu.be\/bzPRVZUj_tk",
+          "video_link": "https://youtu.be/bzPRVZUj_tk",
           "show_overlay": true,
           "style": "image_with_play",
           "height": "medium",
@@ -505,7 +505,7 @@
         "settings": {
           "full_width": false,
           "section_title": "Why Does Skin Wrinkle with Age?",
-          "text": "<p><strong>Intrinsic aging<\/strong> is the natural aging process that takes place over the years, regardless of external influences. Starting at age 20, we produce 1 - 1.5% less skin collagen on average each year, and the loss only accelerates from there. As a result, our skin becomes thinner and more fragile. There’s also a similar decline in your skin’s production of elastin and hyaluronic acid.<\/p><p>Without supplementation we produce, on average, 25% less collagen by age 40 than we did in our youth, and by age 60, our bodies are producing a shocking 50% less collagen<\/p><p>Some wrinkle formation, as a result of intrinsic aging is inevitable, but it is slight compared to the <strong><span style=\"text-decoration:underline\">accelerated aging effects of these external factors.<\/span><\/strong><\/p>",
+          "text": "<p><strong>Intrinsic aging</strong> is the natural aging process that takes place over the years, regardless of external influences. Starting at age 20, we produce 1 - 1.5% less skin collagen on average each year, and the loss only accelerates from there. As a result, our skin becomes thinner and more fragile. There’s also a similar decline in your skin’s production of elastin and hyaluronic acid.</p><p>Without supplementation we produce, on average, 25% less collagen by age 40 than we did in our youth, and by age 60, our bodies are producing a shocking 50% less collagen</p><p>Some wrinkle formation, as a result of intrinsic aging is inevitable, but it is slight compared to the <strong><span style=\"text-decoration:underline\">accelerated aging effects of these external factors.</span></strong></p>",
           "text_size": "medium"
         }
       },
@@ -517,7 +517,7 @@
             "settings": {
               "mainhead": "15%",
               "head": "gvjvhkmhjk",
-              "par": "<p>ghkhjkhjmkhj<\/p>"
+              "par": "<p>ghkhjkhjmkhj</p>"
             }
           },
           "0fc59576-36b8-4a78-a0f6-dd8b3970f711": {
@@ -525,7 +525,7 @@
             "settings": {
               "mainhead": "25%",
               "head": "hjmhmkh",
-              "par": "<p>khjkmhjmkuh<\/p>"
+              "par": "<p>khjkmhjmkuh</p>"
             }
           },
           "f5910ce5-5cb3-47d6-acf3-b1f5a040dccb": {
@@ -533,7 +533,7 @@
             "settings": {
               "mainhead": "40%",
               "head": "bhmhjmj",
-              "par": "<p>mhjbkhkhk<\/p>"
+              "par": "<p>mhjbkhkhk</p>"
             }
           }
         },
@@ -613,7 +613,7 @@
             "settings": {
               "mainhead": "STEP 1",
               "head": "GET THE RIGHT COLLAGEN",
-              "par": "<p>Human skin is made of Type 1 collagen. Most collagen powders include the wrong form of collagen for skin, settling for cheaper ineffective Type 3 Bovine (cow) collagen.<\/p>"
+              "par": "<p>Human skin is made of Type 1 collagen. Most collagen powders include the wrong form of collagen for skin, settling for cheaper ineffective Type 3 Bovine (cow) collagen.</p>"
             }
           },
           "676286e7-6238-463f-869f-060711a887b2": {
@@ -621,7 +621,7 @@
             "settings": {
               "mainhead": "STEP 2",
               "head": "ADD COLLAGEN PRODUCTION BOOSTERS",
-              "par": "<p>As we age, we have to help our bodies continue to produce skin collagen by consuming natural plant extract “boosters” that have been clinically proven to restore the skin to its youthful collagen, elastin, and hyaluronic acid productivity.<\/p>"
+              "par": "<p>As we age, we have to help our bodies continue to produce skin collagen by consuming natural plant extract “boosters” that have been clinically proven to restore the skin to its youthful collagen, elastin, and hyaluronic acid productivity.</p>"
             }
           },
           "a7f9c866-3961-47b7-b39c-6124107a9a69": {
@@ -629,7 +629,7 @@
             "settings": {
               "mainhead": "STEP 3",
               "head": "ADD SKIN PROTECTION FACTORS",
-              "par": "<p>Finally, a truly effective skin collagen formula simply must include highly concentrated plant-based extracts that enhance each cell’s natural defenses against environmental and dietary factors that damage skin.<\/p>"
+              "par": "<p>Finally, a truly effective skin collagen formula simply must include highly concentrated plant-based extracts that enhance each cell’s natural defenses against environmental and dietary factors that damage skin.</p>"
             }
           }
         },
@@ -645,10 +645,10 @@
       "Complex-Diet-Drops-feature-row": {
         "type": "Complex-Diet-Drops-feature-row",
         "settings": {
-          "image": "shopify:\/\/shop_images\/complex-diet-drops.jpg",
+          "image": "shopify://shop_images/complex-diet-drops.jpg",
           "layout": "right",
           "title": "What is Complex Diet Drops?",
-          "text": "<p>ComplexDiet Drops is a synergistic blend over 25 different ingredients knownto help support the body in a variety of ways. When used togetherwithout the BioSource Nutra Diet Protocol, our scientificallyformulated combination of ingredients helps:<\/p><p><strong>Reduce\tHunger<\/strong>\tnaturally without any harsh stimulants<br\/><strong>Lose Weight<\/strong>\tby retraining your body’s appetites and promoting a healthy\tbalance of the essential bodily processes that regulate fat\tstorage.<br\/><strong>Increase\tEnergy <\/strong>by using more stored fat as fuel, helping convert your body into a fat\tburning furnace. \t<\/p>",
+          "text": "<p>ComplexDiet Drops is a synergistic blend over 25 different ingredients knownto help support the body in a variety of ways. When used togetherwithout the BioSource Nutra Diet Protocol, our scientificallyformulated combination of ingredients helps:</p><p><strong>Reduce\tHunger</strong>\tnaturally without any harsh stimulants<br/><strong>Lose Weight</strong>\tby retraining your body’s appetites and promoting a healthy\tbalance of the essential bodily processes that regulate fat\tstorage.<br/><strong>Increase\tEnergy </strong>by using more stored fat as fuel, helping convert your body into a fat\tburning furnace. \t</p>",
           "button_label": "",
           "button_link": ""
         }
@@ -660,21 +660,21 @@
             "type": "text",
             "settings": {
               "heading_text": "Do I need to exercise while using Complex Diet Drops?",
-              "subheading_text": "<p>We recommend staying active with light to moderate exercise, but to avoid intense workouts. Intense workouts can cause extra stress on your body which could hinder your overall results.<\/p>"
+              "subheading_text": "<p>We recommend staying active with light to moderate exercise, but to avoid intense workouts. Intense workouts can cause extra stress on your body which could hinder your overall results.</p>"
             }
           },
           "2dda20e8-73fc-4517-bba5-82a8597dd80d": {
             "type": "text",
             "settings": {
               "heading_text": "Can I use these during the BioSource Nutra Diet Protocol?",
-              "subheading_text": "<p>Yes. Garcinia Cambogia goes hand in hand with your dieting efforts. <\/p>"
+              "subheading_text": "<p>Yes. Garcinia Cambogia goes hand in hand with your dieting efforts. </p>"
             }
           },
           "dce5c555-80ce-46c4-8c12-efdcbcbf70a1": {
             "type": "text",
             "settings": {
               "heading_text": "How do I use Garcinia Cambogia Ultra Slim?",
-              "subheading_text": "<p>Simply follow the instructions on the bottle. Take 1 capsule three times per day. Garcinia Cambogia Ultra Slim is best taken with food. This product works great during the diet protocol or on its own as a maintenance formula. <\/p>"
+              "subheading_text": "<p>Simply follow the instructions on the bottle. Take 1 capsule three times per day. Garcinia Cambogia Ultra Slim is best taken with food. This product works great during the diet protocol or on its own as a maintenance formula. </p>"
             }
           },
           "12cb1657-16a1-41e7-8ba8-e1cfeec12612": {
@@ -682,14 +682,14 @@
             "disabled": true,
             "settings": {
               "heading_text": "How does it taste?",
-              "subheading_text": "<p>These are tasteless effervescent tablets. There is no flavoring. Because the primary ingredient is magnesium it carries a slight mineral taste. <\/p>"
+              "subheading_text": "<p>These are tasteless effervescent tablets. There is no flavoring. Because the primary ingredient is magnesium it carries a slight mineral taste. </p>"
             }
           },
           "e086f81c-efb6-4ad1-ab06-2f9910392cff": {
             "type": "text",
             "settings": {
               "heading_text": "Are there any side effects?",
-              "subheading_text": "<p>Garcinia Cambogia is safe. There have been no negative side effects reported. We always recommend checking with a doctor before you start any new supplement. <\/p>"
+              "subheading_text": "<p>Garcinia Cambogia is safe. There have been no negative side effects reported. We always recommend checking with a doctor before you start any new supplement. </p>"
             }
           }
         },
@@ -707,10 +707,10 @@
       "Complex-Diet-Drops-feature-row2": {
         "type": "Complex-Diet-Drops-feature-row2",
         "settings": {
-          "image": "shopify:\/\/shop_images\/unnamed.png",
+          "image": "shopify://shop_images/unnamed.png",
           "layout": "left",
           "title": "The BioSource Nutra Diet Protocol",
-          "text": "<p>The BioSourceNutra Diet Protocol combinesaspects of intermittent fasting with calorie and carbohydraterestriction for a short, yet powerful body reset. Over the course ofroughly one month you will retrain your body and mind to get backinto an ideal zone of healthy living. Complex Diet Drops and theBioSource Nutra Diet Protocol will help catapult you toward becominga leaner, more energetic, more confident YOU!<\/p><p>Chooseto follow a 21-day quick reset for fast results, or the slightlylonger 43-day option to help you fully adjust to the importantchanges happening in your body.<\/p><p><em>Everything you need in 3 easy steps<\/em><\/p><p><em><strong>Take 0.5ML(10 Drops) 3 times per day<\/strong><\/em><\/p><p><em><strong>Follow the diet protocol<\/strong><\/em><\/p><p><em><strong>Experience the Fast, Incredible results<\/strong><\/em><\/p>",
+          "text": "<p>The BioSourceNutra Diet Protocol combinesaspects of intermittent fasting with calorie and carbohydraterestriction for a short, yet powerful body reset. Over the course ofroughly one month you will retrain your body and mind to get backinto an ideal zone of healthy living. Complex Diet Drops and theBioSource Nutra Diet Protocol will help catapult you toward becominga leaner, more energetic, more confident YOU!</p><p>Chooseto follow a 21-day quick reset for fast results, or the slightlylonger 43-day option to help you fully adjust to the importantchanges happening in your body.</p><p><em>Everything you need in 3 easy steps</em></p><p><em><strong>Take 0.5ML(10 Drops) 3 times per day</strong></em></p><p><em><strong>Follow the diet protocol</strong></em></p><p><em><strong>Experience the Fast, Incredible results</strong></em></p>",
           "button_label": "TRY IT NOW",
           "button_link": "#"
         }
@@ -720,7 +720,7 @@
         "settings": {
           "layout": "right",
           "title": "What’s Really Holding Us Back",
-          "text": "<p>Thetruth is modern lifestyles have hijacked our healthy behaviors andeating habits, making it very hard to maintain a healthy weight.<\/p><p>Youare not alone if you have tried endless dieting and working out to noavail.<\/p><p>Keyfactors that may be causing us to hold on to unhealthy weight:<\/p>",
+          "text": "<p>Thetruth is modern lifestyles have hijacked our healthy behaviors andeating habits, making it very hard to maintain a healthy weight.</p><p>Youare not alone if you have tried endless dieting and working out to noavail.</p><p>Keyfactors that may be causing us to hold on to unhealthy weight:</p>",
           "button_label": "",
           "button_link": ""
         }
@@ -732,9 +732,9 @@
             "type": "text_block",
             "settings": {
               "enable_image": true,
-              "image": "shopify:\/\/shop_images\/insulin_1.png",
+              "image": "shopify://shop_images/insulin_1.png",
               "title": "High Insulin Resistance",
-              "text": "<p>Insulin is an important hormone that regulates energy storage. High sugar, high carb diets elevate insulin levels. Consistent high levels of insulin creates higher insulin resistance in the body. This can signal to increase fat storage resulting in an accumulation of stubborn fat.<\/p>",
+              "text": "<p>Insulin is an important hormone that regulates energy storage. High sugar, high carb diets elevate insulin levels. Consistent high levels of insulin creates higher insulin resistance in the body. This can signal to increase fat storage resulting in an accumulation of stubborn fat.</p>",
               "button_label": "",
               "button_link": ""
             }
@@ -743,9 +743,9 @@
             "type": "text_block",
             "settings": {
               "enable_image": true,
-              "image": "shopify:\/\/shop_images\/desperate-2676556_1280.jpg",
+              "image": "shopify://shop_images/desperate-2676556_1280.jpg",
               "title": "High Stress",
-              "text": "<p>Cortisol is called the stress hormone. Elevated levels of cortisol can decrease the body’s insulin sensitivity and cause chronic inflammation. This vicious cycle puts the body in a constant state of stress and anxiety that can signal the body to hold fat for survival.<\/p>",
+              "text": "<p>Cortisol is called the stress hormone. Elevated levels of cortisol can decrease the body’s insulin sensitivity and cause chronic inflammation. This vicious cycle puts the body in a constant state of stress and anxiety that can signal the body to hold fat for survival.</p>",
               "button_label": "",
               "button_link": ""
             }
@@ -754,9 +754,9 @@
             "type": "text_block",
             "settings": {
               "enable_image": true,
-              "image": "shopify:\/\/shop_images\/poor_sleep.png",
+              "image": "shopify://shop_images/poor_sleep.png",
               "title": "Poor Sleep",
-              "text": "<p>Sleepdeprivation can trigger imbalances in Ghrelin and Leptin. Ghrelin isa hormone that signals hunger while Leptin suppresses the appetite.Lack of sleep may increase ghrelin levels, causing us to seek outfood because we constantly feel hungry<\/p>",
+              "text": "<p>Sleepdeprivation can trigger imbalances in Ghrelin and Leptin. Ghrelin isa hormone that signals hunger while Leptin suppresses the appetite.Lack of sleep may increase ghrelin levels, causing us to seek outfood because we constantly feel hungry</p>",
               "button_label": "",
               "button_link": ""
             }
@@ -765,9 +765,9 @@
             "type": "text_block",
             "settings": {
               "enable_image": true,
-              "image": "shopify:\/\/shop_images\/no-food.png",
+              "image": "shopify://shop_images/no-food.png",
               "title": "Poor Eating Patterns",
-              "text": "<p>Snacking,skipping meals, eating too late or waiting too long between meals allplay a role here. Our bodies love predictability and will functionefficiently with the right programming. Eating outside normal hoursof activity forces our bodies into an active state that can preventproper recovery and disrupt sleep cycles.<\/p>",
+              "text": "<p>Snacking,skipping meals, eating too late or waiting too long between meals allplay a role here. Our bodies love predictability and will functionefficiently with the right programming. Eating outside normal hoursof activity forces our bodies into an active state that can preventproper recovery and disrupt sleep cycles.</p>",
               "button_label": "",
               "button_link": ""
             }
@@ -776,9 +776,9 @@
             "type": "text_block",
             "settings": {
               "enable_image": true,
-              "image": "shopify:\/\/shop_images\/no-junk-food.png",
+              "image": "shopify://shop_images/no-junk-food.png",
               "title": "Poor Food Quality and Quantity",
-              "text": "<p>Restaurant food is typically loaded with sodium, refined sugar and saturated fat from processed oils. Poor quality foods and higher calorie or larger meal portions stress out the liver. This stress can lead to inflammation and hormonal imbalances resulting in unhealthy fat storage among other undesirable health conditions.<\/p>",
+              "text": "<p>Restaurant food is typically loaded with sodium, refined sugar and saturated fat from processed oils. Poor quality foods and higher calorie or larger meal portions stress out the liver. This stress can lead to inflammation and hormonal imbalances resulting in unhealthy fat storage among other undesirable health conditions.</p>",
               "button_label": "",
               "button_link": ""
             }
@@ -787,9 +787,9 @@
             "type": "text_block",
             "settings": {
               "enable_image": true,
-              "image": "shopify:\/\/shop_images\/water-bottle.png",
+              "image": "shopify://shop_images/water-bottle.png",
               "title": "Poor Hydration",
-              "text": "<p>Drinking too little water affects vital bodily functions. Sometimes we can mistake thirst signals for hunger signals and eat instead of hydrating. Increased hydration can aid in lipolysis, the body’s process of breaking down fat.<\/p>",
+              "text": "<p>Drinking too little water affects vital bodily functions. Sometimes we can mistake thirst signals for hunger signals and eat instead of hydrating. Increased hydration can aid in lipolysis, the body’s process of breaking down fat.</p>",
               "button_label": "",
               "button_link": ""
             }
@@ -799,7 +799,7 @@
             "settings": {
               "enable_image": false,
               "title": "",
-              "text": "<p>The good news is that most of our bodies are “naturally programmed”to be much healthier than most of us currently are but just needproper balancing and alignment to make significant improvements.<\/p>",
+              "text": "<p>The good news is that most of our bodies are “naturally programmed”to be much healthier than most of us currently are but just needproper balancing and alignment to make significant improvements.</p>",
               "button_label": "",
               "button_link": ""
             }
@@ -822,10 +822,10 @@
       "Complex-Diet-Drops-feature-row5": {
         "type": "Complex-Diet-Drops-feature-row5",
         "settings": {
-          "image": "shopify:\/\/shop_images\/2.jpg",
+          "image": "shopify://shop_images/2.jpg",
           "layout": "right",
           "title": "Quality Natural Ingredients",
-          "text": "<p>ComplexDiet Drops contains scientifically validated essential andnon-essential amino acid profiles coupled with an herbal blend andother natural ingredients that work together synergistically tosupport your body as you enter an optimal fat-burning mode duringcalorie restriction.<\/p><p>(IllustrationGraphic with icons for ) reduce hunger, increase energy, boostmetabolism, mobilize fat.<\/p><p><strong>The Essentials<\/strong><\/p><p>EssentialAmino Acids provide a number of important benefits to the body liketissue repair and nutrient absorption. Studies have also found thatthese essential amino acids preventlean muscle breakdown. Having a greater amount of lean muscle masscan increase calories burned throughout the day, essentially takingaway the supply of calories from fat cells. As fat cells shrink welook thinner and may feel lighter, among many other benefits.<\/p>",
+          "text": "<p>ComplexDiet Drops contains scientifically validated essential andnon-essential amino acid profiles coupled with an herbal blend andother natural ingredients that work together synergistically tosupport your body as you enter an optimal fat-burning mode duringcalorie restriction.</p><p>(IllustrationGraphic with icons for ) reduce hunger, increase energy, boostmetabolism, mobilize fat.</p><p><strong>The Essentials</strong></p><p>EssentialAmino Acids provide a number of important benefits to the body liketissue repair and nutrient absorption. Studies have also found thatthese essential amino acids preventlean muscle breakdown. Having a greater amount of lean muscle masscan increase calories burned throughout the day, essentially takingaway the supply of calories from fat cells. As fat cells shrink welook thinner and may feel lighter, among many other benefits.</p>",
           "button_label": "",
           "button_link": ""
         }
@@ -838,7 +838,7 @@
             "settings": {
               "enable_image": false,
               "title": "L-Glutamine",
-              "text": "<p>Protect Lean Muscle<br\/>Regulate Blood Sugar<br\/>Reduce Stress<\/p>",
+              "text": "<p>Protect Lean Muscle<br/>Regulate Blood Sugar<br/>Reduce Stress</p>",
               "button_label": "",
               "button_link": ""
             }
@@ -848,7 +848,7 @@
             "settings": {
               "enable_image": false,
               "title": "L-Arginine",
-              "text": "<p>Protect Lean Muscle<br\/>Blood Flow<br\/>Mobilize Fat<\/p>",
+              "text": "<p>Protect Lean Muscle<br/>Blood Flow<br/>Mobilize Fat</p>",
               "button_label": "",
               "button_link": ""
             }
@@ -858,7 +858,7 @@
             "settings": {
               "enable_image": false,
               "title": "L-Tyrosine",
-              "text": "<p>Mental Performance<br\/>Alertness<\/p>",
+              "text": "<p>Mental Performance<br/>Alertness</p>",
               "button_label": "",
               "button_link": ""
             }
@@ -868,7 +868,7 @@
             "settings": {
               "enable_image": false,
               "title": "L-Carnitine",
-              "text": "<p>Mobilize Fat<br\/>Control Appetite<br\/>Reduce Fatige<\/p>",
+              "text": "<p>Mobilize Fat<br/>Control Appetite<br/>Reduce Fatige</p>",
               "button_label": "",
               "button_link": ""
             }
@@ -878,7 +878,7 @@
             "settings": {
               "enable_image": false,
               "title": "L-Ornithine",
-              "text": "<p>Protect Lean Muscle<br\/>Cellular Detoxification<\/p>",
+              "text": "<p>Protect Lean Muscle<br/>Cellular Detoxification</p>",
               "button_label": "",
               "button_link": ""
             }
@@ -888,7 +888,7 @@
             "settings": {
               "enable_image": false,
               "title": "L-Tryptophan",
-              "text": "<p>Control Appetite<br\/>Improve Mood<\/p>",
+              "text": "<p>Control Appetite<br/>Improve Mood</p>",
               "button_label": "",
               "button_link": ""
             }
@@ -910,10 +910,10 @@
       "Complex-Diet-Drops-feature-row6": {
         "type": "Complex-Diet-Drops-feature-row6",
         "settings": {
-          "image": "shopify:\/\/shop_images\/2.jpg",
+          "image": "shopify://shop_images/2.jpg",
           "layout": "right",
           "title": "The Power Combo",
-          "text": "<p>Thepotent blend of herbs and natural ingredients is designed superchargeyour cells and help balance vital bodily functions.<\/p><p>Seethese amazing ingredients and their benefits below: (Graphic todisplay images representing the ingredients kind of like image below.Ingredients are listed in categories based on benefits)<\/p>",
+          "text": "<p>Thepotent blend of herbs and natural ingredients is designed superchargeyour cells and help balance vital bodily functions.</p><p>Seethese amazing ingredients and their benefits below: (Graphic todisplay images representing the ingredients kind of like image below.Ingredients are listed in categories based on benefits)</p>",
           "button_label": "",
           "button_link": ""
         }
@@ -926,7 +926,7 @@
             "settings": {
               "enable_image": false,
               "title": "PromotesHealthy Blood Sugar",
-              "text": "<p>ChromiumPicolinate<br\/>AfricanMango<br\/>GymnemaSylvestre<br\/>GrapefruitSeed Extract<\/p>",
+              "text": "<p>ChromiumPicolinate<br/>AfricanMango<br/>GymnemaSylvestre<br/>GrapefruitSeed Extract</p>",
               "button_label": "",
               "button_link": ""
             }
@@ -936,7 +936,7 @@
             "settings": {
               "enable_image": false,
               "title": "Strengthen Immune System – Lower Stress and Inflammation",
-              "text": "<p>GABA<br\/>Maca<br\/>Astragalus<br\/>Eleuthero<br\/>CapsicumAnnum<br\/>MonoammoniumGlycyrrhizinate<\/p>",
+              "text": "<p>GABA<br/>Maca<br/>Astragalus<br/>Eleuthero<br/>CapsicumAnnum<br/>MonoammoniumGlycyrrhizinate</p>",
               "button_label": "",
               "button_link": ""
             }
@@ -946,7 +946,7 @@
             "settings": {
               "enable_image": false,
               "title": "Boost Energy and Metabolism",
-              "text": "<p>Guarana<br\/>GreenTea<br\/>PanaxGinseng<\/p>",
+              "text": "<p>Guarana<br/>GreenTea<br/>PanaxGinseng</p>",
               "button_label": "",
               "button_link": ""
             }
@@ -956,7 +956,7 @@
             "settings": {
               "enable_image": false,
               "title": "Mobilize Fat",
-              "text": "<p>Frambione<br\/>Coleus Forskohlii<br\/>Grape Seed Extract<br\/>Fucoxanthin<\/p>",
+              "text": "<p>Frambione<br/>Coleus Forskohlii<br/>Grape Seed Extract<br/>Fucoxanthin</p>",
               "button_label": "",
               "button_link": ""
             }
@@ -980,9 +980,9 @@
             "type": "text_block",
             "settings": {
               "enable_image": true,
-              "image": "shopify:\/\/shop_images\/fHpT3A.jpg",
+              "image": "shopify://shop_images/fHpT3A.jpg",
               "title": "No Hormones, No Injections, No Negative Side-Effects",
-              "text": "<p>Creatinga positive hormonal balance is essential for sustainable weight loss.Loading the body with hormones like hGC for weight loss purposes canresult in hormonal imbalances that may actually cause delayed weightgain and other long-term issues. The Complex Diet Drops formula DOESNOT CONTAIN hCG or any other hormones.<\/p><p>BioSourceLabs has dedicated several years and an incredible amount ofresources toward research and development of our hormone-free formulathat just works!<\/p>",
+              "text": "<p>Creatinga positive hormonal balance is essential for sustainable weight loss.Loading the body with hormones like hGC for weight loss purposes canresult in hormonal imbalances that may actually cause delayed weightgain and other long-term issues. The Complex Diet Drops formula DOESNOT CONTAIN hCG or any other hormones.</p><p>BioSourceLabs has dedicated several years and an incredible amount ofresources toward research and development of our hormone-free formulathat just works!</p>",
               "button_label": "",
               "button_link": ""
             }
@@ -999,10 +999,10 @@
       "Complex-Diet-Drops-feature-row8": {
         "type": "Complex-Diet-Drops-feature-row8",
         "settings": {
-          "image": "shopify:\/\/shop_images\/ezgif.jpg",
+          "image": "shopify://shop_images/ezgif.jpg",
           "layout": "left",
           "title": "Safety & Science",
-          "text": "<p><strong>All The Tools ForSuccess<\/strong><\/p><p>Whenyou order Complex Diet Drops you will receive a comprehensive dietsystem that includes everything you’ll need for success (imagesthat represent each below)<\/p><p>1. Complex Diet Drops<br\/>2. Quickstart Diet Guide Booklet with step-by-step instructions for quick referencing.<br\/>3. Free exclusive membership access to our suite of diet success tools including full diet instructions, weight loss tracker, recipes, and food log.<\/p><p><strong>UnlimitedSupport<br\/><\/strong>We want to help you reach your goals. Call, email, or chat with one ofour coaches whenever you need some guidance.<\/p><p><strong>ProvenTrack Record<br\/><\/strong>BioSourceNutra is going has helped customers reach their goals since 2010. Theresults speak for themselves.<\/p><p><strong>Satisfaction Guarantee<br\/><\/strong>BioSourceNutra has a 30-day money-back return policy. If you’re notsatisfied with our products or service, send it back for a refund! Nohassles.<\/p>",
+          "text": "<p><strong>All The Tools ForSuccess</strong></p><p>Whenyou order Complex Diet Drops you will receive a comprehensive dietsystem that includes everything you’ll need for success (imagesthat represent each below)</p><p>1. Complex Diet Drops<br/>2. Quickstart Diet Guide Booklet with step-by-step instructions for quick referencing.<br/>3. Free exclusive membership access to our suite of diet success tools including full diet instructions, weight loss tracker, recipes, and food log.</p><p><strong>UnlimitedSupport<br/></strong>We want to help you reach your goals. Call, email, or chat with one ofour coaches whenever you need some guidance.</p><p><strong>ProvenTrack Record<br/></strong>BioSourceNutra is going has helped customers reach their goals since 2010. Theresults speak for themselves.</p><p><strong>Satisfaction Guarantee<br/></strong>BioSourceNutra has a 30-day money-back return policy. If you’re notsatisfied with our products or service, send it back for a refund! Nohassles.</p>",
           "button_label": "START GETTING HEALTHIER TODAY!",
           "button_link": "#"
         }
@@ -1010,10 +1010,10 @@
       "Complex-Diet-Drops-feature-row4": {
         "type": "Complex-Diet-Drops-feature-row4",
         "settings": {
-          "image": "shopify:\/\/shop_images\/1_720x_0668c3be-42d9-4cb7-a280-1d2571f4770d.jpg",
+          "image": "shopify://shop_images/1_720x_0668c3be-42d9-4cb7-a280-1d2571f4770d.jpg",
           "layout": "left",
           "title": "Why Complex Diet Drops?",
-          "text": "<p>ComplexDiet Drops is designed to help:<\/p><p>Reduce excess hormones like cortisol, the stress hormone responsible for much of our belly fat.<\/p><p>Balance and activate hormones that regulate important bodily processes like hunger, blood sugar, and metabolism<\/p>",
+          "text": "<p>ComplexDiet Drops is designed to help:</p><p>Reduce excess hormones like cortisol, the stress hormone responsible for much of our belly fat.</p><p>Balance and activate hormones that regulate important bodily processes like hunger, blood sugar, and metabolism</p>",
           "button_label": "",
           "button_link": ""
         }
@@ -1021,20 +1021,20 @@
       "complex-promax-feature-row": {
         "type": "complex-promax-feature-row",
         "settings": {
-          "image": "shopify:\/\/shop_images\/AmberGold_BioSourceLabs_ComplexProMax_Bottle_nohood.jpg",
+          "image": "shopify://shop_images/AmberGold_BioSourceLabs_ComplexProMax_Bottle_nohood.jpg",
           "layout": "right",
           "title": "What is Complex ProMAX?",
-          "text": "<p>Complex ProMAX is BioSource Nutra’s latest creation and quickly becomingour most popular product. These 22 carefully selected ingredients area synergistic blend that work together to unleash your body’s fatburning potential while helping to reduce hunger, balance hormones,and raise energy levels.<\/p>",
+          "text": "<p>Complex ProMAX is BioSource Nutra’s latest creation and quickly becomingour most popular product. These 22 carefully selected ingredients area synergistic blend that work together to unleash your body’s fatburning potential while helping to reduce hunger, balance hormones,and raise energy levels.</p>",
           "button_label": ""
         }
       },
       "complex-promax-feature-row2": {
         "type": "complex-promax-feature-row2",
         "settings": {
-          "image": "shopify:\/\/shop_images\/AmberGold_BioSourceLabs_ComplexProMax_Bottle_nohood.jpg",
+          "image": "shopify://shop_images/AmberGold_BioSourceLabs_ComplexProMax_Bottle_nohood.jpg",
           "layout": "left",
           "title": "Who Is It For?",
-          "text": "<p>BioSource Nutra designed Complex ProMax with the experienced low-cal\/low-carb dieter in mind. Sometimes we need help getting through tough stages of any diet protocol. Complex ProMAX is the answer.<\/p><p>This formula was created specifically for the BioSource Nutra Diet Protocol and intermittent fasting but provides serious benefits to anyone following:<\/p><p>1. BioSource Nutra Diet Protocol<\/p><p>2. Intermittent Fasting<\/p><p>3. Ketogenic Diet (Keto)<\/p><p>4. Paleo Diet<\/p><p>5. Slow Carb Diet<\/p><p>6. Dr. Simeons Diet Protocol<\/p><p>Complex ProMAX is completely natural and will not spike blood sugar levels. <\/p>",
+          "text": "<p>BioSource Nutra designed Complex ProMax with the experienced low-cal/low-carb dieter in mind. Sometimes we need help getting through tough stages of any diet protocol. Complex ProMAX is the answer.</p><p>This formula was created specifically for the BioSource Nutra Diet Protocol and intermittent fasting but provides serious benefits to anyone following:</p><p>1. BioSource Nutra Diet Protocol</p><p>2. Intermittent Fasting</p><p>3. Ketogenic Diet (Keto)</p><p>4. Paleo Diet</p><p>5. Slow Carb Diet</p><p>6. Dr. Simeons Diet Protocol</p><p>Complex ProMAX is completely natural and will not spike blood sugar levels. </p>",
           "button_label": "TRY IT NOW",
           "button_link": "#"
         }
@@ -1048,10 +1048,10 @@
       "complex-promax-feature-row3": {
         "type": "complex-promax-feature-row3",
         "settings": {
-          "image": "shopify:\/\/shop_images\/AmberGold_BioSourceLabs_ComplexProMax_Bottle_nohood.jpg",
+          "image": "shopify://shop_images/AmberGold_BioSourceLabs_ComplexProMax_Bottle_nohood.jpg",
           "layout": "right",
           "title": "What Does Complex ProMAX Do?",
-          "text": "<p>The individual Ingredients in Complex ProMax have a variety of uses. Combining the ingredients at the proper dosage like we have, while using together with the BioSource Nutra Diet Protocol may produce a powerful effect to help:<\/p><p>Quickly reduce body fat<\/p><p>Control hunger and cravings<\/p><p>Detoxify vital organs<\/p><p>Boost and balance energy levels<\/p><p>Protect lean muscle mass<\/p><p>Balance hormones and stimulate beneficial hormone production<\/p><p>Help regulate blood sugar<\/p>",
+          "text": "<p>The individual Ingredients in Complex ProMax have a variety of uses. Combining the ingredients at the proper dosage like we have, while using together with the BioSource Nutra Diet Protocol may produce a powerful effect to help:</p><p>Quickly reduce body fat</p><p>Control hunger and cravings</p><p>Detoxify vital organs</p><p>Boost and balance energy levels</p><p>Protect lean muscle mass</p><p>Balance hormones and stimulate beneficial hormone production</p><p>Help regulate blood sugar</p>",
           "button_label": ""
         }
       },
@@ -1063,7 +1063,7 @@
             "settings": {
               "enable_image": false,
               "title": "",
-              "text": "<p>Two common complaints experienced dieters express when following a low calorie, low carbohydrate diet are:<\/p><p>1. Hitting weight loss plateaus too quickly or frequently (plateau on a graph graphic)<\/p><p>2. Not getting the same results they have achieved in the past while using other diet drop formulas.<\/p><p>This can happen when using the same formula for too long or from yo-yo behavior cycles of dieting then gaining weight back. Complex ProMAX can help stop the yo-yo to get even the most experienced dieter on track to hit their goals.  <\/p><p>Complex ProMax is best used during the BioSource Nutra Diet Protocol and for periods of ongoing intermittent fasting to maintain ideal body weight.<\/p>",
+              "text": "<p>Two common complaints experienced dieters express when following a low calorie, low carbohydrate diet are:</p><p>1. Hitting weight loss plateaus too quickly or frequently (plateau on a graph graphic)</p><p>2. Not getting the same results they have achieved in the past while using other diet drop formulas.</p><p>This can happen when using the same formula for too long or from yo-yo behavior cycles of dieting then gaining weight back. Complex ProMAX can help stop the yo-yo to get even the most experienced dieter on track to hit their goals.  </p><p>Complex ProMax is best used during the BioSource Nutra Diet Protocol and for periods of ongoing intermittent fasting to maintain ideal body weight.</p>",
               "button_label": ""
             }
           }
@@ -1083,9 +1083,9 @@
             "type": "text_block",
             "settings": {
               "enable_image": true,
-              "image": "shopify:\/\/shop_images\/promax_1.jpg",
+              "image": "shopify://shop_images/promax_1.jpg",
               "title": "",
-              "text": "<p>Although Complex ProMAX is the newest additional to our family of products, it has quickly become one of our top sellers alongside Complex Diet Drops. This newer formula offers the same basic benefits as Complex Diet Drops but contains some additional ingredients that address the more specific needs experienced dieters have like inflammation and hunger.<\/p><p>Complex Diet Drops is still the preferred choice of advanced diet drops for experienced dieters all over the world who follow a VLCD (Very Low Calorie Diet) protocol because it simply delivers incredible weight loss results. However, new dieters are also using Complex ProMAX with equal success.<\/p><p>If you have completed two rounds of the BioSource Nutra Diet Protocol and you are thinking of starting another round of the diet using Complex ProMAX, we recommend taking a break for 3 weeks then resume with your new diet round.<\/p>",
+              "text": "<p>Although Complex ProMAX is the newest additional to our family of products, it has quickly become one of our top sellers alongside Complex Diet Drops. This newer formula offers the same basic benefits as Complex Diet Drops but contains some additional ingredients that address the more specific needs experienced dieters have like inflammation and hunger.</p><p>Complex Diet Drops is still the preferred choice of advanced diet drops for experienced dieters all over the world who follow a VLCD (Very Low Calorie Diet) protocol because it simply delivers incredible weight loss results. However, new dieters are also using Complex ProMAX with equal success.</p><p>If you have completed two rounds of the BioSource Nutra Diet Protocol and you are thinking of starting another round of the diet using Complex ProMAX, we recommend taking a break for 3 weeks then resume with your new diet round.</p>",
               "button_label": "TRY IT NOW",
               "button_link": "#"
             }
@@ -1106,9 +1106,9 @@
             "type": "text_block",
             "settings": {
               "enable_image": true,
-              "image": "shopify:\/\/shop_images\/55rcEw.png",
+              "image": "shopify://shop_images/55rcEw.png",
               "title": "Ingredients and Benefits",
-              "text": "<p>BioSource Nutra has identified three key factors to balance and control in the body that may help promote ideal conditions for healthy weight loss.<\/p><p>1. Balance Blood sugar<\/p><p>When blood sugar is consistently high, insulin surges signal to the body to store fat instead of burning it because there is already plenty of energy.   <\/p><p>2. Prevent lean muscle breakdown<\/p><p>Lean muscle tissue requires more energy\/calories to support than fatty tissue. More lean muscle = more calories used. Using more calories than we take in results in fat loss. <\/p><p>3. Reduce stress and inflammation<\/p><p>Cortisol is called the stress hormone. Reducing stress can help unlock stubborn fat and reduce the body’s inflammation response. <\/p><p><\/p><p>This unique blend of ingredients contains an essential amino acid profile together with adaptogens and natural ingredients known to provide crucial benefits in the body during reduced calorie intake.<\/p><p><\/p><p>Amino Acids <\/p><p>Complex ProMAX contains 8 essential and non-essential amino acids <\/p><p>L-Arginine<\/p><p>L-Glutamine<\/p><p>Beta Alanine<\/p><p>GABA<\/p><p>L-Carnitine<\/p><p>L-Ornithine<\/p><p>L-Tryptophan<\/p><p>Tyrosine. <\/p><p><\/p><p>Benefits:<\/p><p><\/p><p>(icons representing each benefit) Tissue repair, nutrient absorption, protect lean muscle, cellular detoxification, healthy brain function<\/p><p><\/p><p>Advanced Natural Ingredients and Adaptogens <\/p><p>The blend of adaptogens and other natural ingredients include: <\/p><p>Garcinia Cambogia <\/p><p>Caralluma Fimbriata<\/p><p>African Mango <\/p><p>Ecklonia Cava <\/p><p>Green Tea <\/p><p>Maca<\/p><p>Guarana<\/p><p>Astragalus<\/p><p>Gymnema Sylvestre <\/p><p>Panax Ginseng <\/p><p>Pygeum<\/p><p><\/p><p>These ingredients are designed to address the critical 3 factors along with several others that are directly related. <\/p><p><\/p><p>Benefits:<\/p><p>(Icons) healthy blood sugar, appetite control, boost energy, hormonal balance, and control inflammation response, improve mood, healthy brain function. <\/p><p><\/p><p>Take a look at the list ingredients and benefits below:<\/p>",
+              "text": "<p>BioSource Nutra has identified three key factors to balance and control in the body that may help promote ideal conditions for healthy weight loss.</p><p>1. Balance Blood sugar</p><p>When blood sugar is consistently high, insulin surges signal to the body to store fat instead of burning it because there is already plenty of energy.   </p><p>2. Prevent lean muscle breakdown</p><p>Lean muscle tissue requires more energy/calories to support than fatty tissue. More lean muscle = more calories used. Using more calories than we take in results in fat loss. </p><p>3. Reduce stress and inflammation</p><p>Cortisol is called the stress hormone. Reducing stress can help unlock stubborn fat and reduce the body’s inflammation response. </p><p></p><p>This unique blend of ingredients contains an essential amino acid profile together with adaptogens and natural ingredients known to provide crucial benefits in the body during reduced calorie intake.</p><p></p><p>Amino Acids </p><p>Complex ProMAX contains 8 essential and non-essential amino acids </p><p>L-Arginine</p><p>L-Glutamine</p><p>Beta Alanine</p><p>GABA</p><p>L-Carnitine</p><p>L-Ornithine</p><p>L-Tryptophan</p><p>Tyrosine. </p><p></p><p>Benefits:</p><p></p><p>(icons representing each benefit) Tissue repair, nutrient absorption, protect lean muscle, cellular detoxification, healthy brain function</p><p></p><p>Advanced Natural Ingredients and Adaptogens </p><p>The blend of adaptogens and other natural ingredients include: </p><p>Garcinia Cambogia </p><p>Caralluma Fimbriata</p><p>African Mango </p><p>Ecklonia Cava </p><p>Green Tea </p><p>Maca</p><p>Guarana</p><p>Astragalus</p><p>Gymnema Sylvestre </p><p>Panax Ginseng </p><p>Pygeum</p><p></p><p>These ingredients are designed to address the critical 3 factors along with several others that are directly related. </p><p></p><p>Benefits:</p><p>(Icons) healthy blood sugar, appetite control, boost energy, hormonal balance, and control inflammation response, improve mood, healthy brain function. </p><p></p><p>Take a look at the list ingredients and benefits below:</p>",
               "button_label": ""
             }
           }
@@ -1124,20 +1124,20 @@
       "complex-promax-feature-row4": {
         "type": "complex-promax-feature-row4",
         "settings": {
-          "image": "shopify:\/\/shop_images\/2.jpg",
+          "image": "shopify://shop_images/2.jpg",
           "layout": "left",
           "title": "Why Complex ProMAX?",
-          "text": "<p>In our experience, we have found that with weight loss formulas “one size fits most”, but not all. This is especially true when dieters have used the same diet drops formula multiple times and have trouble getting the results they want.<\/p><p>We call it the “immunity phenomenon”. When it comes to certain ingredients, some people’s bodies may become “immune” to the effects of a particular product. Formulas that may have worked in the past can become less effective. When this happens, the body needs something new to break through!<\/p>",
+          "text": "<p>In our experience, we have found that with weight loss formulas “one size fits most”, but not all. This is especially true when dieters have used the same diet drops formula multiple times and have trouble getting the results they want.</p><p>We call it the “immunity phenomenon”. When it comes to certain ingredients, some people’s bodies may become “immune” to the effects of a particular product. Formulas that may have worked in the past can become less effective. When this happens, the body needs something new to break through!</p>",
           "button_label": ""
         }
       },
       "complex-promax-feature-row5": {
         "type": "complex-promax-feature-row5",
         "settings": {
-          "image": "shopify:\/\/shop_images\/diabetes-plate-method-medium.png",
+          "image": "shopify://shop_images/diabetes-plate-method-medium.png",
           "layout": "right",
           "title": "When and How To Use",
-          "text": "<p>Simplymeasure out .5 ml on the convenient calibrated dropper, drop underthe tongue, hold for 30 seconds, then swallow. For best results, dothis 3 times per day, at least 30 minutes before or after food. <\/p><p>(LifestyleImage of liquid in a calibrated dropper or someone in action takingdrops.)<\/p>",
+          "text": "<p>Simplymeasure out .5 ml on the convenient calibrated dropper, drop underthe tongue, hold for 30 seconds, then swallow. For best results, dothis 3 times per day, at least 30 minutes before or after food. </p><p>(LifestyleImage of liquid in a calibrated dropper or someone in action takingdrops.)</p>",
           "button_label": ""
         }
       },
@@ -1149,7 +1149,7 @@
             "settings": {
               "enable_image": false,
               "title": "",
-              "text": "<p>1. Convenient<\/p><p>2. No artificial flavors, colors, fillers, or other ingredients<\/p><p>3. Great flavor<\/p><p>4. Trusted Quality and Safety (Made in USA icon, GMP Certified Icon, 3rd Party Tested icon)<\/p><p>5. Great reviews (5 star icon)<\/p><p>6. Works with any low calorie\/low carb diet<\/p><p>7. All the tools for success<\/p><p>8. Unlimited Support<\/p><p>9. Time-Tested Track Record<\/p><p>10. 30-Day Money Back Guarantee<\/p>",
+              "text": "<p>1. Convenient</p><p>2. No artificial flavors, colors, fillers, or other ingredients</p><p>3. Great flavor</p><p>4. Trusted Quality and Safety (Made in USA icon, GMP Certified Icon, 3rd Party Tested icon)</p><p>5. Great reviews (5 star icon)</p><p>6. Works with any low calorie/low carb diet</p><p>7. All the tools for success</p><p>8. Unlimited Support</p><p>9. Time-Tested Track Record</p><p>10. 30-Day Money Back Guarantee</p>",
               "button_label": ""
             }
           }
@@ -1175,28 +1175,28 @@
             "type": "text",
             "settings": {
               "heading_text": "Does Complex ProMAX contain hCG?",
-              "subheading_text": "<p>No. Complex ProMAX is hormone-free. We will never add hormones to any of our products. hCG is not approved for over-the- counter use in the USA. Frankly, you should avoid using hCG for weight loss or any other hormones because they can cause hormonal imbalances that may ultimately cause you to <strong><em>gain weight<\/em><\/strong> along with other unfavorable long-term effects on the body.<\/p>"
+              "subheading_text": "<p>No. Complex ProMAX is hormone-free. We will never add hormones to any of our products. hCG is not approved for over-the- counter use in the USA. Frankly, you should avoid using hCG for weight loss or any other hormones because they can cause hormonal imbalances that may ultimately cause you to <strong><em>gain weight</em></strong> along with other unfavorable long-term effects on the body.</p>"
             }
           },
           "7caf0bcd-d2fa-4676-b416-1b3273ba8da4": {
             "type": "text",
             "settings": {
               "heading_text": "Can I use Complex ProMAX if this is my first time on the diet?",
-              "subheading_text": "<p>Absolutely! Even though we recommend this for customers who have used Complex Diet Drops several times, beginners can still use ProMAX with great success.  <\/p>"
+              "subheading_text": "<p>Absolutely! Even though we recommend this for customers who have used Complex Diet Drops several times, beginners can still use ProMAX with great success.  </p>"
             }
           },
           "6590dac7-d427-4295-8a33-54445b96e8ac": {
             "type": "text",
             "settings": {
               "heading_text": "Can I use Complex Diet Drops together with Complex ProMAX?",
-              "subheading_text": "<p>We recommend using Complex Diet Drops for the first round of the diet protocol. Use these products separately at different times. Complex ProMAX shines during a second or third round, and can also be used during maintenance (Phase 3 and Phase 4) to help stave off hunger. <\/p>"
+              "subheading_text": "<p>We recommend using Complex Diet Drops for the first round of the diet protocol. Use these products separately at different times. Complex ProMAX shines during a second or third round, and can also be used during maintenance (Phase 3 and Phase 4) to help stave off hunger. </p>"
             }
           },
           "afb304e8-0f49-4577-98db-9275d25d6fcf": {
             "type": "text",
             "settings": {
               "heading_text": "Is Complex ProMAX worth the money?",
-              "subheading_text": "<p>The simple answer is YES! Our customers&#x27; results speak volumes. These are the highest quality of drops you will find on the market with years of research and customer feedback to back it up. Anyone who has used BioSource Nutra products with success where other products have failed them will tell you that ProMAX is easily worth 2-3 times what we actually charge. <\/p>"
+              "subheading_text": "<p>The simple answer is YES! Our customers&#x27; results speak volumes. These are the highest quality of drops you will find on the market with years of research and customer feedback to back it up. Anyone who has used BioSource Nutra products with success where other products have failed them will tell you that ProMAX is easily worth 2-3 times what we actually charge. </p>"
             }
           }
         },
@@ -1217,21 +1217,21 @@
             "type": "text",
             "settings": {
               "heading_text": "Can I use this during the BioSource Nutra Diet Protocol?",
-              "subheading_text": "<p>ABSOLUTELY! We highly recommend everyone uses Boost during the diet to maintain natural energy levels and to help the body stay balanced while lowering calorie intake. <\/p>"
+              "subheading_text": "<p>ABSOLUTELY! We highly recommend everyone uses Boost during the diet to maintain natural energy levels and to help the body stay balanced while lowering calorie intake. </p>"
             }
           },
           "cd54bcd5-3de0-454b-8b3a-57b6c57573fc": {
             "type": "text",
             "settings": {
               "heading_text": "How does Boost taste?",
-              "subheading_text": "<p>Boost has a vanilla mint flavor. Due to the impressive ingredient profile, it has a stronger taste and smell. As with any quality b complex, there is that unmistakable vitamin taste that lets you know you're getting a good dose of healthy b vitamins.<\/p>"
+              "subheading_text": "<p>Boost has a vanilla mint flavor. Due to the impressive ingredient profile, it has a stronger taste and smell. As with any quality b complex, there is that unmistakable vitamin taste that lets you know you're getting a good dose of healthy b vitamins.</p>"
             }
           },
           "1021b399-39de-4edd-96e0-0b31e7a137ec": {
             "type": "text",
             "settings": {
               "heading_text": "Can I add this to a drink or water?",
-              "subheading_text": "<p>Yes. Some people like adding it to their favorite juice. You can also add it to water if you don't prefer taking it directly from the bottle.<\/p>"
+              "subheading_text": "<p>Yes. Some people like adding it to their favorite juice. You can also add it to water if you don't prefer taking it directly from the bottle.</p>"
             }
           }
         },
@@ -1250,22 +1250,22 @@
           "ea89b482-b211-40e6-bead-be377e9e7a82": {
             "type": "Product-Image-Text",
             "settings": {
-              "Pro-Img": "shopify:\/\/shop_images\/free-delivery_eb184a3c-2c78-4129-9f2b-c974d84484ad.png",
-              "cust": "<h6>Free Shipping<\/h6>\n<p>for US orders<\/p>\n<p>over $100<\/p>"
+              "Pro-Img": "shopify://shop_images/free-delivery_eb184a3c-2c78-4129-9f2b-c974d84484ad.png",
+              "cust": "<h6>Free Shipping</h6>\n<p>for US orders</p>\n<p>over $100</p>"
             }
           },
           "659e4a8e-0eeb-47fe-9cff-98f263fd9fc7": {
             "type": "Product-Image-Text",
             "settings": {
-              "Pro-Img": "shopify:\/\/shop_images\/shield.png",
-              "cust": "<h6>100% NO-RISK<\/h6>\n<p>Money Back<\/p> <p>Guarantee<\/p>"
+              "Pro-Img": "shopify://shop_images/shield.png",
+              "cust": "<h6>100% NO-RISK</h6>\n<p>Money Back</p> <p>Guarantee</p>"
             }
           },
           "60e11a23-4fe2-45ce-a6bb-b662e5c83476": {
             "type": "Product-Image-Text",
             "settings": {
-              "Pro-Img": "shopify:\/\/shop_images\/free-shipping.png",
-              "cust": "<h6>Next Day Shipping<\/h6>\n<p>Orders ship next<\/p> <p>business day<\/p>"
+              "Pro-Img": "shopify://shop_images/free-shipping.png",
+              "cust": "<h6>Next Day Shipping</h6>\n<p>Orders ship next</p> <p>business day</p>"
             }
           }
         },
@@ -1293,22 +1293,22 @@
           "d6e7316f-17cc-49d6-b9db-3ce7b51059b5": {
             "type": "Product-Image-Text",
             "settings": {
-              "Pro-Img": "shopify:\/\/shop_images\/free-delivery_eb184a3c-2c78-4129-9f2b-c974d84484ad.png",
-              "cust": "<h6>Free Shipping<\/h6>\n<p>for US orders<\/p>\n<p>over $100<\/p>"
+              "Pro-Img": "shopify://shop_images/free-delivery_eb184a3c-2c78-4129-9f2b-c974d84484ad.png",
+              "cust": "<h6>Free Shipping</h6>\n<p>for US orders</p>\n<p>over $100</p>"
             }
           },
           "e13d3486-e525-44dc-ac0b-dbe51a08a366": {
             "type": "Product-Image-Text",
             "settings": {
-              "Pro-Img": "shopify:\/\/shop_images\/shield.png",
-              "cust": "<h6>100% NO-RISK<\/h6>\n<p>Money Back<\/p> <p>Guarantee<\/p>"
+              "Pro-Img": "shopify://shop_images/shield.png",
+              "cust": "<h6>100% NO-RISK</h6>\n<p>Money Back</p> <p>Guarantee</p>"
             }
           },
           "2cb2a5f9-e269-4d1c-b509-19196602ff01": {
             "type": "Product-Image-Text",
             "settings": {
-              "Pro-Img": "shopify:\/\/shop_images\/free-shipping.png",
-              "cust": "<h6>Next Day Shipping<\/h6>\n<p>Orders ship next<\/p> <p>business day<\/p>"
+              "Pro-Img": "shopify://shop_images/free-shipping.png",
+              "cust": "<h6>Next Day Shipping</h6>\n<p>Orders ship next</p> <p>business day</p>"
             }
           }
         },
@@ -1383,21 +1383,21 @@
             "type": "Image-List",
             "settings": {
               "Image-Title": "Intermittent Fasting",
-              "Image": "shopify:\/\/shop_images\/intermittent_fasting_support.jpg"
+              "Image": "shopify://shop_images/intermittent_fasting_support.jpg"
             }
           },
           "732b9a04-f76f-4740-a905-1a659f95ef47": {
             "type": "Image-List",
             "settings": {
               "Image-Title": "Keto",
-              "Image": "shopify:\/\/shop_images\/keto-friendly_71a4b6c9-3936-4a2c-b0d3-bbe522e7afdd.png"
+              "Image": "shopify://shop_images/keto-friendly_71a4b6c9-3936-4a2c-b0d3-bbe522e7afdd.png"
             }
           },
           "cf1908a5-e573-44c1-b7a0-4a7c2aba14d4": {
             "type": "Image-List",
             "settings": {
               "Image-Title": "Paleo",
-              "Image": "shopify:\/\/shop_images\/paleo-friendly_d12091b9-3fe6-4162-961a-ddfacab73b96.png"
+              "Image": "shopify://shop_images/paleo-friendly_d12091b9-3fe6-4162-961a-ddfacab73b96.png"
             }
           }
         },
@@ -1407,10 +1407,10 @@
           "cf1908a5-e573-44c1-b7a0-4a7c2aba14d4"
         ],
         "settings": {
-          "image": "shopify:\/\/shop_images\/1706650688_0.png",
+          "image": "shopify://shop_images/1706650688_0.png",
           "layout": "left",
           "title": "Who Is This For?",
-          "text": "<p>In short, practically every adult can benefit from Essential B Complex.<\/p>\n\n<p>Vegetarians, vegans, followers of intermittent fasting protocols, and those who adhere to very low calorie diets may have a greater tendency to show diminished levels of vitamin b, especially b12. Even those who eat meat, fish, and other foods packed with b vitamins may unknowingly be low in these important vitamins.<\/p>\n\n<p>The most common symptoms of b vitamin deficiency include fatigue and weakness. However, there are many symptoms from prolonged deficiency that can go undetected until irreversible damage is done.<\/p>\n\n<p>If you are following the BioSource Nutra Diet Protocol, or any calorie restricted diet for that matter, Essential B Complex is a must!<\/p>\n\n<p>Essential B Complex is also ideal for support during:<\/p>",
+          "text": "<p>In short, practically every adult can benefit from Essential B Complex.</p>\n\n<p>Vegetarians, vegans, followers of intermittent fasting protocols, and those who adhere to very low calorie diets may have a greater tendency to show diminished levels of vitamin b, especially b12. Even those who eat meat, fish, and other foods packed with b vitamins may unknowingly be low in these important vitamins.</p>\n\n<p>The most common symptoms of b vitamin deficiency include fatigue and weakness. However, there are many symptoms from prolonged deficiency that can go undetected until irreversible damage is done.</p>\n\n<p>If you are following the BioSource Nutra Diet Protocol, or any calorie restricted diet for that matter, Essential B Complex is a must!</p>\n\n<p>Essential B Complex is also ideal for support during:</p>",
           "button_label": "",
           "button_link": ""
         }
@@ -1421,35 +1421,35 @@
           "38e6ae4a-1f6c-4c21-8eba-3488b92310fc": {
             "type": "image_picker",
             "settings": {
-              "img": "shopify:\/\/shop_images\/metabolism_0208bc9e-8d7d-45c6-85d3-08e3681a87b6.png",
+              "img": "shopify://shop_images/metabolism_0208bc9e-8d7d-45c6-85d3-08e3681a87b6.png",
               "Title": "Supports a healthy metabolism"
             }
           },
           "b1c7ae21-30ab-4e41-83bc-6f6d5ec8c232": {
             "type": "image_picker",
             "settings": {
-              "img": "shopify:\/\/shop_images\/energy_658ef7d3-ab53-4188-987b-78764f8f9f8b.png",
+              "img": "shopify://shop_images/energy_658ef7d3-ab53-4188-987b-78764f8f9f8b.png",
               "Title": "Helps support and sustain energy"
             }
           },
           "a40f1ca3-8a59-45c9-9044-a24e393bb4cd": {
             "type": "image_picker",
             "settings": {
-              "img": "shopify:\/\/shop_images\/immune_c7c4f4da-7f7e-413f-b09f-053d67b9f552.png",
+              "img": "shopify://shop_images/immune_c7c4f4da-7f7e-413f-b09f-053d67b9f552.png",
               "Title": "Helps support healthy immune function"
             }
           },
           "88013b14-ef70-4b4d-acdf-8f49359b083c": {
             "type": "image_picker",
             "settings": {
-              "img": "shopify:\/\/shop_images\/stress_58ec32ee-29f1-4b40-a01f-106da01711ac.png",
+              "img": "shopify://shop_images/stress_58ec32ee-29f1-4b40-a01f-106da01711ac.png",
               "Title": "Helps combat fatigue and supports vital bodily functions"
             }
           },
           "d8a96123-f9dd-471b-8e6a-d6859408cc8d": {
             "type": "image_picker",
             "settings": {
-              "img": "shopify:\/\/shop_images\/blood-cells_ee297463-1ace-4ec2-a105-308bc59ed14b.png",
+              "img": "shopify://shop_images/blood-cells_ee297463-1ace-4ec2-a105-308bc59ed14b.png",
               "Title": "Bioavailable vitamin B12 supports heart and brain health"
             }
           }
@@ -1462,7 +1462,7 @@
           "d8a96123-f9dd-471b-8e6a-d6859408cc8d"
         ],
         "settings": {
-          "Image": "shopify:\/\/shop_images\/woman-sitting-yoga-pose-beach-min.jpg",
+          "Image": "shopify://shop_images/woman-sitting-yoga-pose-beach-min.jpg",
           "vertical_alignment": "left-middle"
         }
       },
@@ -1472,30 +1472,30 @@
           "4795fef1-6f5e-4dc2-8471-839c7f139d86": {
             "type": "image_picker",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Water.jpg",
+              "image": "shopify://shop_images/Water.jpg",
               "title": "Daily Water Intake Tracking Sheet",
               "para": "",
-              "link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0268\/2306\/5772\/files\/Water-Tracking-Sheet.pdf?v=1619616079",
+              "link": "https://cdn.shopify.com/s/files/1/0268/2306/5772/files/Water-Tracking-Sheet.pdf?v=1619616079",
               "label": "Download"
             }
           },
           "e91a5930-0f1f-4045-8bc2-d67cf3d4508a": {
             "type": "image_picker",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Member.jpg",
+              "image": "shopify://shop_images/Member.jpg",
               "title": "Member Area Registration",
               "para": "(Menu Planner, Weight &amp; Measurement Tracker, Recipes and more)",
-              "link": "https:\/\/members.complexdietdrops.com\/register.php",
+              "link": "https://members.complexdietdrops.com/register.php",
               "label": "Get Access"
             }
           },
           "49683d06-f662-4c27-bc72-2191a8f6d616": {
             "type": "image_picker",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Weight-Loss.jpg",
+              "image": "shopify://shop_images/Weight-Loss.jpg",
               "title": "Weight Loss Tracker",
               "para": "",
-              "link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0268\/2306\/5772\/files\/Weight-Loss-Tracker-Sheet.pdf?v=1619616303",
+              "link": "https://cdn.shopify.com/s/files/1/0268/2306/5772/files/Weight-Loss-Tracker-Sheet.pdf?v=1619616303",
               "label": "Download"
             }
           }
@@ -1524,21 +1524,21 @@
             "type": "text",
             "settings": {
               "heading_text": "Can I take this during the BioSource Nutra Diet Protocol",
-              "subheading_text": "<p>Yes. Many people experience constipation or other irregularities during the diet protocol due to the dietary changes. The ingredients in Colonew can help maintain regularity while balancing the gut biome. This is a great thing when you are trying to lose weight and gain new eating habits. <\/p>"
+              "subheading_text": "<p>Yes. Many people experience constipation or other irregularities during the diet protocol due to the dietary changes. The ingredients in Colonew can help maintain regularity while balancing the gut biome. This is a great thing when you are trying to lose weight and gain new eating habits. </p>"
             }
           },
           "f10e1fd7-3cdb-4ae5-bec5-ea29ad4065ed": {
             "type": "text",
             "settings": {
               "heading_text": "Will Colonew make me run to the bathroom?",
-              "subheading_text": "<p>The short answer is no, it shouldn't. However, each person is different with how they're bodies react to new foods and supplements. Colonew is designed to be gentle on the stomach to help move things along without a catastrophic blow out!<\/p>"
+              "subheading_text": "<p>The short answer is no, it shouldn't. However, each person is different with how they're bodies react to new foods and supplements. Colonew is designed to be gentle on the stomach to help move things along without a catastrophic blow out!</p>"
             }
           },
           "d722680c-4d5c-4b23-b086-7bac52ed528f": {
             "type": "text",
             "settings": {
               "heading_text": "How long should I take Colonew for?",
-              "subheading_text": "<p>Colonew is designed to be taken for daily support. Most people experience or feel the biggest difference within the first 15 days. Although you may not <em><strong>feel<\/strong><\/em> the same difference after that period we recommend continuing with this product for at least 3 months to allow the product to continue to work so your body can adapt well.<\/p>"
+              "subheading_text": "<p>Colonew is designed to be taken for daily support. Most people experience or feel the biggest difference within the first 15 days. Although you may not <em><strong>feel</strong></em> the same difference after that period we recommend continuing with this product for at least 3 months to allow the product to continue to work so your body can adapt well.</p>"
             }
           }
         },
@@ -1573,21 +1573,21 @@
             "type": "text",
             "settings": {
               "heading_text": "When should I take Razburn?",
-              "subheading_text": "<p>We suggest taking one capsule in the morning and one in the early afternoon. Razburn has a little bit of natural caffeine, so if you're sensitive to caffeine you probably want to avoid taking it a few hours before sleep.<\/p>"
+              "subheading_text": "<p>We suggest taking one capsule in the morning and one in the early afternoon. Razburn has a little bit of natural caffeine, so if you're sensitive to caffeine you probably want to avoid taking it a few hours before sleep.</p>"
             }
           },
           "1473dc7c-54e2-46e5-9e9d-5aefe768f368": {
             "type": "text",
             "settings": {
               "heading_text": "Can I take Razburn during the BioSource Nutra Diet Protocol?",
-              "subheading_text": "<p>Yes. Take Razburn for a boost of energy and for antioxidant protection during your low calorie diet phase. Razburn also works wonders during the maintenance period to maintain a slightly elevated metabolism. <\/p>"
+              "subheading_text": "<p>Yes. Take Razburn for a boost of energy and for antioxidant protection during your low calorie diet phase. Razburn also works wonders during the maintenance period to maintain a slightly elevated metabolism. </p>"
             }
           },
           "d0a0b942-930b-4218-967f-db425a17e575": {
             "type": "text",
             "settings": {
               "heading_text": "How long should I take Razburn for?",
-              "subheading_text": "<p>There is no limit on how long you can take Razburn and therefore can be used for as long as you feel it benefits you! Some of our customers use it just during the diet protocol while others use it to continually maintain hunger and energy levels. Razburn helps support your body's immune system and can help you maintain consistent energy levels.<\/p>"
+              "subheading_text": "<p>There is no limit on how long you can take Razburn and therefore can be used for as long as you feel it benefits you! Some of our customers use it just during the diet protocol while others use it to continually maintain hunger and energy levels. Razburn helps support your body's immune system and can help you maintain consistent energy levels.</p>"
             }
           }
         },
@@ -1611,7 +1611,7 @@
           "title": "",
           "text": "",
           "button_label": "Shop",
-          "button_link": "shopify:\/\/collections\/bundles"
+          "button_link": "shopify://collections/bundles"
         }
       },
       "16378699060e29c124": {
@@ -1621,7 +1621,7 @@
             "type": "image",
             "settings": {
               "alignment": "center",
-              "link": "https:\/\/biosourcenutra.com\/collections\/all",
+              "link": "https://biosourcenutra.com/collections/all",
               "cta_label": ""
             }
           },
@@ -1675,7 +1675,7 @@
             "type": "custom_html",
             "settings": {
               "custom_html_title": "",
-              "custom_html": "<p>Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard roadrunner flapped lynx far that and jeepers giggled far and far bald that roadrunner python inside held shrewdly the manatee.<\/p>",
+              "custom_html": "<p>Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard roadrunner flapped lynx far that and jeepers giggled far and far bald that roadrunner python inside held shrewdly the manatee.</p>",
               "hd_color": "#ea0606",
               "text_color": "#ea0606"
             }
@@ -1684,7 +1684,7 @@
             "type": "custom_html",
             "settings": {
               "custom_html_title": "",
-              "custom_html": "<p>Fretful human far recklessly while caterpillar well a well blubbered added one a some far whispered rampantly whispered while irksome far clung irrespective wailed more rosily and where saluted while black dear so yikes as considering recast to some crass until.<\/p>",
+              "custom_html": "<p>Fretful human far recklessly while caterpillar well a well blubbered added one a some far whispered rampantly whispered while irksome far clung irrespective wailed more rosily and where saluted while black dear so yikes as considering recast to some crass until.</p>",
               "hd_color": "#000000",
               "text_color": "#000000"
             }
@@ -1693,7 +1693,7 @@
             "type": "custom_html",
             "settings": {
               "custom_html_title": "",
-              "custom_html": "<p>Thanks sniffed in hello after in foolhardy and some far purposefully much one at the much conjointly leapt skimpily that quail sheep some goodness <a href=\"https:\/\/demos.alithemes.com\/html\/stories\/demo\/single.html#\">nightingale <\/a>the instead exited expedient up far ouch mellifluous altruistic and and lighted more instead much when ferret but the.<\/p>",
+              "custom_html": "<p>Thanks sniffed in hello after in foolhardy and some far purposefully much one at the much conjointly leapt skimpily that quail sheep some goodness <a href=\"https://demos.alithemes.com/html/stories/demo/single.html#\">nightingale </a>the instead exited expedient up far ouch mellifluous altruistic and and lighted more instead much when ferret but the.</p>",
               "hd_color": "#000000",
               "text_color": "#000000"
             }
@@ -1701,10 +1701,10 @@
           "0b308bcb-c63f-4d15-95fe-ffd5b2e9be14": {
             "type": "image_gallery",
             "settings": {
-              "img_one": "shopify:\/\/shop_images\/thumb-2.jpg",
-              "img_two": "shopify:\/\/shop_images\/thumb-4.jpg",
-              "img_three": "shopify:\/\/shop_images\/thumb-3.jpg",
-              "gallery_info": "<p>Image credit: Behance<\/p>"
+              "img_one": "shopify://shop_images/thumb-2.jpg",
+              "img_two": "shopify://shop_images/thumb-4.jpg",
+              "img_three": "shopify://shop_images/thumb-3.jpg",
+              "gallery_info": "<p>Image credit: Behance</p>"
             }
           }
         },
@@ -1782,7 +1782,7 @@
         "settings": {
           "max_width": 1100,
           "layout": "with-photo",
-          "photo": "shopify:\/\/shop_images\/Women_laughing_together.jpg",
+          "photo": "shopify://shop_images/Women_laughing_together.jpg",
           "primary_color": "",
           "text_color": "#3a3a3a",
           "text_field_border_color": "#83c8ea",
@@ -1804,8 +1804,8 @@
         "type": "full-image-with-link",
         "disabled": true,
         "settings": {
-          "image": "shopify:\/\/shop_images\/Cyber_Monday-2023-Website-Banner_1200x600_2d1c4935-2c26-4b26-a770-52e1750eea9a.jpg",
-          "imagelink": "shopify:\/\/collections\/all"
+          "image": "shopify://shop_images/Cyber_Monday-2023-Website-Banner_1200x600_2d1c4935-2c26-4b26-a770-52e1750eea9a.jpg",
+          "imagelink": "shopify://collections/all"
         }
       },
       "3ca001d4-bce4-43ec-a619-10d7ffa06f0b": {
@@ -1814,7 +1814,7 @@
           "20ce1ab5-9805-41e1-9267-0f8228825616": {
             "type": "html",
             "settings": {
-              "code": "<div style=\"position: relative; padding-bottom: 56.25%; height: 0;\"><iframe src=\"https:\/\/www.loom.com\/embed\/b1e340b79bae4690b2671ee693382f2b?sid=6ad339fb-fc21-4d5e-8c38-4430c685ea2c\" frameborder=\"0\" webkitallowfullscreen=\"\" mozallowfullscreen=\"\" allowfullscreen=\"\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\"><\/iframe><\/div>",
+              "code": "<div style=\"position: relative; padding-bottom: 56.25%; height: 0;\"><iframe src=\"https://www.loom.com/embed/b1e340b79bae4690b2671ee693382f2b?sid=6ad339fb-fc21-4d5e-8c38-4430c685ea2c\" frameborder=\"0\" webkitallowfullscreen=\"\" mozallowfullscreen=\"\" allowfullscreen=\"\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\"></iframe></div>",
               "width": "100%"
             }
           }
@@ -1829,9 +1829,9 @@
       "video": {
         "type": "video",
         "settings": {
-          "image": "shopify:\/\/shop_images\/hqdefault.jpg",
+          "image": "shopify://shop_images/hqdefault.jpg",
           "image_position": "center center",
-          "video_link": "https:\/\/youtu.be\/bzPRVZUj_tk",
+          "video_link": "https://youtu.be/bzPRVZUj_tk",
           "show_overlay": false,
           "style": "image_with_play",
           "height": "medium",
@@ -1851,7 +1851,7 @@
         "settings": {
           "show_hide_video": true,
           "image_position": "center center",
-          "video_link": "https:\/\/www.loom.com\/embed\/c95fcbdda6e54657bce5f0e49a7a3156",
+          "video_link": "https://www.loom.com/embed/c95fcbdda6e54657bce5f0e49a7a3156",
           "show_overlay": true,
           "style": "image_with_play",
           "height": "medium",
@@ -1866,7 +1866,7 @@
           "strong {color: #de62a7;}"
         ],
         "settings": {
-          "maintitle": "<h1>Get a <strong>FREE $40 Gift Card<\/strong> by sending us a short video review of BioSource Nutra Products!<\/h1>"
+          "maintitle": "<h1>Get a <strong>FREE $40 Gift Card</strong> by sending us a short video review of BioSource Nutra Products!</h1>"
         }
       },
       "page-content-sections": {
@@ -1877,16 +1877,16 @@
           "a {text-decoration: underline;}"
         ],
         "settings": {
-          "maintitleone": "<p>BioSource Nutra will send you a <strong>$40 Gift Card<\/strong> to our store in return for just a 20 to 50 second video review of our product! <strong>AND as an added bonus<\/strong>, we’ll add you to our monthly draw to <strong>win a bundle of our best-selling products!<\/strong><\/p><h1>👇👇👇👇👇👇<\/h1><h1>Get Started Now<\/h1><h2><em>Follow these simple steps below:<\/em><\/h2>",
-          "Imageone": "shopify:\/\/shop_images\/CDD_CPRMX_EBC_Staggered.png",
-          "maintitletwo": "<h1>STEP 1:<\/h1><p>Grab a <strong>Smartphone <\/strong>or a <strong>Tablet <\/strong>that<strong> <\/strong>can record video.(iPhone, Samsung, ipad, etc.)<\/p>",
-          "Imagetwo": "shopify:\/\/shop_images\/Smartphone_or_Tablet.png",
-          "maintitlethree": "<h1>STEP 2:<\/h1><p><strong>Record<\/strong> your video review <em>(<\/em><em><strong>Must be 20-50 seconds long<\/strong><\/em><em>)<\/em><\/p><p>We suggest you ask a friend or family member to record you…(You can then treat them to a coffee when you receive your gift card.)<\/p><h1>VIDEO REQUIREMENTS<\/h1><p>TO QUALIFY FOR THE GIFT CARD, YOU MUST INCLUDE THE FOLLOWING <strong>3 ELEMENTS<\/strong> IN YOUR VIDEO:<\/p><p>1.) Mention our company name:<strong> BioSource Nutra<\/strong><\/p><p>2.) Clearly show Your <strong>Face<\/strong> and the <strong>BioSource Nutra<\/strong> <strong> Product<\/strong><\/p><p>3.) Review both <strong>the Product<\/strong> and <strong>Your Shopping Experience<\/strong><\/p><p><span style=\"text-decoration:underline\"><strong><br\/>Wondering What To Say?<\/strong><\/span><strong> <\/strong><\/p><p>Here are some ideas of questions to answer:<\/p><ul><li>What was your life like before using BioSource Nutra?<\/li><li>What was your life like after using BioSource Nutra?<\/li><li>If you were to recommend this to a friend, what exactly would you say?<\/li><li>What was the reason you were looking for this product?<\/li><li>Did you lose weight with the product? How much did you lose and over what period of time?<\/li><li>What is the most positive (or negative) experience you've had with this kind of product (BioSource Nutra's or not)?<\/li><\/ul>",
-          "Imagethree": "shopify:\/\/shop_images\/Capture_Video.png",
-          "maintitlefour": "<h1>STEP 3:<\/h1><p><a href=\"\/pages\/video-submission-form\" target=\"_blank\" title=\"BioSource Nutra Video Review Submission\">CLICK HERE TO UPLOAD YOUR VIDEO!<\/a><strong> <\/strong>(From the device you recorded it on)<\/p><p>You can also email the video to us if you prefer.<\/p><p>USE SUBJECT LINE:<\/p><p>BioSource Nutra Video Review<\/p><p>SEND YOUR VIDEO TO:<\/p><p>support@biosourcenutra.com<br\/><em><br\/>(Note that many email providers do not allow large files to be sent. You can use the free \"WeTransfer\" app for large video files)<\/em><br\/><br\/><strong>Save time and simply upload your video by clicking the button below...<\/strong><\/p>",
-          "Imagefour": "shopify:\/\/shop_images\/Submit_Video.png",
+          "maintitleone": "<p>BioSource Nutra will send you a <strong>$40 Gift Card</strong> to our store in return for just a 20 to 50 second video review of our product! <strong>AND as an added bonus</strong>, we’ll add you to our monthly draw to <strong>win a bundle of our best-selling products!</strong></p><h1>👇👇👇👇👇👇</h1><h1>Get Started Now</h1><h2><em>Follow these simple steps below:</em></h2>",
+          "Imageone": "shopify://shop_images/CDD_CPRMX_EBC_Staggered.png",
+          "maintitletwo": "<h1>STEP 1:</h1><p>Grab a <strong>Smartphone </strong>or a <strong>Tablet </strong>that<strong> </strong>can record video.(iPhone, Samsung, ipad, etc.)</p>",
+          "Imagetwo": "shopify://shop_images/Smartphone_or_Tablet.png",
+          "maintitlethree": "<h1>STEP 2:</h1><p><strong>Record</strong> your video review <em>(</em><em><strong>Must be 20-50 seconds long</strong></em><em>)</em></p><p>We suggest you ask a friend or family member to record you…(You can then treat them to a coffee when you receive your gift card.)</p><h1>VIDEO REQUIREMENTS</h1><p>TO QUALIFY FOR THE GIFT CARD, YOU MUST INCLUDE THE FOLLOWING <strong>3 ELEMENTS</strong> IN YOUR VIDEO:</p><p>1.) Mention our company name:<strong> BioSource Nutra</strong></p><p>2.) Clearly show Your <strong>Face</strong> and the <strong>BioSource Nutra</strong> <strong> Product</strong></p><p>3.) Review both <strong>the Product</strong> and <strong>Your Shopping Experience</strong></p><p><span style=\"text-decoration:underline\"><strong><br/>Wondering What To Say?</strong></span><strong> </strong></p><p>Here are some ideas of questions to answer:</p><ul><li>What was your life like before using BioSource Nutra?</li><li>What was your life like after using BioSource Nutra?</li><li>If you were to recommend this to a friend, what exactly would you say?</li><li>What was the reason you were looking for this product?</li><li>Did you lose weight with the product? How much did you lose and over what period of time?</li><li>What is the most positive (or negative) experience you've had with this kind of product (BioSource Nutra's or not)?</li></ul>",
+          "Imagethree": "shopify://shop_images/Capture_Video.png",
+          "maintitlefour": "<h1>STEP 3:</h1><p><a href=\"/pages/video-submission-form\" target=\"_blank\" title=\"BioSource Nutra Video Review Submission\">CLICK HERE TO UPLOAD YOUR VIDEO!</a><strong> </strong>(From the device you recorded it on)</p><p>You can also email the video to us if you prefer.</p><p>USE SUBJECT LINE:</p><p>BioSource Nutra Video Review</p><p>SEND YOUR VIDEO TO:</p><p>support@biosourcenutra.com<br/><em><br/>(Note that many email providers do not allow large files to be sent. You can use the free \"WeTransfer\" app for large video files)</em><br/><br/><strong>Save time and simply upload your video by clicking the button below...</strong></p>",
+          "Imagefour": "shopify://shop_images/Submit_Video.png",
           "btn": "UPLOAD VIDEO HERE",
-          "btn_url": "shopify:\/\/pages\/video-submission-form"
+          "btn_url": "shopify://pages/video-submission-form"
         }
       },
       "page-footer-section": {
@@ -1896,9 +1896,9 @@
           "strong {color: #de62a7;}"
         ],
         "settings": {
-          "mainfootertitle": "<h1>Get a <strong>FREE $40 Gift Card<\/strong> by sending us a short video review of BioSource Nutra Products!<\/h1>",
+          "mainfootertitle": "<h1>Get a <strong>FREE $40 Gift Card</strong> by sending us a short video review of BioSource Nutra Products!</h1>",
           "btn": "UPLOAD VIDEO HERE",
-          "btn_url": "shopify:\/\/pages\/video-submission-form"
+          "btn_url": "shopify://pages/video-submission-form"
         }
       },
       "video-new-two": {
@@ -1906,7 +1906,7 @@
         "settings": {
           "show_hide_video": false,
           "image_position": "center center",
-          "video_link": "https:\/\/www.loom.com\/embed\/c95fcbdda6e54657bce5f0e49a7a3156",
+          "video_link": "https://www.loom.com/embed/c95fcbdda6e54657bce5f0e49a7a3156",
           "show_overlay": true,
           "style": "image_with_play",
           "height": "medium",
@@ -1942,33 +1942,40 @@
     ],
     "blocks": {
       "855628211100114053": {
-        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
         "settings": {
         }
       },
       "6097499278999377719": {
-        "type": "shopify:\/\/apps\/globo-mega-menu\/blocks\/app-embed\/7a00835e-fe40-45a5-a615-2eb4ab697b58",
+        "type": "shopify://apps/globo-mega-menu/blocks/app-embed/7a00835e-fe40-45a5-a615-2eb4ab697b58",
         "disabled": false,
         "settings": {
         }
       },
       "15079184273603081885": {
-        "type": "shopify:\/\/apps\/essential-free-shipping-bar\/blocks\/app_embed\/4125375e-37c8-4137-949d-c4e1a3aac572",
+        "type": "shopify://apps/essential-free-shipping-bar/blocks/app_embed/4125375e-37c8-4137-949d-c4e1a3aac572",
         "disabled": false,
         "settings": {
         }
       },
       "11724500921838622758": {
-        "type": "shopify:\/\/apps\/frequently-bought-together\/blocks\/app-embed-block\/b1a8cbea-c844-4842-9529-7c62dbab1b1f",
+        "type": "shopify://apps/frequently-bought-together/blocks/app-embed-block/b1a8cbea-c844-4842-9529-7c62dbab1b1f",
         "disabled": false,
         "settings": {
         }
       },
       "17676059084223943535": {
-        "type": "shopify:\/\/apps\/triplewhale\/blocks\/triple_pixel_snippet\/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
+        "type": "shopify://apps/triplewhale/blocks/triple_pixel_snippet/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
         "disabled": false,
         "settings": {
+        }
+      },
+      "10605408327587305396": {
+        "type": "shopify://apps/eg-auto-add-to-cart/blocks/app-embed/0f7d4f74-1e89-4820-aec4-6564d7e535d2",
+        "disabled": false,
+        "settings": {
+          "version": "v3"
         }
       }
     }
