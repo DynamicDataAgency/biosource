@@ -79,6 +79,7 @@
       },
       "feature-row": {
         "type": "feature-row",
+        "disabled": true,
         "custom_css": [
 
         ],
@@ -1925,10 +1926,25 @@
           "enable_image_zoom": true,
           "enable_video_looping": false
         }
+      },
+      "full_image_with_link_WWKxYY": {
+        "type": "full-image-with-link",
+        "settings": {
+          "image": "shopify://shop_images/GIVEAWAY.png",
+          "imagelink": ""
+        }
+      },
+      "cta_section_Un7pC7": {
+        "type": "cta-section",
+        "settings": {
+          "phonetext": "",
+          "phonenumber": ""
+        }
       }
     },
     "content_for_index": [
       "feature-row",
+      "full_image_with_link_WWKxYY",
       "16378699060e29c124",
       "af25f0e2-46e0-4a5e-9bc8-5576baf07247",
       "3ca001d4-bce4-43ec-a619-10d7ffa06f0b",
@@ -1938,7 +1954,8 @@
       "1608624114b11dd426",
       "1607602227c4a0f84e",
       "1607681369518453bc",
-      "16093254090bfc9dfa"
+      "16093254090bfc9dfa",
+      "cta_section_Un7pC7"
     ],
     "blocks": {
       "855628211100114053": {
