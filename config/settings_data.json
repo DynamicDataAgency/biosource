@@ -79,6 +79,7 @@
       },
       "feature-row": {
         "type": "feature-row",
+        "disabled": true,
         "custom_css": [
 
         ],
@@ -1928,9 +1929,8 @@
       },
       "full_image_with_link_WWKxYY": {
         "type": "full-image-with-link",
-        "disabled": true,
         "settings": {
-          "image": "shopify://shop_images/November_to_Remember.png",
+          "image": "shopify://shop_images/November_to_Remember_2.png",
           "imagelink": ""
         }
       },
