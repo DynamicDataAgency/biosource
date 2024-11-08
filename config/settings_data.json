@@ -80,9 +80,7 @@
       "feature-row": {
         "type": "feature-row",
         "disabled": true,
-        "custom_css": [
-
-        ],
+        "custom_css": [],
         "settings": {
           "image": "shopify://shop_images/biosourcenutra-home-banner.webp",
           "layout": "left",
@@ -1651,9 +1649,7 @@
           "16378699060e29c124-2"
         ],
         "disabled": true,
-        "custom_css": [
-
-        ],
+        "custom_css": [],
         "settings": {
           "section_height": "medium"
         }
@@ -1715,9 +1711,7 @@
           "58cdd113-daa9-4ba1-bedf-7363dccf23bf",
           "0b308bcb-c63f-4d15-95fe-ffd5b2e9be14"
         ],
-        "custom_css": [
-
-        ],
+        "custom_css": [],
         "settings": {
           "blog_show_author": true,
           "blog_show_date": true,
@@ -1947,8 +1941,8 @@
       "full_image_with_link_WWKxYY",
       "16378699060e29c124",
       "af25f0e2-46e0-4a5e-9bc8-5576baf07247",
-      "3ca001d4-bce4-43ec-a619-10d7ffa06f0b",
       "17c00579-5416-4ce8-af7e-aceab8ff2524",
+      "3ca001d4-bce4-43ec-a619-10d7ffa06f0b",
       "1637867574011cf4a3",
       "16110488562374262f",
       "1608624114b11dd426",
@@ -1961,32 +1955,27 @@
       "855628211100114053": {
         "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "6097499278999377719": {
         "type": "shopify://apps/globo-mega-menu/blocks/app-embed/7a00835e-fe40-45a5-a615-2eb4ab697b58",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "15079184273603081885": {
         "type": "shopify://apps/essential-free-shipping-bar/blocks/app_embed/4125375e-37c8-4137-949d-c4e1a3aac572",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "11724500921838622758": {
         "type": "shopify://apps/frequently-bought-together/blocks/app-embed-block/b1a8cbea-c844-4842-9529-7c62dbab1b1f",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "17676059084223943535": {
         "type": "shopify://apps/triplewhale/blocks/triple_pixel_snippet/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "10605408327587305396": {
         "type": "shopify://apps/eg-auto-add-to-cart/blocks/app-embed/0f7d4f74-1e89-4820-aec4-6564d7e535d2",
@@ -1998,8 +1987,7 @@
       "11532412952436166569": {
         "type": "shopify://apps/loox-reviews/blocks/loox-inject/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       }
     }
   },
@@ -2008,8 +1996,7 @@
       "sections": {
         "header": {
           "type": "header",
-          "settings": {
-          }
+          "settings": {}
         },
         "hero-1": {
           "type": "hero",
@@ -2020,26 +2007,22 @@
         },
         "feature-row": {
           "type": "feature-row",
-          "settings": {
-          }
+          "settings": {}
         },
         "feature-columns": {
           "type": "feature-columns",
           "blocks": {
             "feature-columns-0": {
               "type": "text_block",
-              "settings": {
-              }
+              "settings": {}
             },
             "feature-columns-1": {
               "type": "text_block",
-              "settings": {
-              }
+              "settings": {}
             },
             "feature-columns-2": {
               "type": "text_block",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
@@ -2068,18 +2051,15 @@
           "blocks": {
             "quotes-0": {
               "type": "quote",
-              "settings": {
-              }
+              "settings": {}
             },
             "quotes-1": {
               "type": "quote",
-              "settings": {
-              }
+              "settings": {}
             },
             "quotes-2": {
               "type": "quote",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
@@ -2096,18 +2076,15 @@
           "blocks": {
             "image-bar-0": {
               "type": "image",
-              "settings": {
-              }
+              "settings": {}
             },
             "image-bar-1": {
               "type": "image",
-              "settings": {
-              }
+              "settings": {}
             },
             "image-bar-2": {
               "type": "image",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
@@ -2115,21 +2092,18 @@
             "image-bar-1",
             "image-bar-2"
           ],
-          "settings": {
-          }
+          "settings": {}
         },
         "footer": {
           "type": "footer",
           "blocks": {
             "footer-0": {
               "type": "link_list",
-              "settings": {
-              }
+              "settings": {}
             },
             "footer-1": {
               "type": "newsletter",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
@@ -2280,23 +2254,20 @@
         },
         "1492033809691": {
           "type": "map",
-          "settings": {
-          }
+          "settings": {}
         },
         "1492033877875": {
           "type": "quotes",
           "blocks": {
             "1492033877875-0": {
               "type": "quote",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
             "1492033877875-0"
           ],
-          "settings": {
-          }
+          "settings": {}
         },
         "1492033924902": {
           "type": "custom-content",
@@ -2322,18 +2293,15 @@
           "blocks": {
             "1492096252560-0": {
               "type": "featured_collection",
-              "settings": {
-              }
+              "settings": {}
             },
             "1492096252560-1": {
               "type": "featured_collection",
-              "settings": {
-              }
+              "settings": {}
             },
             "1492096252560-2": {
               "type": "featured_collection",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
@@ -2372,18 +2340,15 @@
           "blocks": {
             "link_list": {
               "type": "link_list",
-              "settings": {
-              }
+              "settings": {}
             },
             "text": {
               "type": "text",
-              "settings": {
-              }
+              "settings": {}
             },
             "newsletter": {
               "type": "newsletter",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
