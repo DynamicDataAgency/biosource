@@ -69,7 +69,7 @@
           "logo": "shopify://shop_images/BioSource_Nutra_Logo_blue.png",
           "logo_max_width": 200,
           "main_linklist": "main-menu",
-          "message": true,
+          "message": false,
           "home_page_only": false,
           "message_text": "Pre Black Friday Deal - 20% Off Subscription + Free Shipping. (FREE GIFT on Autoship $75+)",
           "message_link": "shopify://pages/referrals",
@@ -1925,7 +1925,7 @@
       "full_image_with_link_WWKxYY": {
         "type": "full-image-with-link",
         "custom_css": [
-          ".full-width-image-link {padding-top: 50px !important; }"
+          ".full-width-image-link {padding-top: 50px !important;}"
         ],
         "settings": {
           "image": "shopify://shop_images/1.01-1900x400-Phenom-Marketing_-Inc.-LAT-265455.png",
