@@ -1924,9 +1924,7 @@
       },
       "full_image_with_link_WWKxYY": {
         "type": "full-image-with-link",
-        "custom_css": [
-          ".full-width-image-link {padding-top: 50px !important;}"
-        ],
+        "custom_css": [],
         "settings": {
           "image": "shopify://shop_images/1.01-1900x400-Phenom-Marketing_-Inc.-LAT-265455.png",
           "imagelink": "https://biosourcenutra.com/pages/november-giveaway"
