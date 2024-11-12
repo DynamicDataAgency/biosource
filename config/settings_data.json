@@ -61,18 +61,19 @@
       "header": {
         "type": "header",
         "custom_css": [
-          "li.gm-item .gm-icon-img img {width: 100%; height: 200px; object-fit: contain;}"
+          "li.gm-item .gm-icon-img img {width: 100%; height: 200px; object-fit: contain;}",
+          ".announcement-bar__message {font-weight: bold;}"
         ],
         "settings": {
           "align_logo": "left",
           "logo": "shopify://shop_images/BioSource_Nutra_Logo_blue.png",
           "logo_max_width": 200,
           "main_linklist": "main-menu",
-          "message": false,
+          "message": true,
           "home_page_only": false,
-          "message_text": "Give Your Friends $40 To Spend On Us!",
+          "message_text": "Pre Black Friday Deal - 20% Off Subscription + Free Shipping. (FREE GIFT on Autoship $75+)",
           "message_link": "shopify://pages/referrals",
-          "color_bg": "#94cc09",
+          "color_bg": "#f068b3",
           "color_text": "#ffffff",
           "submenu": "main-menu"
         }
@@ -1934,10 +1935,50 @@
           "phonetext": "",
           "phonenumber": ""
         }
+      },
+      "slideshow_LtGPbi": {
+        "type": "slideshow",
+        "blocks": {
+          "image_ddJQHj": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/Giveaway_Website_Banner_1900x400_11449a0b-9d3a-4f50-8b02-067dd625ebf3.png",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": "shopify://pages/november-giveaway"
+            }
+          },
+          "image_xXbQh4": {
+            "type": "image",
+            "settings": {
+              "alignment": "center center",
+              "slide_title": "Image slide",
+              "subheading": "Tell your brand's story through images",
+              "button_label": "",
+              "button_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "image_ddJQHj",
+          "image_xXbQh4"
+        ],
+        "disabled": true,
+        "settings": {
+          "slideshow_height": "adapt",
+          "text_size": "medium",
+          "text_alignment": "center center",
+          "show_overlay": false,
+          "autorotate": true,
+          "autorotate_speed": 5
+        }
       }
     },
     "content_for_index": [
       "feature-row",
+      "slideshow_LtGPbi",
       "full_image_with_link_WWKxYY",
       "16378699060e29c124",
       "af25f0e2-46e0-4a5e-9bc8-5576baf07247",
