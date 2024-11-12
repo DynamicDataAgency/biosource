@@ -1924,6 +1924,7 @@
       },
       "full_image_with_link_WWKxYY": {
         "type": "full-image-with-link",
+        "disabled": true,
         "custom_css": [],
         "settings": {
           "image": "shopify://shop_images/1.01-1900x400-Phenom-Marketing_-Inc.-LAT-265455.png",
@@ -1975,12 +1976,20 @@
           "autorotate": true,
           "autorotate_speed": 5
         }
+      },
+      "full_image_with_link_zyb493": {
+        "type": "full-image-with-link",
+        "settings": {
+          "image": "shopify://shop_images/1731439325_0.png",
+          "imagelink": "https://biosourcenutra.com/pages/november-giveaway"
+        }
       }
     },
     "content_for_index": [
       "feature-row",
       "slideshow_LtGPbi",
       "full_image_with_link_WWKxYY",
+      "full_image_with_link_zyb493",
       "16378699060e29c124",
       "af25f0e2-46e0-4a5e-9bc8-5576baf07247",
       "17c00579-5416-4ce8-af7e-aceab8ff2524",
