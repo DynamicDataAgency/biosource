@@ -60,7 +60,7 @@ div#shopify-section-blog-template {
 }
 }
 @media only screen and (max-width: 479px){
-.gm-menu-installed .gm-menu img {
+.gm-menu-installed .gm-menu .gm-dropdown img {
     width: 180px;
     margin: 0 auto;
 }
