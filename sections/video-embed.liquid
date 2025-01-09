@@ -57,15 +57,27 @@
     padding: 0;
   }
 
-  /* Remove top padding or margin on smaller screens */
+  /* Fix space above video on smaller screens */
   @media (max-width: 768px) {
     .video-wrapper {
       padding-top: 56.25%; /* Keeps 16:9 aspect ratio */
-      margin-top: 0; /* Ensures no margin above the video */
+      margin-top: 0; /* Remove margin above video */
     }
 
     .video-section .container {
       padding: 0; /* Ensure there's no container padding causing extra space */
+    }
+
+    /* Remove space from the body or any parent elements */
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Remove space above iframe */
+    .video-section iframe {
+      margin-top: 0;
+      padding-top: 0;
     }
   }
 
