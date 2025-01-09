@@ -1,71 +1,36 @@
-<section class="video-section">
-  <div class="container">
-    <div class="video-wrapper">
-      {% if section.settings.video_url != blank %}
-        <iframe 
-          src="{{ section.settings.video_url }}" 
-          frameborder="0" 
-          allow="autoplay; fullscreen" 
-          class="embedded-video"
-          allowfullscreen>
-        </iframe>
-      {% else %}
-        <p>Please provide a video URL in the section settings.</p>
-      {% endif %}
+{% if section.settings.video_url %}
+  <div class="video-embed-wrapper">
+    <div class="video-embed">
+      <iframe 
+        width="560" 
+        height="315" 
+        src="{{ section.settings.video_url | remove: 'watch?v=' | append: '/embed' }}" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
     </div>
   </div>
-</section>
 
-<style>
-  .video-section .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-
-  .video-wrapper {
-    width: 100%;
-    position: relative;
-    padding-top: 56.25%; /* 16:9 aspect ratio */
-  }
-
-  .video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
-
-  /* Mobile Styling */
-  @media (max-width: 768px) {
-    .video-wrapper {
-      padding-top: 56.25%; /* Maintain 16:9 aspect ratio */
+  <style>
+    .video-embed-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */ 
+      height: 0;
     }
 
-    .video-wrapper iframe {
-      max-height: 300px;
+    .video-embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
-  }
-</style>
 
-{% schema %}
-{
-  "name": "Responsive Video Embed",
-  "settings": [
-    {
-      "type": "text",
-      "id": "video_url",
-      "label": "Video Embed URL",
-      "default": "https://www.youtube.com/embed/example"
+    @media (max-width: 767px) {
+      .video-embed-wrapper {
+        padding-bottom: 177.78%; /* 9:16 aspect ratio for mobile */ 
+      }
     }
-  ],
-  "presets": [
-    {
-      "name": "Responsive Video Embed",
-      "category": "Custom"
-    }
-  ]
-}
-{% endschema %}
+  </style>
+{% endif %}
