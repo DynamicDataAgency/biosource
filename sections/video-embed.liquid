@@ -1,7 +1,6 @@
-<section class="video-embed-section">
+<section class="video-section">
   <div class="container">
-    <!-- Video Embed Section -->
-    <div class="video-column">
+    <div class="video-wrapper">
       {% if section.settings.embed_code != blank %}
         <div class="code-wrapper">
           {{ section.settings.embed_code }}
@@ -14,26 +13,19 @@
 </section>
 
 <style>
-  .video-embed-section .container {
+  .video-section .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
   }
 
-  .video-column {
+  .video-wrapper {
     width: 100%;
-    text-align: center; /* Centers the video */
+    position: relative;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
   }
 
   .code-wrapper {
-    position: relative;
-    width: 100%;
-    padding-top: 56.25%; /* Aspect ratio 16:9 */
-  }
-
-  .code-wrapper iframe, 
-  .code-wrapper embed, 
-  .code-wrapper object {
     position: absolute;
     top: 0;
     left: 0;
@@ -44,15 +36,15 @@
 
   /* Responsive behavior for smaller screens */
   @media (max-width: 768px) {
-    .video-column {
-      width: 100%; /* Ensure full width on mobile */
+    .video-wrapper {
+      padding-top: 56.25%; /* Keeps 16:9 aspect ratio */
     }
   }
 </style>
 
 {% schema %}
 {
-  "name": "Video Embed Section",
+  "name": "One-Column Video Embed",
   "settings": [
     {
       "type": "textarea",
@@ -63,7 +55,7 @@
   ],
   "presets": [
     {
-      "name": "Video Embed Section",
+      "name": "One-Column Video Embed",
       "category": "Custom"
     }
   ]
