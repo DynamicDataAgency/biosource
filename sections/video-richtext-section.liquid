@@ -1,7 +1,7 @@
 <section class="video-text-section">
   <div class="container">
-    <div class="video-text-stack">
-      <!-- Video Embed -->
+    <div class="video-text-grid">
+      <!-- Left Column: Video Embed -->
       <div class="video-column">
         {% if section.settings.embed_code != blank %}
           <div class="code-wrapper">
@@ -11,7 +11,7 @@
           <p>Please provide embed code in the section settings.</p>
         {% endif %}
       </div>
-      <!-- Text Content -->
+      <!-- Right Column: Text Content -->
       <div class="text-column">
         <div class="formatted-text">
           {{ section.settings.text_content }}
@@ -23,19 +23,23 @@
 
 <style>
   .video-text-section .container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
   }
 
-  .video-text-stack {
-    display: flex;
-    flex-direction: column; /* Stacks video and text vertically */
+  .video-text-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Single-column layout by default */
     gap: 20px;
   }
 
   .video-column {
-    width: 100%;
+    grid-column: 1; /* Video will always appear first */
+  }
+
+  .text-column {
+    grid-column: 1; /* Text will wrap under video in single-column mode */
   }
 
   .code-wrapper {
@@ -55,20 +59,31 @@
     border: 0;
   }
 
-  .text-column .formatted-text {
+  .formatted-text {
     font-size: 16px;
     line-height: 1.6;
   }
 
-  /* Optional: Center-align content for aesthetic purposes */
-  .video-text-section .formatted-text {
-    text-align: left; /* Change to center if preferred */
+  /* Two-column layout for larger screens */
+  @media (min-width: 768px) {
+    .video-text-grid {
+      grid-template-columns: 1fr 1fr; /* Two equal columns */
+      gap: 20px;
+    }
+
+    .video-column {
+      grid-column: 1; /* Video in left column */
+    }
+
+    .text-column {
+      grid-column: 2; /* Text in right column */
+    }
   }
 </style>
 
 {% schema %}
 {
-  "name": "Video and Text Stack",
+  "name": "Video and Text Section",
   "settings": [
     {
       "type": "textarea",
@@ -79,15 +94,16 @@
     {
       "type": "richtext",
       "id": "text_content",
-      "label": "Text Content",
+      "label": "Formatted Text Content",
       "default": "<h2>Your Title Here</h2><p>Write your content here. Use <strong>bold</strong>, <em>italic</em>, or other rich formatting options.</p>"
     }
   ],
   "presets": [
     {
-      "name": "Video and Text Stack",
+      "name": "Video and Text Section",
       "category": "Custom"
     }
   ]
 }
 {% endschema %}
+
