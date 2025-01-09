@@ -1,6 +1,6 @@
 <section class="video-text-section">
   <div class="container">
-    <div class="video-text-grid">
+    <div class="video-text-flex">
       <!-- Left Column: Video Embed -->
       <div class="video-column">
         {% if section.settings.embed_code != blank %}
@@ -28,18 +28,15 @@
     padding: 20px;
   }
 
-  .video-text-grid {
-    display: grid;
-    grid-template-columns: 1fr; /* Single-column layout by default */
+  .video-text-flex {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping when necessary */
     gap: 20px;
   }
 
   .video-column {
-    grid-column: 1; /* Video will always appear first */
-  }
-
-  .text-column {
-    grid-column: 1; /* Text will wrap under video in single-column mode */
+    flex: 1 1 300px; /* Minimum width of 300px */
+    max-width: 50%; /* Ensures it doesn't exceed half the container width */
   }
 
   .code-wrapper {
@@ -59,31 +56,31 @@
     border: 0;
   }
 
+  .text-column {
+    flex: 1 1 300px; /* Minimum width of 300px */
+    max-width: 50%; /* Ensures it doesn't exceed half the container width */
+  }
+
   .formatted-text {
     font-size: 16px;
     line-height: 1.6;
   }
 
-  /* Two-column layout for larger screens */
-  @media (min-width: 768px) {
-    .video-text-grid {
-      grid-template-columns: 1fr 1fr; /* Two equal columns */
-      gap: 20px;
+  /* Adjustments for when the text wraps under the video */
+  @media (max-width: 768px) {
+    .video-column, .text-column {
+      flex: 1 1 100%; /* Full width for both columns */
     }
 
-    .video-column {
-      grid-column: 1; /* Video in left column */
-    }
-
-    .text-column {
-      grid-column: 2; /* Text in right column */
+    .video-text-flex {
+      flex-direction: column; /* Stack columns vertically */
     }
   }
 </style>
 
 {% schema %}
 {
-  "name": "Video and Text Section",
+  "name": "Responsive Video and Text",
   "settings": [
     {
       "type": "textarea",
@@ -100,10 +97,9 @@
   ],
   "presets": [
     {
-      "name": "Video and Text Section",
+      "name": "Responsive Video and Text",
       "category": "Custom"
     }
   ]
 }
 {% endschema %}
-
