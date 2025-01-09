@@ -32,11 +32,10 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    align-items: flex-start; /* Align columns to the top */
   }
 
-  .video-column, .text-column {
-    flex: 1 1 100%; /* Default to full width for both columns */
+  .video-column {
+    flex: 1 1 100%; /* Full width by default */
   }
 
   .code-wrapper {
@@ -56,26 +55,28 @@
     border: 0;
   }
 
+  .text-column {
+    flex: 1 1 100%; /* Full width by default */
+  }
+
   .text-column .formatted-text {
     font-size: 16px;
     line-height: 1.6;
+    margin-top: 20px; /* Spacing below the video */
   }
 
   /* Two-column layout for larger screens */
   @media (min-width: 768px) {
+    .video-text-grid {
+      flex-wrap: nowrap; /* Prevents wrapping unless text exceeds video height */
+    }
+
     .video-column, .text-column {
-      flex: 1 1 48%; /* Side-by-side columns with space between */
+      flex: 1 1 48%; /* Side-by-side columns */
     }
 
     .text-column {
-      flex-grow: 1; /* Ensures the text can expand and wrap below the video if longer */
-    }
-  }
-
-  /* Mobile Styling */
-  @media (max-width: 768px) {
-    .video-text-grid {
-      flex-direction: column;
+      flex-grow: 1; /* Allows text to wrap below video if needed */
     }
   }
 </style>
