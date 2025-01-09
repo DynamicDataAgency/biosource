@@ -1,6 +1,109 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+<section class="video-text-section">
+  <div class="container">
+    <div class="video-text-grid">
+      <!-- Left Column: Code Embed -->
+      <div class="video-column">
+        {% if section.settings.embed_code != blank %}
+          <div class="code-wrapper">
+            {{ section.settings.embed_code }}
+          </div>
+        {% else %}
+          <p>Please provide embed code in the section settings.</p>
+        {% endif %}
+      </div>
+      <!-- Right Column: Rich Text -->
+      <div class="text-column">
+        <div class="formatted-text">
+          {{ section.settings.text_content }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .video-text-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
   }
+
+  .video-text-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .video-column, .text-column {
+    flex: 1 1 100%; /* Default to full width for both columns */
+  }
+
+  .code-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  }
+
+  .code-wrapper iframe, 
+  .code-wrapper embed,
+  .code-wrapper object {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .text-column .formatted-text {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 20px; /* Adds spacing if text wraps below */
+  }
+
+  /* Two-column layout for larger screens */
+  @media (min-width: 768px) {
+    .video-column, .text-column {
+      flex: 1 1 48%; /* Side-by-side columns with space between */
+    }
+
+    .text-column {
+      flex-grow: 1; /* Ensures the text can expand and wrap below the video if longer */
+    }
+  }
+
+  /* Mobile Styling */
+  @media (max-width: 768px) {
+    .video-text-grid {
+      flex-direction: column;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Code and Text Section",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "embed_code",
+      "label": "Embed Code",
+      "default": "<iframe src='https://www.youtube.com/embed/example' frameborder='0' allowfullscreen></iframe>"
+    },
+    {
+      "type": "richtext",
+      "id": "text_content",
+      "label": "Formatted Text Content",
+      "default": "<h2>Your Title Here</h2><p>Write your content here. Use <strong>bold</strong>, <em>italic</em>, or other rich formatting options.</p>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Code and Text Section",
+      "category": "Custom"
+    }
+  ]
+}
 {% endschema %}
