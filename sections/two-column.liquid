@@ -1,6 +1,73 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+<section class="two-column-section">
+  <div class="container">
+    <div class="grid">
+      <!-- Left Column -->
+      <div class="grid__item medium-up--one-half">
+        <div class="video-wrapper">
+          {% if section.settings.video_url != blank %}
+            <iframe 
+              src="{{ section.settings.video_url }}" 
+              frameborder="0" 
+              allowfullscreen 
+              class="embedded-video">
+            </iframe>
+          {% endif %}
+        </div>
+        <p class="custom-text">
+          {{ section.settings.text_content }}
+        </p>
+      </div>
+      <!-- Right Column -->
+      <div class="grid__item medium-up--one-half">
+        <div class="custom-html">
+          {{ section.settings.html_content }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .two-column-section .grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
   }
+  .video-wrapper iframe {
+    width: 100%;
+    height: 315px; /* Adjust height as needed */
+  }
+  .custom-html {
+    padding: 10px;
+    background-color: #f9f9f9; /* Optional styling */
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Two Column Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "video_url",
+      "label": "Video Embed URL"
+    },
+    {
+      "type": "textarea",
+      "id": "text_content",
+      "label": "Text Content"
+    },
+    {
+      "type": "textarea",
+      "id": "html_content",
+      "label": "Custom HTML"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Two Column Section",
+      "category": "Custom"
+    }
+  ]
+}
 {% endschema %}
