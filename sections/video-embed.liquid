@@ -57,10 +57,23 @@
     padding: 0;
   }
 
-  /* Responsive behavior for smaller screens */
+  /* Remove top padding or margin on smaller screens */
   @media (max-width: 768px) {
     .video-wrapper {
       padding-top: 56.25%; /* Keeps 16:9 aspect ratio */
+      margin-top: 0; /* Ensures no margin above the video */
+    }
+
+    .video-section .container {
+      padding: 0; /* Ensure there's no container padding causing extra space */
+    }
+  }
+
+  /* For very small screen sizes */
+  @media (max-width: 480px) {
+    .video-wrapper {
+      padding-top: 56.25%; /* Keeps 16:9 aspect ratio */
+      margin-top: 0; /* Ensures no margin above the video */
     }
   }
 </style>
