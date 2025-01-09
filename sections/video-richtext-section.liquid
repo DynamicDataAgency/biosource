@@ -1,6 +1,6 @@
 <section class="video-text-section">
   <div class="container">
-    <div class="video-text-wrapper">
+    <div class="video-text-grid">
       <!-- Left Column: Video Embed -->
       <div class="video-column">
         {% if section.settings.embed_code != blank %}
@@ -28,21 +28,24 @@
     padding: 20px;
   }
 
-  .video-text-wrapper {
-    display: block; /* Ensures natural flow */
+  .video-text-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns side by side */
+    gap: 20px;
   }
 
   .video-column {
-    float: left; /* Video floats to the left */
-    width: 50%; /* Takes half the width */
-    margin-right: 20px; /* Adds spacing between video and text */
-    box-sizing: border-box;
+    grid-column: 1; /* Video on the left */
+  }
+
+  .text-column {
+    grid-column: 2; /* Text on the right */
   }
 
   .code-wrapper {
-    position: relative;
     width: 100%;
-    padding-top: 56.25%; /* Aspect ratio 16:9 */
+    position: relative;
+    aspect-ratio: 16 / 9; /* Maintains 16:9 aspect ratio */
   }
 
   .code-wrapper iframe, 
@@ -53,11 +56,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    border: none;
-  }
-
-  .text-column {
-    overflow: hidden; /* Clears float */
+    border: 0;
   }
 
   .formatted-text {
@@ -67,22 +66,19 @@
 
   /* Responsive behavior for smaller screens */
   @media (max-width: 768px) {
-    .video-column {
-      float: none;
-      width: 100%; /* Full width for video */
-      margin-right: 0; /* No spacing needed */
+    .video-text-grid {
+      grid-template-columns: 1fr; /* Single-column layout for mobile */
     }
 
-    .text-column {
-      overflow: visible;
-      width: 100%; /* Full width for text */
+    .video-column, .text-column {
+      grid-column: 1; /* Both video and text in one column */
     }
   }
 </style>
 
 {% schema %}
 {
-  "name": "Video and Wrapping Text",
+  "name": "Video and Text Section",
   "settings": [
     {
       "type": "textarea",
@@ -99,7 +95,7 @@
   ],
   "presets": [
     {
-      "name": "Video and Wrapping Text",
+      "name": "Video and Text Section",
       "category": "Custom"
     }
   ]
