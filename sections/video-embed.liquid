@@ -13,26 +13,30 @@
 </section>
 
 <style>
+  /* Container for video section */
   .video-section .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0; /* Remove extra padding */
   }
 
+  /* Video wrapper section */
   .video-wrapper {
     width: 100%;
     position: relative;
-    margin: 0;
+    margin: 0; /* Remove margin to avoid space */
+    padding: 0; /* Remove padding to eliminate space above */
   }
 
+  /* Code wrapper holding the embed code */
   .code-wrapper {
     position: relative;
     width: 100%;
     height: 0;
-    padding-top: 56.25%; /* 16:9 aspect ratio */
+    padding-top: 56.25%; /* Maintain 16:9 aspect ratio */
   }
 
-  /* Ensuring iframe is fully responsive */
+  /* Ensure iframe content fills its container */
   .code-wrapper iframe {
     position: absolute;
     top: 0;
@@ -43,7 +47,7 @@
     display: block;
   }
 
-  /* Remove any default padding/margin that might cause issues */
+  /* Remove any margin or padding that may cause issues */
   .video-section iframe,
   .video-section object,
   .video-section embed {
