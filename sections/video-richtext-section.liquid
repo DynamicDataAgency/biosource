@@ -11,10 +11,10 @@
           <p>Please provide embed code in the section settings.</p>
         {% endif %}
       </div>
-      <!-- Right Column: Text Content -->
-      <div class="text-column">
-        <div class="formatted-text">
-          {{ section.settings.text_content }}
+      <!-- Right Column: Custom HTML Content -->
+      <div class="custom-html-column">
+        <div class="custom-html-content">
+          {{ section.settings.custom_html }}
         </div>
       </div>
     </div>
@@ -38,8 +38,8 @@
     grid-column: 1; /* Video on the left */
   }
 
-  .text-column {
-    grid-column: 2; /* Text on the right */
+  .custom-html-column {
+    grid-column: 2; /* Custom HTML on the right */
   }
 
   .code-wrapper {
@@ -59,7 +59,7 @@
     border: 0;
   }
 
-  .formatted-text {
+  .custom-html-content {
     font-size: 16px;
     line-height: 1.6;
   }
@@ -70,15 +70,15 @@
       grid-template-columns: 1fr; /* Single-column layout for mobile */
     }
 
-    .video-column, .text-column {
-      grid-column: 1; /* Both video and text in one column */
+    .video-column, .custom-html-column {
+      grid-column: 1; /* Both video and custom HTML in one column */
     }
   }
 </style>
 
 {% schema %}
 {
-  "name": "Video and Text Section",
+  "name": "Video & HTML Section",
   "settings": [
     {
       "type": "textarea",
@@ -87,15 +87,15 @@
       "default": "<iframe src='https://www.youtube.com/embed/example' frameborder='0' allowfullscreen></iframe>"
     },
     {
-      "type": "richtext",
-      "id": "text_content",
-      "label": "Formatted Text Content",
-      "default": "<h2>Your Title Here</h2><p>Write your content here. Use <strong>bold</strong>, <em>italic</em>, or other rich formatting options.</p>"
+      "type": "textarea",
+      "id": "custom_html",
+      "label": "Custom HTML Content",
+      "default": "<p>Enter your custom HTML here, including <strong>tags</strong>, <a href='#'>links</a>, etc.</p>"
     }
   ],
   "presets": [
     {
-      "name": "Video and Text Section",
+      "name": "Video & HTML Section",
       "category": "Custom"
     }
   ]
