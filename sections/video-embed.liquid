@@ -1,36 +1,34 @@
-{% if section.settings.video_url %}
-  <div class="video-embed-wrapper">
-    <div class="video-embed">
-      <iframe 
-        width="560" 
-        height="315" 
-        src="{{ section.settings.video_url | remove: 'watch?v=' | append: '/embed' }}" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
-      </iframe>
-    </div>
+<div class="video-embed-wrapper">
+  <div class="video-embed">
+    <iframe 
+      width="560" 
+      height="315" 
+      src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
   </div>
+</div>
 
-  <style>
+<style>
+  .video-embed-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */ 
+    height: 0;
+  }
+
+  .video-embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 767px) {
     .video-embed-wrapper {
-      position: relative;
-      padding-bottom: 56.25%; /* 16:9 aspect ratio */ 
-      height: 0;
+      padding-bottom: 177.78%; /* 9:16 aspect ratio for mobile */ 
     }
-
-    .video-embed {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    @media (max-width: 767px) {
-      .video-embed-wrapper {
-        padding-bottom: 177.78%; /* 9:16 aspect ratio for mobile */ 
-      }
-    }
-  </style>
-{% endif %}
+  }
+</style>
