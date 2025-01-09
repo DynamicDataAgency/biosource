@@ -1,6 +1,63 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+<section class="video-section">
+  <div class="container">
+    <div class="video-wrapper">
+      {% if section.settings.embed_code != blank %}
+        <div class="code-wrapper">
+          {{ section.settings.embed_code }}
+        </div>
+      {% else %}
+        <p>Please provide embed code in the section settings.</p>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<style>
+  .video-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
   }
+
+  .video-wrapper {
+    width: 100%;
+    position: relative;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+  }
+
+  .code-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  /* Responsive behavior for smaller screens */
+  @media (max-width: 768px) {
+    .video-wrapper {
+      padding-top: 56.25%; /* Keeps 16:9 aspect ratio */
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "One-Column Video Embed",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "embed_code",
+      "label": "Embed Code",
+      "default": "<iframe src='https://www.youtube.com/embed/example' frameborder='0' allowfullscreen></iframe>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "One-Column Video Embed",
+      "category": "Custom"
+    }
+  ]
+}
 {% endschema %}
