@@ -1,112 +1,47 @@
-<section class="video-section">
-  <div class="container">
-    <div class="video-wrapper">
-      {% if section.settings.embed_code != blank %}
-        <div class="code-wrapper">
-          <!-- Render the embed code as raw HTML -->
-          {{ section.settings.embed_code | raw }}
-        </div>
-      {% else %}
-        <p>Please provide embed code in the section settings.</p>
-      {% endif %}
-    </div>
-  </div>
-</section>
-
-<style>
-  /* Global reset to ensure no unwanted spacing */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  /* Container for video section */
-  .video-section .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0; /* Remove extra padding */
-  }
-
-  /* Video wrapper section */
-  .video-wrapper {
-    width: 100%;
-    position: relative;
-    margin: 0; /* Ensure there's no margin above */
-    padding: 0; /* Remove padding to eliminate space above */
-  }
-
-  /* Code wrapper holding the embed code */
-  .code-wrapper {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-top: 56.25%; /* Maintain 16:9 aspect ratio */
-  }
-
-  /* Ensure iframe content fills its container */
-  .code-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-    display: block;
-  }
-
-  /* Remove any margin or padding that may cause issues */
-  .video-section iframe,
-  .video-section object,
-  .video-section embed {
-    display: block;
-    margin: 0;
-    padding: 0;
-  }
-
-  /* For mobile screens, ensure no extra space above the video */
-  @media (max-width: 768px) {
-    .video-wrapper {
-      padding-top: 56.25%; /* Maintain 16:9 aspect ratio */
-      margin-top: 0; /* Ensure no margin above the video */
-    }
-
-    .video-section .container {
-      padding: 0; /* Ensure no padding in the container */
-    }
-
-    /* Reset any margin/padding above the iframe */
-    .video-section iframe {
-      margin-top: 0;
-      padding-top: 0;
-    }
-  }
-
-  /* Further fix for very small screen sizes */
-  @media (max-width: 480px) {
-    .video-wrapper {
-      padding-top: 56.25%; /* Maintain 16:9 aspect ratio */
-      margin-top: 0; /* Ensure no margin above the video */
-    }
-  }
-</style>
-
 {% schema %}
 {
-  "name": "One-Column Video Embed",
+  "name": "Video Embed",
   "settings": [
     {
-      "type": "textarea",
-      "id": "embed_code",
-      "label": "Embed Code",
-      "default": "<iframe src='https://www.youtube.com/embed/example' frameborder='0' allowfullscreen></iframe>"
+      "type": "text",
+      "label": "Video Embed Code",
+      "id": "video_embed_code",
+      "default": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/dQw4w9WgXcQ\" frameborder=\"0\" allowfullscreen></iframe>",
+      "info": "Paste your video embed code (e.g., from YouTube or Vimeo) here."
     }
   ],
   "presets": [
     {
-      "name": "One-Column Video Embed",
+      "name": "Default",
       "category": "Custom"
     }
   ]
 }
 {% endschema %}
+
+<div class="video-embed-container">
+  <div class="video-embed-content">
+    {{ settings.video_embed_code | raw }}
+  </div>
+</div>
+
+<style>
+  .video-embed-container {
+    text-align: center;
+    padding: 30px 0;
+  }
+  
+  .video-embed-content iframe {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+  }
+
+  /* For responsive design */
+  @media screen and (max-width: 768px) {
+    .video-embed-content iframe {
+      max-width: 100%;
+      height: 450px; /* Adjust the height for smaller screens */
+    }
+  }
+</style>
