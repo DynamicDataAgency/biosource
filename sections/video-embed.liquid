@@ -3,7 +3,8 @@
     <div class="video-wrapper">
       {% if section.settings.embed_code != blank %}
         <div class="code-wrapper">
-          {{ section.settings.embed_code }}
+          <!-- Raw embed code for video -->
+          {{ section.settings.embed_code | escape }}
         </div>
       {% else %}
         <p>Please provide embed code in the section settings.</p>
