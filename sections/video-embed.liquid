@@ -14,6 +14,13 @@
 </section>
 
 <style>
+  /* Global reset to ensure no unwanted spacing */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
   /* Container for video section */
   .video-section .container {
     max-width: 1200px;
@@ -25,7 +32,7 @@
   .video-wrapper {
     width: 100%;
     position: relative;
-    margin: 0; /* Remove margin to avoid space */
+    margin: 0; /* Ensure there's no margin above */
     padding: 0; /* Remove padding to eliminate space above */
   }
 
@@ -57,35 +64,29 @@
     padding: 0;
   }
 
-  /* Fix space above video on smaller screens */
+  /* For mobile screens, ensure no extra space above the video */
   @media (max-width: 768px) {
     .video-wrapper {
-      padding-top: 56.25%; /* Keeps 16:9 aspect ratio */
-      margin-top: 0; /* Remove margin above video */
+      padding-top: 56.25%; /* Maintain 16:9 aspect ratio */
+      margin-top: 0; /* Ensure no margin above the video */
     }
 
     .video-section .container {
-      padding: 0; /* Ensure there's no container padding causing extra space */
+      padding: 0; /* Ensure no padding in the container */
     }
 
-    /* Remove space from the body or any parent elements */
-    body {
-      margin: 0;
-      padding: 0;
-    }
-
-    /* Remove space above iframe */
+    /* Reset any margin/padding above the iframe */
     .video-section iframe {
       margin-top: 0;
       padding-top: 0;
     }
   }
 
-  /* For very small screen sizes */
+  /* Further fix for very small screen sizes */
   @media (max-width: 480px) {
     .video-wrapper {
-      padding-top: 56.25%; /* Keeps 16:9 aspect ratio */
-      margin-top: 0; /* Ensures no margin above the video */
+      padding-top: 56.25%; /* Maintain 16:9 aspect ratio */
+      margin-top: 0; /* Ensure no margin above the video */
     }
   }
 </style>
