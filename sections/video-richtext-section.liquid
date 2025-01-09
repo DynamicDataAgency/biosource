@@ -32,7 +32,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    align-items: flex-start;
+    align-items: flex-start; /* Align columns to the top */
   }
 
   .video-column, .text-column {
@@ -41,9 +41,8 @@
 
   .code-wrapper {
     width: 100%;
-    overflow: hidden;
     position: relative;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    aspect-ratio: 16 / 9; /* Maintains 16:9 aspect ratio */
   }
 
   .code-wrapper iframe, 
@@ -60,7 +59,6 @@
   .text-column .formatted-text {
     font-size: 16px;
     line-height: 1.6;
-    margin-top: 20px; /* Adds spacing if text wraps below */
   }
 
   /* Two-column layout for larger screens */
