@@ -312,7 +312,17 @@
   </div>
 </div>
 
-
+{% if cart.item_count > 0 %}
+      <div
+          id="looxReviews"
+          data-or-productIds="{{ cart.items | map: 'product' | map: 'id' | join: ',' }}"
+          style="margin:0 auto;max-width:1920px;"
+          data-write-btn=hidden
+          data-loox-variant="cart"
+          class="loox-reviews-default"
+      >
+      </div>
+{% endif %}
 
 {% schema %}
 {
